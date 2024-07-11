@@ -22,25 +22,27 @@
     <div class="login-left">
         <div>
         <h2>Join Studentpreneur<br>Turn your ideas into reality</h2>
-    <button @click="loginGoogle">Login with Google</button></div>
-
-
-    <div>
-        <form action="#" method="post">
-            <div class="input-box">
-                <input type="email" name="email" required autocomplete="off">
-                <label>Email</label>
+    <button @click="loginGoogle">Login with Google</button>
+        </div>
+        <div>
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
-            <div class="input-box">
-                <input type="password" name="password" required autocomplete="off">
-                <label>Please Enter your Password</label>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
             </div>
-            <input type="hidden" name="action" value="login">
-            <button type="submit" class="btn">Sign In</button>
+            <button type="submit">Login</button>
         </form>
-       
+        </div>
+    </div>
+    <div class="login-right">
+        <img src="img/login.jpg" alt="Login Image">
     </div>
 </section>
+
 </body>
 
 </html>
