@@ -1,0 +1,65 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+<h1>StudentPreneur</h1>
+</body>
+
+<!--中间的导航-->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Learning</a>
+    <a href='#'>Events</a>
+    <a href='#'>Global Connections</a>
+</nav>
+
+<!--右侧导航-->
+<nav>
+    <a href='#'><!--icon team profile--></a>
+    <a href='#'><!--icon team profile--></a>
+    <a href='#'><!--icon team profile--></a>
+    <button><a href='#'><!--icon team profile--></a></button>
+</nav>
+
+<footer>
+    
+</footer>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentPreneur Sign in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <header>
+        <nav>
+            <div class="logo">StudentPreneur</div>
+            <div class="log_button">
+                <button @click="signIn">Sign In</button>
+                <button @click="signUp">Sign Up</button>
+            </div>
+        </nav>
+        <div class="homeCover">
+            <h1>Turn your ideas into reality</h1>
+            <button @click="joinUs">Join us now</button>
+        </div>
+    </header>
+
+
+
+
+
+

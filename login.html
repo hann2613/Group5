@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>StudentPreneur Sign in</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <nav>
+                <div class="logo">StudentPreneur</div>
+                <div class="log_button">
+                    <button @click="signIn">Sign In</button>
+                    <button @click="signUp">Sign Up</button>
+                </div>
+            </nav>
+        </header>
+    
+<section class="login-section">
+    <div class="login-left">
+        <div>
+        <h2>Join Studentpreneur<br>Turn your ideas into reality</h2>
+    <button @click="loginGoogle">Login with Google</button></div>
+
+
+    <div>
+        <form action="#" method="post">
+            <div class="input-box">
+                <input type="email" name="email" required autocomplete="off">
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" required autocomplete="off">
+                <label>Please Enter your Password</label>
+            </div>
+            <input type="hidden" name="action" value="login">
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+       
+    </div>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: auto 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .log_button button {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #686868;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .log_button button:hover {
+    background-color: #363636;
+}
+
+.homeCover {
+    background-image: url('img/homepage1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 100px 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.homeCover h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.homeCover button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #686868;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.homeCover button:hover {
+    background-color: #363636;
+}
+
+/* mentors */
+.mentors {
+    margin: 20px 100px;
+}
+
+.mentors h2{
+    text-align: center;
+    margin: 10px auto;
+    font-size: 2em;
+}
+
+.slide-container {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.mentor-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(45% * 2);
+}
+
+.mentor-card {
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mentor-card img {
+    max-width: 150px;
+    max-height: 150px;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Live Session */
+.live-session {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.live-session h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.session-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.session-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 300px;
+}
+
+.session-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.session-card h3 {
+    font-size: 1.2em;
+    margin: 15px 0 10px;
+}
+
+.session-card p {
+    margin-bottom: 15px;
+}
+
+.session-card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #686868;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.session-card button:hover {
+    background-color: #363636;
+}
+
+/* Global Connections */
+.global-connections {
+    background-color: #f1f1f1;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.global-connections h2 {
+    font-size: 2em;
+}
+
+.map {
+    position: relative;
+    text-align: center;
+}
+
+.map img{
+    text-align: center;
+    max-width: 80%;
+}
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+/*------------------------------------------------------------------------------------------
+Sign in Page
+-----------------------------------------------------------------------------------*/
