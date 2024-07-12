@@ -1,14 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentPreneur Team Management</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style2.css" />
+  <title>StudentPreneur Team Management</title>
 </head>
 <body>
-<h1>StudentPreneur</h1>
+  <header>
+    <nav>
+      <div class="logo">StudentPreneur</div>
+      <a href="#">Home</a>
+      <a href="#">Learning</a>
+      <a href="#">Events</a>
+      <a href="#">Global Connections</a>
+      <div class="teamup">
+        <button class="teamup-btn">Team Up</button>
+        <div class="profile-icon"></div>
+      </div>
+    </nav>
+  </header>
+  <main class="teamup-main" id="app">
+    <section class="projects-section">
+      <div class="project-tabs">
+        <button v-for="(project, index) in projects" 
+                :key="index" 
+                :class="{ 'project-tab': true, 'active': project.active }"
+                @click="toggleProject(index)">
+          {{ project.name }}
+        </button>
+        <button class="project-tab">+</button>
+      </div>
+      <hr />
+      <div class="sprint-tabs">
+        <button v-for="(sprint, index) in sprints" 
+                :key="index" 
+                :class="{ 'sprint-tab': true, 'active': sprint.active }"
+                @click="toggleSprint(index)">
+          {{ sprint.name }}
+        </button>
+        <button class="sprint-tab">+</button>
+      </div>
+      <hr />
+    </section>
+    <section class="tasks-section">
+      <div v-for="(column, index) in columns" :key="index" class="task-column">
+        <h2 class="task-column-title">
+          {{ column.title }} <span class="task-count">({{ column.tasks.length }})</span>
+        </h2>
+        <div v-for="(task, taskIndex) in column.tasks" :key="taskIndex" class="task-card" :class="['task', task.category]">
+          <h3>{{ task.title }}</h3>
+          <p>{{ task.description }}</p>
+          <button v-if="task.category === 'Development'">Assign</button>
+          <div class="task-info">
+            <span>{{ task.date }}</span>
+            <span>{{ task.comments }} comments</span>
+            <span>{{ task.mentions }} mention</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        projects: [
+          { name: 'Project 1', active: true },
+          { name: 'Project 2', active: false },
+          { name: 'Project 3', active: false }
+        ],
+        sprints: [
+          { name: 'Sprint 1', active: false },
+          { name: 'Sprint 2', active: true },
+          { name: 'Sprint 3', active: false },
+          { name: 'Sprint 4', active: false }
+        ],
+        columns: [
+          {
+            title: 'To Do',
+            tasks: [
+              { title: 'UI Design', category: 'To Do', description: 'Color Selection', date: '10 July', comments: 3, mentions: 1 },
+              { title: 'Development', category: 'Development', description: 'Vue.js', date: '21 July', comments: 3, mentions: 1 },
+              { title: 'Prototype', category: 'To Do', description: 'Figma', date: '23 July', comments: 1, mentions: 1 },
+            ]
+          },
+          {
+            title: 'On Progress',
+            tasks: [
+              { title: 'UX Design', category: 'UX Design', description: 'Wireframe', date: 'Today', mentions: 1, meetings: 2 },
+              { title: 'UX Design', category: 'UX Design', description: 'Wireframe', date: 'Yesterday', mentions: 1, meetings: 1 }
+            ]
+          },
+          {
+            title: 'Review',
+            tasks: [
+              { title: 'Arrangement', category: 'Arrangement', description: 'New Session', date: '10 June', comments: 3, mentions: 1 },
+              { title: 'UX Design', category: 'UX Design', description: 'Personas', date: '8 June', comments: 3, mentions: 1 },
+              { title: 'UX Design', category: 'UX Design', description: 'Personas', date: '8 June', comments: 3, mentions: 1 },
+              { title: 'UX Design', category: 'UX Design', description: 'Personas', date: '8 June', comments: 3, mentions: 1 }
+            ]
+          },
+          {
+            title: 'Done',
+            tasks: [
+              { title: 'Primary Data', category: 'Development', description: 'Interview with 1', date: '2 June', comments: 3, mentions: 1 },
+              { title: 'Primary Data', category: 'Development', description: 'Interview with 2', date: '1 June', comments: 2, mentions: 1 },
+              { title: 'Primary Data', category: 'Development', description: 'Interview with 3', date: '1 June', comments: 1, mentions: 1 }
+            ]
+          }
+        ]
+      },
+      methods: {
+        toggleProject(index) {
+          this.projects.forEach((project, idx) => {
+            project.active = (index === idx);
+          });
+        },
+        toggleSprint(index) {
+          this.sprints.forEach((sprint, idx) => {
+            sprint.active = (index === idx);
+          });
+        }
+      }
+    });
+  </script>
 </body>
-
-
 </html>
