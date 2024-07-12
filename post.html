@@ -4,11 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentPreneur Post</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>StudentPreneur</h1>
+<div id="app">
+    <header>
+        <nav>
+            <div class="logo">StudentPreneur</div>
+            <div class="log_button">
+                <button @click="signIn">Sign In</button>
+                <button @click="signUp">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="column">
+            <div class="postpage-card" id="profile-card">
+                <div>
+                    <a href="/profile.html">
+                        <img src="/img/profile1.jpg" alt="Profile" id="profile-img">
+                    </a>
+                    <h2>Emma Rivera</h2>
+                    <h3>Web Developer</h3>
+                    <p>Web Development | UI/UX Design | E-commerce | Education Technology | Healthcare Technology</p>
+                </div>
+                <div>
+                    <button>Get More with Premium
+                </button>
+                </div>
+            
+            </div>
+
+
+            <div class="postpage-card" id="explore-card">
+                <div>explore-card</div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="postpage-card" id="search">
+                <div>search</div>
+            </div>
+            <div class="postpage-card"  id="write-post">
+                <div>write-post</div>
+            </div>
+            <div class="postpage-card"  id="post-card1">
+                <div>post-card</div>
+            </div>
+            <div class="postpage-card"  id="post-card2">
+                <div>post-card</div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="postpage-card"  id="teammate-card">
+                <div>find your teammates</div>
+            </div>
+            <div class="postpage-card"  id="course-card">
+                <div>Featured Courses</div>
+            </div>
+            <div class="postpage-card"  id="ad-card1">
+                <div>ad</div>
+            </div>
+            <div class="postpage-card"  id="ad-card2">
+                <div>ad</div>
+            </div>
+        </div>
+        
+        
+        
+        
+    </div>
+    <footer>
+        <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+    new Vue({
+        //js
+    });
+</script>
 
 </body>
-
-
 </html>

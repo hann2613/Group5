@@ -330,3 +330,115 @@ Sign in Page
     height: auto;
     border-radius: 20px;
 }
+
+
+/*------------------------------------------------------------------------------------------
+Post Page
+-----------------------------------------------------------------------------------*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap:15px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.column:nth-child(1) {
+    flex-basis: 30%;
+}
+
+.column:nth-child(2) {
+    flex-basis: 50%;
+}
+
+.column:nth-child(3) {
+    flex-basis: 20%;
+}
+
+
+.postpage-card {
+    border-radius: 30px;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+#profile-card {
+    height: 443px;
+    text-align: center;
+}
+
+#profile-card #profile-img{
+    width: 95px;
+    height: 95px;
+    border-radius: 100px;
+    border: 2px solid #26235C;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    margin-top:30px;
+}
+
+#profile-card h2{
+    color: #252525;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#profile-card h3{
+    color: #575757;
+    font-size: 18px;
+    font-weight: 400;
+}
+#profile-card p{
+    color: #252525;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+#profile-card button{
+    width: 260px;
+    height: 43px;
+    border-radius: 30px;
+    background: #575757;
+    color: var(--White, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#explore-card {
+    height: 333px;
+}
+
+#search {
+    height: 44px;
+    background: #D9D9D9;
+}
+
+#write-post {
+    height: 158px;
+}
+#post-card1 {
+    height: 620px;
+}
+#post-card2 {
+    height: 620px;
+}
+
+#teammate-card{
+    height: 350px;
+
+}
+#course-card{
+    height: 350px;
+}
+#ad-card1{
+    height: 350px;
+}
+#ad-card2{
+    height: 350px;
+}
+
