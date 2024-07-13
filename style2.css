@@ -188,7 +188,7 @@ section h2 {
 ---------------------------*/
 .header-content {
   position: relative;
-  background-image: url('img/learning-cover.jpg');
+  background-image: url("img/learning-cover.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -368,3 +368,25 @@ section {
   cursor: pointer;
 }
 
+/*------------------------------Global Connections-------------------*/
+
+svg {
+  margin: 50px;
+  padding: 10px;
+  width: 80%;
+  align-items:center;
+  text-align: center;
+}
+
+svg path {
+  fill: #006e99;
+  stroke: #eee;
+  stroke-width: 0.25;
+}
+
+svg path:hover {
+  fill: #002936;
+  transition:0.6em;
+  cursor:pointer;
+
+}
