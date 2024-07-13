@@ -126,7 +126,6 @@ header .logo {
   color: #666;
 }
 
-/* Task Categories */
 .task-card.To-Do {
   border-left: 4px solid #bfdeff;
 }
@@ -167,16 +166,13 @@ footer p {
 section {
   margin: 20px 100px;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
   margin-bottom: 20px;
   font-size: 1.5em;
   text-align: center;
-  
 }
 
 .investor-profile,
@@ -187,3 +183,188 @@ section h2 {
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
+/*-------------------------learning page-------
+---------------------------*/
+.header-content {
+  position: relative;
+  background-image: url('img/learning-cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+}
+
+.header-content .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header-content h1,
+.header-content p,
+.header-content button {
+  position: relative;
+  z-index: 2;
+}
+
+.header-content h1 {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.header-content p {
+  color: #e9ffb5;
+  font-size: 25px;
+}
+
+.header-content button {
+  background-color: #06241b;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+section {
+  padding: 40px 20px;
+  margin: auto 0;
+}
+
+/* Courses section */
+.courses {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 2em;
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.course-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Mentors section */
+.mentors {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mentors h2 {
+  font-size: 2em;
+}
+
+.mentor-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mentor-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.mentor-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Articles section */
+.articles {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.articles h2 {
+  font-size: 2em;
+}
+
+.article-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.article-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+/* Pricing section */
+.pricing {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2em;
+}
+
+.pricing-tables {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pricing-table {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.pricing-table button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #686868;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

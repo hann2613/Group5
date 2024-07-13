@@ -40,18 +40,12 @@ header .log_button button {
   cursor: pointer;
 }
 
-header .log_button button:hover {
-  background-color: #363636;
-}
-
 .homeCover {
   background-image: url("img/homepage1.jpg");
   background-size: cover;
   background-position: center;
-  color: black;
-  padding: 100px 20px;
-  margin-left: 100px;
-  margin-right: 100px;
+  color: #d9d9d9;
+  padding: 150px;
   text-align: center;
 }
 
@@ -70,13 +64,9 @@ header .log_button button:hover {
   cursor: pointer;
 }
 
-.homeCover button:hover {
-  background-color: #363636;
-}
-
 /* mentors */
 .mentors {
-  margin: 20px 100px;
+  margin: 50px 100px;
 }
 
 .mentors h2 {
@@ -129,6 +119,7 @@ header .log_button button:hover {
   padding: 20px;
   cursor: pointer;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .prev {
@@ -160,7 +151,7 @@ header .log_button button:hover {
 
 /* Live Session */
 .live-session {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -215,7 +206,6 @@ header .log_button button:hover {
 
 /* Global Connections */
 .global-connections {
-  background-color: #f1f1f1;
   padding: 60px 20px;
   text-align: center;
 }
