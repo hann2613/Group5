@@ -1,0 +1,189 @@
+/*----------------Team up management-----
+-----------------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  margin: auto 20px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.teamup {
+  display: flex;
+  align-items: center;
+}
+
+.teamup-btn {
+  background-color: #686868;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.teamup-main {
+  padding: 20px;
+}
+
+.projects-section,
+.tasks-section {
+  margin-bottom: 20px;
+}
+
+.project-tabs,
+.sprint-tabs {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.project-tab,
+.sprint-tab {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.project-tab.active,
+.sprint-tab.active {
+  background-color: #686868;
+  color: #fff;
+  border: none;
+}
+
+.tasks-section {
+  display: flex;
+}
+
+.task-column {
+  background-color: #fff;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.task-column-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.task-count {
+  color: #666;
+}
+
+.task-card {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-card h3 {
+  margin-top: 0;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Task Categories */
+.task-card.To-Do {
+  border-left: 4px solid #bfdeff;
+}
+
+.task-card.Development {
+  border-left: 4px solid #ff9900;
+}
+
+.task-card.UX-Design {
+  border-left: 4px solid #ff4f4f;
+}
+
+.task-card.Arrangement {
+  border-left: 4px solid #a9ffa9;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d1d1d1;
+  margin: 20px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/*----------------------------Resource page--------
+-------*/
+section {
+  margin: 20px 100px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+  
+}
+
+.investor-profile,
+.fundings-profile,
+.supplier-profile {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
