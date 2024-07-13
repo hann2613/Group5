@@ -40,18 +40,12 @@ header .log_button button {
   cursor: pointer;
 }
 
-header .log_button button:hover {
-  background-color: #363636;
-}
-
 .homeCover {
   background-image: url("img/homepage1.jpg");
   background-size: cover;
   background-position: center;
-  color: black;
-  padding: 100px 20px;
-  margin-left: 100px;
-  margin-right: 100px;
+  color: #d9d9d9;
+  padding: 150px;
   text-align: center;
 }
 
@@ -70,13 +64,9 @@ header .log_button button:hover {
   cursor: pointer;
 }
 
-.homeCover button:hover {
-  background-color: #363636;
-}
-
 /* mentors */
 .mentors {
-  margin: 20px 100px;
+  margin: 50px 100px;
 }
 
 .mentors h2 {
@@ -129,6 +119,7 @@ header .log_button button:hover {
   padding: 20px;
   cursor: pointer;
   border-radius: 50%;
+  z-index: 10;
 }
 
 .prev {
@@ -160,7 +151,7 @@ header .log_button button:hover {
 
 /* Live Session */
 .live-session {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -215,7 +206,6 @@ header .log_button button:hover {
 
 /* Global Connections */
 .global-connections {
-  background-color: #f1f1f1;
   padding: 60px 20px;
   text-align: center;
 }
@@ -345,7 +335,7 @@ Post Page
   flex-direction: column;
 }
 .column:nth-child(1) {
-    flex-basis: 30%;
+    flex-basis: 27%;
 }
 
 .column:nth-child(2) {
@@ -353,14 +343,14 @@ Post Page
 }
 
 .column:nth-child(3) {
-    flex-basis: 20%;
+    flex-basis: 23%;
 }
 
 .postpage-card {
   border-radius: 30px;
   background: #f5f5f5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #profile-card {
@@ -388,42 +378,77 @@ Post Page
   font-size: 18px;
   font-weight: 400;
 }
-#profile-card p {
+#profile-card #profile p {
   color: #252525;
   font-size: 16px;
   font-weight: 400;
+  margin: 5%;
 }
 
 #profile-card button {
-  width: 260px;
-  height: 43px;
+  width: 250px;
+  height: 40px;
   border-radius: 30px;
+  border-width: 0;
   background: #575757;
   color: var(--White, #fff);
-  font-size: 20px;
-  font-style: normal;
+  font-size: 18px;
   font-weight: 400;
-  line-height: normal;
 }
 
 #explore-card {
   height: 333px;
 }
-#trending-card{
-    height: 333px;
+
+#explore-card #title{
+  margin-top: 8%;
+  margin-left: 14%;
+  margin-bottom: 8%;
+  display: flex;
+  gap: 5%;
+  font-size: 24px;
+  font-weight: 600;
 }
-#search {
+
+#explore-card #nav{
+  margin-top: 8%;
+}
+#explore-card #nav ul{
+  margin-top: 8%;
+  list-style: none;
+
+}
+
+#explore-card #nav ul li{
+  margin-top: 5%;
+}
+#explore-card #nav a{
+  margin-left: 5%;
+  font-size: 20px;
+  font-weight: 400;
+}
+#trending-card{
+  background:none;
+  border: none;
+  box-shadow:none;
+}
+
+#trending-card img{
+  width: 100%;
+}
+
+#search-card {
   height: 44px;
   background: #d9d9d9;
 }
 
-#search img{
+#search-card img{
     padding: 2% 0 0 8%;
 }
 
 #search a{
 color: rgba(0, 0, 0, 0.60);
-    font-size: 18px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -431,16 +456,62 @@ color: rgba(0, 0, 0, 0.60);
  
 }
 #write-post {
-  height: 158px;
+  height: 130px;
+  background:none;
+  border: none;
+  box-shadow:none;
+}
+#write-post img{
+  width: 100%;
+}
+
+/* 
+#write-post #write{
+  display: flex;
+  gap: 3%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+
 }
 
 #write-profile{
-    width: 40px;
-    height: 40px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
-    border-radius: 30px;
-    margin: 5% 0 0 5%;
+  width: 40px;
+  height: 40px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  border-radius: 30px;
+  margin-top: 5%;
 }
+
+#write-post #edit{
+  text-align: center;
+  margin-top: 7%;
+}
+
+#write-post #post{
+  display: flex;
+  gap: 45%;
+  margin-left: 5%;
+}
+
+#write-post #post img{
+  width: 100%;
+}
+
+#write-post #post button{
+  width: 100px;
+  height: 40px;
+  padding: 6px 10px;
+  gap: 30px;
+  border-radius: 10px;
+  border-width: 0;
+  background: #575757;
+  color: var(--White, #FFF);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+
 
 #emoji{
     width: 150px;
@@ -458,23 +529,99 @@ color: rgba(0, 0, 0, 0.60);
     gap: 30px;
     align-items: right;
 
+} */
+
+#post-card{
+  background:none;
+  border: none;
+  box-shadow:none;
 }
-#post-card1 {
-  height: 620px;
-}
-#post-card2 {
-  height: 620px;
+#post-card img{
+  width: 100%;
 }
 
+
 #teammate-card {
-  height: 350px;
+  height: 160px;
+  font-weight: 800;
+  text-align: center;
 }
+
+#teammate-card #title{
+  font-size: 14px;
+  margin-top: 8%;
+}
+
+#teammate-card #see-more{
+  color: #616161;
+  text-align: center;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; 
+}
+
+#teammate-card #line {
+  width: 220.016px;
+  height: 1px;
+  background: #C5C7C8;
+  margin-top: 2%;
+}
+
+
+.teammate-profile{
+  margin-top: 8%;
+  display: flex;
+  gap: 5%;
+  display: flexbox;
+  flex-direction: row;
+  justify-content: center;
+ 
+}
+.teammate-profile img{
+  width: 30px;
+  height: 30px;
+  
+}
+
+.teammate-profile a{
+  color: #252525;
+  font-size: 8px;
+  font-weight: 400;
+}
+.teammate-profile button{
+  width: 70px;
+  height: 22px;
+  padding-left: 3px;
+  border-radius: 15px;
+  border-width: 0;
+  background: #575757;
+  color: var(--White, #FFF);
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+#live-card{
+  height:380px;
+  background:none;
+  border: none;
+  box-shadow:none;
+}
+
+#live-card img{
+  width: 100%;
+}
+
 #course-card{
-    height: 350px;
+  height:502px;
+  background:none;
+  border: none;
+  box-shadow:none;
 }
-#ad-card1{
-    height: 350px;
+
+#course-card img{
+  width: 100%;
 }
-#ad-card2 {
-  height: 350px;
+#ad-card{
+    height: 350px;
 }
