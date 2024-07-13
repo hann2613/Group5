@@ -335,7 +335,7 @@ Post Page
   flex-direction: column;
 }
 .column:nth-child(1) {
-    flex-basis: 28%;
+    flex-basis: 27%;
 }
 
 .column:nth-child(2) {
@@ -343,7 +343,7 @@ Post Page
 }
 
 .column:nth-child(3) {
-    flex-basis: 22%;
+    flex-basis: 23%;
 }
 
 .postpage-card {
@@ -378,29 +378,28 @@ Post Page
   font-size: 18px;
   font-weight: 400;
 }
-#profile-card p {
+#profile-card #profile p {
   color: #252525;
   font-size: 16px;
   font-weight: 400;
+  margin: 5%;
 }
 
 #profile-card button {
-  width: 260px;
-  height: 43px;
+  width: 250px;
+  height: 40px;
   border-radius: 30px;
   border-width: 0;
   background: #575757;
   color: var(--White, #fff);
-  font-size: 20px;
-  font-style: normal;
+  font-size: 18px;
   font-weight: 400;
-  line-height: normal;
 }
 
 #explore-card {
   height: 333px;
-  
 }
+
 #explore-card #title{
   margin-top: 8%;
   margin-left: 14%;
@@ -414,6 +413,15 @@ Post Page
 #explore-card #nav{
   margin-top: 8%;
 }
+#explore-card #nav ul{
+  margin-top: 8%;
+  list-style: none;
+
+}
+
+#explore-card #nav ul li{
+  margin-top: 5%;
+}
 #explore-card #nav a{
   margin-left: 5%;
   font-size: 20px;
@@ -424,15 +432,17 @@ Post Page
   border: none;
   box-shadow:none;
 }
+
 #trending-card img{
   width: 100%;
 }
-#search {
+
+#search-card {
   height: 44px;
   background: #d9d9d9;
 }
 
-#search img{
+#search-card img{
     padding: 2% 0 0 8%;
 }
 
@@ -446,6 +456,7 @@ color: rgba(0, 0, 0, 0.60);
  
 }
 #write-post {
+  height: 130px;
   background:none;
   border: none;
   box-shadow:none;
@@ -591,14 +602,26 @@ color: rgba(0, 0, 0, 0.60);
   text-align: center;
 }
 #live-card{
-    height: 350px;
+  height:380px;
+  background:none;
+  border: none;
+  box-shadow:none;
 }
+
+#live-card img{
+  width: 100%;
+}
+
 #course-card{
-    height: 350px;
+  height:502px;
+  background:none;
+  border: none;
+  box-shadow:none;
 }
-#ad-card1{
-    height: 350px;
+
+#course-card img{
+  width: 100%;
 }
-#ad-card2 {
-  height: 350px;
+#ad-card{
+    height: 350px;
 }
