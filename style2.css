@@ -59,7 +59,6 @@ footer p {
   margin: 0;
 }
 
-
 .profile-icon {
   width: 30px;
   height: 30px;
@@ -161,8 +160,6 @@ hr {
   margin: 20px 0;
 }
 
-
-
 /*----------------------------Resource page--------
 -------*/
 section {
@@ -201,6 +198,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   margin: auto 0;
+  flex-shrink: 0;
 }
 
 .header-content .overlay {
