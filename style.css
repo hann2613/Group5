@@ -454,6 +454,8 @@ Post Page
 
 #trending-card #nav ul li{
   margin-top: 5%;
+  display: flex;
+  justify-content: left;
 }
 #trending-card #nav a{
   margin-left: 5%;
@@ -470,7 +472,7 @@ Post Page
 }
 
 #search-card img{
-    padding-left:8%;
+    padding-left: 8%;
 }
 
 #search-card a{
