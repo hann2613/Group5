@@ -7,60 +7,90 @@
     <title>StudentPreneur Sign in</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">StudentPreneur</div>
-        <div class="log_button">
-          <button @click="signIn">Sign In</button>
-          <button @click="signUp">Sign Up</button>
-        </div>
-      </nav>
-    </header>
+    <div id="app">
+      <header>
+        <nav>
+          <div class="logo">StudentPreneur</div>
+          <div class="log_button">
+            <button onclick="signIn()">Sign In</button>
+            <button onclick="signUp()">Sign Up</button>
+          </div>
+        </nav>
+      </header>
 
-    <section class="login-section">
-      <div class="login-left">
-        <div>
-          <h2>Join Studentpreneur<br />Turn your ideas into reality</h2>
-          <button @click="loginGoogle">Login with Google</button>
+      <section class="login-section">
+        <div class="login-left">
+          <div>
+            <h2>Join Studentpreneur<br />Turn your ideas into reality</h2>
+            <button onclick="loginGoogle()">Login with Google</button>
+          </div>
+          <br />
+          <div>
+            <form id="loginForm" @submit.prevent="login">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" v-model="email" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  v-model="password"
+                  required
+                />
+              </div>
+              <button type="submit">Login</button>
+            </form>
+          </div>
         </div>
-        <br>
-        <div>
-          <form>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" name="password" required />
-            </div>
-            <button @click="login">Login</button>
-          </form>
+        <div class="login-right">
+          <img src="img/login.jpg" alt="Login Image" />
         </div>
-      </div>
-      <div class="login-right">
-        <img src="img/login.jpg" alt="Login Image" />
-      </div>
-    </section>
-    <footer>
+      </section>
+
+      <footer>
         <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
-    </footer>
-  
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
     <script>
       new Vue({
-        el: "body",
+        el: "#app",
+        data() {
+          return {
+            email: "",
+            password: "",
+            hardcodedAccounts: [
+              { email: "user1@example.com", password: "user1password" },
+              { email: "user2@example.com", password: "user2password" },
+              { email: "user3@example.com", password: "user3password" },
+              { email: "user4@example.com", password: "user4password" },
+            ],
+          };
+        },
         methods: {
-          signIn() {
-            window.location.href = 'login.html';
-          },
-          signUp() {},
-          loginGoogle() {},
           login() {
-            window.location.href = 'post.html';
-          }
-        }
+            const { email, password } = this;
+            const matchedAccount = this.hardcodedAccounts.find(
+              (account) =>
+                account.email === email && account.password === password
+            );
+
+            if (matchedAccount) {
+              alert("Login successful!");
+              window.location.href = "post.html";
+            } else {
+              alert("Login failed. Please check your credentials.");
+            }
+          },
+        },
       });
+
+      function signIn() {
+        window.location.href = "login.html";
+      }
     </script>
   </body>
 </html>
