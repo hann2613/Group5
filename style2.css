@@ -46,6 +46,18 @@ header .logo {
   margin-right: 20px;
   border-radius: 10px;
 }
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
 
 .profile-icon {
   width: 30px;
@@ -148,19 +160,6 @@ hr {
   margin: 20px 0;
 }
 
-/* Footer */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  bottom: 0;
-}
-
-footer p {
-  margin: 0;
-}
-
 /*----------------------------Resource page--------
 -------*/
 section {
@@ -188,7 +187,7 @@ section h2 {
 ---------------------------*/
 .header-content {
   position: relative;
-  background-image: url('img/learning-cover.jpg');
+  background-image: url("img/learning-cover.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -199,6 +198,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   margin: auto 0;
+  flex-shrink: 0;
 }
 
 .header-content .overlay {
@@ -368,3 +368,153 @@ section {
   cursor: pointer;
 }
 
+/*------------------------------Global Connections-------------------*/
+
+.global_cover {
+  background-image: url("img/global.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  text-align: center;
+}
+
+.global_cover h2 {
+  font-size: 2.5em;
+  margin-top: 130px;
+  color: #000000;
+  text-align: center;
+}
+.global_cover p {
+  font-size: 1.5em;
+  color: #000000;
+  text-align: center;
+}
+.global_cover button {
+  padding: 20px 30px;
+  border: none;
+  background-color: #352626;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*--------------filter&search area-------------------*/
+.filter_search {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.filter-block {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.filter-block input,
+.filter-block select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.filter-block label {
+  margin-right: 5px;
+}
+
+.filter-block button {
+  padding: 8px 16px;
+  background-color: #001731;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+svg path {
+  fill: #006e99;
+  stroke: #eee;
+  stroke-width: 0.25;
+}
+
+svg path:hover {
+  fill: #002936;
+  transition: 0.6em;
+  cursor: pointer;
+}
+
+/*global connect part*/
+.global-connect-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  margin: 50px 250px;
+}
+
+.global-connect {
+  width: 45%;
+  padding: 15px 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-connect {
+  padding: 6px 12px;
+  background-color: #172b49;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-connect:hover {
+  background-color: #0d1c32;
+}

@@ -3,26 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style5.css" />
     <title>StudentPreneur Events</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo">StudentPreneur</div>
-        <a href="#">Home</a>
-        <a href="#">Learning</a>
-        <a href="#">Events</a>
-        <a href="#">Global Connections</a>
+        <div class="logo"><a href="post.html">StudentPreneur</a></div>
+        <a href="post.html">Home</a>
+        <a href="learning.html">Learning</a>
+        <a href="event.html">Events</a>
+        <a href="globalConnections.html">Global Connections</a>
         <div class="teamup">
-          <button class="teamup-btn">Team Up</button>
+          <button onclick="window.location.href = 'teamup1.html'" class="teamup-btn">Team Up</button>
           <div class="profile-icon"></div>
         </div>
       </nav>
     </header>
 
+    <main id="app">
+      <section class="events-hero">
+        <h1>Project Showcase: Sustainable Fashion Startup</h1>
+        <p>
+          Join our main event next Friday where Team Green Threads will
+          <br />showcase their innovative approach to sustainable fashion. Don't
+          miss it!
+        </p>
+        <div class="events-timer">
+          <span>2</span><span>10</span><span>41</span>
+        </div>
+      </section>
+
+      <section class="events-sessions">
+        <h2>Upcoming Live Sessions</h2>
+        <div class="events-sessions-container">
+          <div
+            class="events-session-card"
+            v-for="session in sessions"
+            :key="session.id"
+          >
+            <img :src="session.image" :alt="session.title" />
+            <h3>{{ session.title }}</h3>
+            <p>{{ session.date }}</p>
+            <button>{{ session.buttonText }}</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="events-competition">
+        <h2>Showcase Your Innovation, Compete for Glory!</h2>
+        <p>
+          Join our upcoming startup competitions and test your ideas. Compete
+          for exciting prizes, gain valuable feedback, and connect with
+          potential investors and collaborators.
+        </p>
+        <!--vue data!!!!!!!!!!!!!!!!!!!!还需要在js李家图片-->
+        <div class="events-competition-details">
+          <h3>Startup Pitch Competition</h3>
+          <img src="img/event-competition.jpeg" />
+          <p>July 18, 2024, 3:00 PM</p>
+          <button>Register Now</button>
+          <p>Registration Deadline: July 15, 2024</p>
+        </div>
+      </section>
+
+      <section class="events-workshops">
+        <h2>Explore Our Interactive Workshops and Seminars</h2>
+        <div class="events-workshops-search">
+          <input type="text" placeholder="Search by topic or speaker..." />
+          <select>
+            <option value="">Type</option>
+          </select>
+          <select>
+            <option value="">Time</option>
+          </select>
+          <button class="event-search">Search</button>
+        </div>
+        <div class="events-workshops-container">
+          <div
+            class="events-workshop-card"
+            v-for="workshop in workshops"
+            :key="workshop.id"
+          >
+            <img :src="workshop.image" :alt="workshop.title" />
+            <h3>{{ workshop.title }}</h3>
+            <p>{{ workshop.date }}</p>
+            <button>{{ workshop.buttonText }}</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer>
       <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          sessions: [
+            {
+              id: 1,
+              image: "img/event-live1.jpeg",
+              title: "Engage Entrepreneurial Minds",
+              date: "July 20, 5:00 PM",
+              buttonText: "Join Session",
+            },
+            {
+              id: 2,
+              image: "img/event-live2.jpeg",
+              title: "Pitch Perfect: How to Impress Investors",
+              date: "July 21, 7:00 PM",
+              buttonText: "Join Session",
+            },
+            {
+              id: 3,
+              image: "img/event-live3.jpeg",
+              title: "Skills for Startup Success",
+              date: "July 19, 6:00 PM",
+              buttonText: "Join Session",
+            },
+          ],
+          workshops: [
+            {
+              id: 1,
+              image: "img/event-workshop1.jpeg",
+              title: "Building a Resilient Crowd",
+              date: "July 15, 7:00 PM",
+              buttonText: "Join Workshop",
+            },
+            {
+              id: 2,
+              image: "img/event-workshop2.jpeg",
+              title: "Future of Technology in Startups",
+              date: "July 17, 5:00 PM",
+              buttonText: "Join Seminar",
+            },
+            {
+              id: 3,
+              image: "img/event-workshop3.jpeg",
+              title: "Funding Strategy: Tips and Tricks",
+              date: "July 16, 8:00 PM",
+              buttonText: "Join Seminar",
+            },
+          ],
+        },
+        methods: {
+          teamup() {
+            window.location.href = "teamup1.html";
+          },
+        },
+      });
+    </script>
   </body>
 </html>
