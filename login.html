@@ -63,10 +63,18 @@
             email: "",
             password: "",
             hardcodedAccounts: [
-              { email: "user1@example.com", password: "user1password" },
-              { email: "user2@example.com", password: "user2password" },
-              { email: "user3@example.com", password: "user3password" },
-              { email: "user4@example.com", password: "user4password" },
+              { email: "user1@example.com", password: "user1password",role:"user"},
+              { email: "user2@example.com", password: "user2password",role:"user" },
+              { email: "user3@example.com", password: "user3password",role:"user" },
+              { email: "user4@example.com", password: "user4password",role:"user" },
+              { email: "user5@example.com", password: "user5password",role:"user" },
+              { email: "user6@example.com", password: "user6password",role:"user" },
+              { email: "admin1@example.com", password: "admin1password",role:"admin" },
+              { email: "admin2@example.com", password: "admin2password",role:"admin" },
+              { email: "admin3@example.com", password: "admin3password",role:"admin" },
+              { email: "admin4@example.com", password: "admin4password" ,role:"admin"},
+              { email: "admin5@example.com", password: "admin5password",role:"admin" },
+              { email: "admin6@example.com", password: "admin6password",role:"admin" },
             ],
           };
         },
@@ -77,12 +85,16 @@
               (account) =>
                 account.email === email && account.password === password
             );
-
             if (matchedAccount) {
-              alert("Login successful!");
-              window.location.href = "post.html";
+              if (matchedAccount.role === "user") {
+                alert("Login as user successful!");
+                window.location.href = "post.html";
+              } else if (matchedAccount.role === "admin") {
+                alert("Login as admin successful!");
+                window.location.href = "admin.html";
+              }
             } else {
-              alert("Login failed. Please check your credentials.");
+              alert("Login failed. Please check your email or password.");
             }
           },
         },
