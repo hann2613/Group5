@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentPreneur Post</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="app">
-    <header>
-        <nav>
-          <div class="logo"><a href="/post.html">StudentPreneur</a></div>
-          <a href="/post.html">Home</a>
-          <a href="/learning.html">Learning</a>
-          <a href="/event.html">Events</a>
-          <a href="/globalconnection.html">Global Connections</a>
-          <div class="teamup">
-            <button class="teamup-btn" href="/teamup1.html">Team Up</button>
-            <div class="profile-icon"></div>
-          </div>
-        </nav>
-    </header>
+<?php include 'header.php'; ?>
 
     <div class="container">
         <div class="column">
             <div class="postpage-card" id="profile-card">
                 <div id="profile">
                     <a href="/profile.html">
-                        <img src="/img/profile1.jpg" alt="Profile" id="profile-img">
+                        <img src="img/profile1.jpg" alt="Profile" id="profile-img">
                     </a>
                     <h2>Emma Rivera</h2>
                     <h3>Web Developer</h3>
@@ -37,31 +15,31 @@
                     <button>Get More with Premium</button>
                 </div>
                     <br>
-                    <img src="/img/social.png" alt="">
+                    <img src="img/social.png" alt="">
             
             </div>
 
 
             <div class="postpage-card" id="explore-card">
                 <div id="title">
-                    <img src="/img/explore.svg" alt="">
+                    <img src="img/explore.svg" alt="">
                     <a>Explore</a>
                 </div>
                 <hr>
                 <div id="nav">
                     <ul>
-                        <li><img src="/img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
-                        <li><img src="/img/nav2.svg"  alt=""><a href="/learning.html"> Learning</a></li>
-                        <li><img src="/img/nav3.svg"  alt=""><a href="/network.html"> My Network</a></li>
-                        <li><img src="/img/nav4.svg" alt=""><a href="/globalconnection.html"> Global Connections</a></li>
-                        <li><img src="/img/nav2.svg"  alt=""><a href="/resource.html"> Investor</a></li>
+                        <li><img src="img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
+                        <li><img src="img/nav2.svg"  alt=""><a href="/learning.html"> Learning</a></li>
+                        <li><img src="img/nav3.svg"  alt=""><a href="/network.html"> My Network</a></li>
+                        <li><img src="img/nav4.svg" alt=""><a href="/globalConnections.html"> Global Connections</a></li>
+                        <li><img src="img/nav2.svg"  alt=""><a href="/resource.html"> Investor</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="postpage-card" id="trending-card" >
                 <div id="title">
-                    <img src="/img/trending.svg" alt="">
+                    <img src="img/trending.svg" alt="">
                     <a>Trending</a>
                 </div>
                 <hr>
@@ -75,31 +53,30 @@
 
         <div class="column">
             <div class="postpage-card" id="search-card">           
-                    <img src="/img/Search.svg" alt=""> 
+                    <img src="img/Search.svg" alt=""> 
                     <a href="">#Global Connections </a>
 
                     
             </div>
 
             <div class="postpage-card"  id="write-post">
-                <img src="/img/Post (3).png" alt="">
-                <!-- <div id="write">
-                    <img src="/img/profile1.jpg" alt="" id="write-profile">
+                <div id="write">
+                    <img style="object-fit:cover;" src="img/profile1.jpg" alt="" id="write-profile">
                     <div id="edit">
                         <a>Writing someting... </a>
-                        <img src="/img/Edit.svg" alt="">
+                        <img src="img/Edit.svg" alt="">
                     </div>
                 </div>
                 <div id="post">
-                    <img src="/img/emoji.png" alt="">
+                    <img src="img/emoji.png" alt="">
                     <button>Post</button>
-                </div> -->
+                </div>
             </div>
 
             <div class="postpage-card"  id="post-card">
-                <img src="/img/Post1.png" alt="">
-                <img src="/img/Post (1).png" alt="">    
-                <img src="/img/Post (2).png" alt="">          
+                <img src="img/Post1.png" alt="">
+                <img src="img/Post (1).png" alt="">    
+                <img src="img/Post (2).png" alt="">          
             </div>
         </div>
         
@@ -125,22 +102,43 @@
 
 
             <div class="postpage-card"  id="live-card">
-                <img src="/img/upcoming-live.png" alt="">
+                <div class="disc-container">
+                  <h3 style="font-size: 18px;padding-left: 5px;">Upcoming Live Session</h3>
+                  <hr>
+                  <p style="text-align: left;padding-left: 5px;">Effective Marketing Strategies</p>
+                  <img src="img/event-competition.jpeg" alt="">
+                  <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Gain insights into the most effective marketing strategies for your business</p>
+                  <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">July 15, 2024, 5:00 PM</p>
+                </div>
+                <div class="btn-contianer">   
+                  <button>Remind Me</button><br>
+                  <button id="btn-join">Join Now</button>      
+                </div>
             </div>
             <div class="postpage-card"  id="course-card">
-                <img src="/img/featrured-course.png" alt="">
-            </div>
+              <div class="disc-container">
+                <h3 style="font-size: 18px;padding-left: 5px;">Featured Courses</h3>
+                <hr>
+                <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
+                <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract customers.</p>
+                <p style="text-align: left;padding-left: 5px;" >Rating: 4.9/5</p>
+                <img src="img/event-competition.jpeg" alt="">
+                <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
+              </div>
+              <div class="btn-contianer2">   
+                <button>Watch for Free (Members)</button><br>
+                <button id="btn-buy">Buy Now for £19</button>  
+              </div>
+          </div>
+            
             <div class="postpage-card"  id="ad-card"> 
                 <div>ad</div>
             </div>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
-    </footer>
-</div>
+    <?php include 'footer.php'; ?>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
       new Vue({
         el: "#app",
@@ -205,6 +203,4 @@
           ],
       }});
     </script>
-
-</body>
-</html>
+ -->
