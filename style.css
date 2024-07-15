@@ -64,6 +64,14 @@ header .log_button button {
   cursor: pointer;
 }
 
+.icons button {
+  border-radius: 5px;
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+} 
 /* mentors */
 .mentors {
   margin: 50px 100px;
@@ -399,6 +407,7 @@ Post Page
 
 #explore-card {
   height: 333px;
+  padding: 5px;
 }
 
 #explore-card #title{
@@ -431,6 +440,7 @@ Post Page
 
 #trending-card {
   height: 490px;
+  padding: 5px;
 }
 
 #trending-card #title{
@@ -483,23 +493,13 @@ Post Page
     padding-top: 15px;
 
 }
-#write-post {
-  height: 130px;
-  background:none;
-  border: none;
-  box-shadow:none;
-}
-#write-post img{
-  width: 100%;
-}
 
-/* 
+
 #write-post #write{
   display: flex;
   gap: 3%;
   margin-left: 5%;
   margin-bottom: 5%;
-
 }
 
 #write-profile{
@@ -517,19 +517,20 @@ Post Page
 
 #write-post #post{
   display: flex;
-  gap: 45%;
-  margin-left: 5%;
+  justify-content: space-between;
 }
 
 #write-post #post img{
-  width: 100%;
+  width: 160px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #write-post #post button{
   width: 100px;
   height: 40px;
-  padding: 6px 10px;
-  gap: 30px;
+  margin-right: 5%;
+  padding: 10px 10px;
   border-radius: 10px;
   border-width: 0;
   background: #575757;
@@ -538,13 +539,11 @@ Post Page
   font-weight: 400;
 }
 
-
-
-
 #emoji{
     width: 150px;
     margin: 5% 0 0 5%;
 }
+
 #postbtn{
     width: 100px;
     height: 40px;
@@ -557,7 +556,7 @@ Post Page
     gap: 30px;
     align-items: right;
 
-} */
+}
 
 #post-card{
   background:none;
@@ -573,14 +572,15 @@ Post Page
   height: 160px;
   font-weight: 800;
   text-align: center;
+  padding: 5px;
 }
 
 #teammate-card #title{
   margin-top: 8%;
   display: flex;
   justify-content: space-between;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 #teammate-card #find{
@@ -629,27 +629,84 @@ Post Page
   text-align: center;
   margin-right: 8%;
 }
+
+
 #live-card{
-  height:380px;
-  background:none;
-  border: none;
-  box-shadow:none;
+  padding: 5px;
+  height:480px;
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #live-card img{
   width: 100%;
 }
 
-#course-card{
-  height:502px;
-  background:none;
+.btn-contianer{
+  padding-left: 33%
+}
+
+#live-card button{
+  display: flex;
+  border-radius: 15px;
   border: none;
-  box-shadow:none;
+  background: #575757;
+  width: 78px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+  color: var(--White, #FFF);
+  font-size: 10px;
+}
+
+#live-card #btn-join{
+  border-radius: 15px;
+  background: #B9B6B6;
+  font-size: 10px;
+}
+
+
+#course-card{
+  height:550px;
+  padding: 5px;
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #course-card img{
   width: 100%;
 }
+
+.btn-contianer2{
+  padding-left: 18%;
+  padding-top: 10%;
+
+}
+
+#course-card button{
+  display: flex;
+  border-radius: 15px;
+  border: none;
+  background: #575757;
+  width: 156px;
+  height: 28px;
+  padding: 6px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-shrink: 0;
+  color: var(--White, #FFF);
+  font-size: 10px;
+}
+
+#course-card #btn-buy{
+  border-radius: 15px;
+  background: #B9B6B6;
+  font-size: 10px;
+}
+
 #ad-card{
     height: 350px;
     text-align: center;
