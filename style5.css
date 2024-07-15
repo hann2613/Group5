@@ -168,13 +168,6 @@ h2 {
 
 /*----------------------events page---------------------
 ------------------------------------------------------*/  
-  header .profile-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #666;
-    border-radius: 50%;
-  }
-
   .events-hero {
     background: url('img/event-cover.jpeg') no-repeat center center;
     background-size: cover;
@@ -204,11 +197,13 @@ h2 {
     margin: 0 10px;
   }
   
-  .events-sessions, .events-competition, .events-workshops {
+  .events-sessions,  .events-competition, .events-workshops {
     padding: 50px 20px;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
-  
+
   .events-sessions h2, .events-competition h2, .events-workshops h2 {
     font-size: 2em;
     margin-bottom: 20px;
@@ -256,14 +251,13 @@ h2 {
   }
   
   .events-competition-details {
-    background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
     display: inline-block;
-    padding: 30px;
-    text-align: left;
-    max-width: 500px;
-    margin: auto;
+    padding: 20px auto;
+    margin: 50px 200px;
+    text-align: center;
+    max-width: 100%;
   }
   
   .events-competition-details h3 {
@@ -273,8 +267,6 @@ h2 {
   
   .events-competition-details img {
     align-items: center;
-    padding: 20px;
-    width: 100%;
     text-align: center;
 }
 
@@ -301,9 +293,14 @@ h2 {
     cursor: pointer;
     border-radius: 5px;
     margin-bottom: 10px;
+    border-radius: 10px;
   }
   .events-workshops-search input, .events-workshops-search select, .events-workshops-search button {
     padding: 10px;
     margin: 0 30px;
+    border-radius: 10px;
   }
   
+
+/*-----------------message------------------------------------------
+----------------------------*/
