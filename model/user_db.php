@@ -1,9 +1,12 @@
 <?php
-function get_users() {
+function get_users($limit) {
     global $db;
+    $db = Database::getDB();
     $query = 'SELECT * FROM users
-              ORDER BY id';
+              ORDER BY id
+              LIMIT :limit';
     $statement = $db->prepare($query);
+    $statement->bindValue(':limit', $limit, PDO::PARAM_INT);
     $statement->execute();
     $users = $statement->fetchAll();
     $statement->closeCursor();

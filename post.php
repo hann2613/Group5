@@ -1,5 +1,19 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+  require('model/database.php');
+  require('model/user_db.php');
 
+  $action = filter_input(INPUT_POST, 'action');
+  if ($action === NULL) {
+      $action = filter_input(INPUT_GET, 'action');
+      if ($action === NULL) {
+          $action = 'list_users';
+      }
+  }
+
+  if ($action == 'list_users') {
+      $users = get_users(2);
+  }
+?>
     <div class="container">
         <div class="column">
             <div class="postpage-card" id="profile-card">
@@ -87,15 +101,16 @@
                         <a class="see-more">See more</a>
                     </div>
                     <hr>
-         
-                    <div class="teammate-profile" v-for="user in users.slice(0, 2)" :key="user.id">
-                        <img :src="user.image" alt="">
+                    <?php foreach ($users as $user) : ?>
+                    <div class="teammate-profile">
+                        <img src=" " alt="">
                         <div class="profile-info">
-                            <a style="color:black; font-size: 14px;">{{ user.name }}</a><br>
-                            <a>{{ user.description }}</a>
+                            <a style='color:black; font-size: 14px;padding-bottom:4px;'><?php echo "{$user['firstName']} {$user['lastName']}" ?></a><br>
+                            <a> <?php echo "{$user['description']}"?></a> 
                         </div>
                         <button>+ Connect</button>
                     </div>
+                    <?php endforeach; ?>
                                       
             
             </div>
@@ -115,12 +130,13 @@
                   <button id="btn-join">Join Now</button>      
                 </div>
             </div>
+            
             <div class="postpage-card"  id="course-card">
               <div class="disc-container">
                 <h3 style="font-size: 18px;padding-left: 5px;">Featured Courses</h3>
                 <hr>
                 <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
-                <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract customers.</p>
+                <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract users.</p>
                 <p style="text-align: left;padding-left: 5px;" >Rating: 4.9/5</p>
                 <img src="img/event-competition.jpeg" alt="">
                 <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
@@ -129,7 +145,8 @@
                 <button>Watch for Free (Members)</button><br>
                 <button id="btn-buy">Buy Now for £19</button>  
               </div>
-          </div>
+            </div>
+          
             
             <div class="postpage-card"  id="ad-card"> 
                 <div>ad</div>
@@ -138,69 +155,5 @@
     </div>
     <?php include 'footer.php'; ?>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-      new Vue({
-        el: "#app",
-        data: {
-          users: [
-            {
-              id: 1,
-              name: "Jacob Jones",
-              image: "img/mentor1.png",
-              description: "Research Science",
-            },
-            {
-              id: 2,
-              name: "Emily Davis",
-              image: "img/mentor2.jpg",
-              description: "Java Developer",
-            },
-            {
-              id: 3,
-              name: "Michael Brown",
-              image: "img/mentor3.png",
-              description: "Innovation Consultant",
-            },
-          ],
-          trendings: [
-            {
-              id: 1,
-              name: "StartupTips",
-            },
-            {
-              id: 2,
-              name: "Funding",
-            },
-            {
-              id: 3,
-              name: "Networking",
-            },
-            {
-              id: 4,
-              name: "BusinessGrowth",
-            },
-            {
-              id: 5,
-              name: "Entrepreneurship",
-            },
-            {
-              id: 6,
-              name: "Mentorship",
-            },
-            {
-              id: 7,
-              name: "ProductDevelopment",
-            },
-            {
-              id: 8,
-              name: "MarketTrends",
-            },
-            {
-              id: 9,
-              name: "TechInnovation",
-            },
-          ],
-      }});
-    </script>
- -->
+
+    

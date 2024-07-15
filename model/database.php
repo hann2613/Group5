@@ -1,8 +1,8 @@
 <?php
 class Database {
-    private static $dsn = 'mysql:host=localhost;dbname=studentpreneur';
+    private static $dsn = 'mysql:host=localhost;port=3307;dbname=studentpreneur';
     private static $username = 'ts_user';
-    private static $password = 'pa55word';
+    private static $password = ''; 
     private static $db;
 
     private function __construct() {}
@@ -15,7 +15,7 @@ class Database {
                                     self::$password);
             } catch (PDOException $e) {
                 $error_message = $e->getMessage();
-                include('../errors/database_error.php');
+                echo "Database Error: $error_message";
                 exit();
             }
         }
