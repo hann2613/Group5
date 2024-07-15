@@ -10,11 +10,15 @@
 <div id="app">
     <header>
         <nav>
-            <div class="logo">StudentPreneur</div>
-            <div class="log_button">
-                <button @click="signIn">Sign In</button>
-                <button @click="signUp">Sign Up</button>
-            </div>
+          <div class="logo"><a href="/post.html">StudentPreneur</a></div>
+          <a href="/post.html">Home</a>
+          <a href="/learning.html">Learning</a>
+          <a href="/event.html">Events</a>
+          <a href="/globalconnection.html">Global Connections</a>
+          <div class="teamup">
+            <button class="teamup-btn" href="/teamup1.html">Team Up</button>
+            <div class="profile-icon"></div>
+          </div>
         </nav>
     </header>
 
@@ -46,29 +50,35 @@
                 <hr>
                 <div id="nav">
                     <ul>
-                        <li><img src="/img/nav1.svg" alt=""><a href=""> Events</a></li>
-                        <li><img src="/img/nav2.svg"  alt=""><a href=""> Learning</a></li>
-                        <li><img src="/img/nav3.svg"  alt=""><a href=""> My Network</a></li>
-                        <li><img src="/img/nav4.svg" alt=""><a href=""> Global Connections</a></li>
-                        <li><img src="/img/nav2.svg"  alt=""><a href=""> Investor</a></li>
+                        <li><img src="/img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
+                        <li><img src="/img/nav2.svg"  alt=""><a href="/learning.html"> Learning</a></li>
+                        <li><img src="/img/nav3.svg"  alt=""><a href="/network.html"> My Network</a></li>
+                        <li><img src="/img/nav4.svg" alt=""><a href="/globalconnection.html"> Global Connections</a></li>
+                        <li><img src="/img/nav2.svg"  alt=""><a href="/resource.html"> Investor</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="postpage-card" id="trending-card">
-                <img src="/img/trending.png" alt="">
+
+            <div class="postpage-card" id="trending-card" >
+                <div id="title">
+                    <img src="/img/trending.svg" alt="">
+                    <a>Trending</a>
+                </div>
+                <hr>
+                <div id="nav" v-for="trending in trendings.slice(0, 9)" :key="trending.id">
+                    <ul>
+                        <li><a href=""># {{trending.name}}</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="column">
-            <div class="postpage-card" id="search-card">
-                <div>   
-                    <a href="">                 
-                        <img src="/img/Search.svg" alt="Profile" id="search-img"> 
-                    </a>
+            <div class="postpage-card" id="search-card">           
+                    <img src="/img/Search.svg" alt=""> 
                     <a href="">#Global Connections </a>
 
-                </div>
-                
+                    
             </div>
 
             <div class="postpage-card"  id="write-post">
@@ -97,20 +107,23 @@
             <div class="postpage-card" id="teammate-card">
                     <div id="title">
                         <a id="find">Find Your Teammate</a>
-                        <a id="see-more">See more</a>
+                        <a class="see-more">See more</a>
                     </div>
                     <hr>
-                    <div class="teammate-profile">
-                        <img src="/img/profile1.jpg" alt=""> 
-                        <a href="">John Doe <br>Research Science</a>
+         
+                    <div class="teammate-profile" v-for="user in users.slice(0, 2)" :key="user.id">
+                        <img :src="user.image" alt="">
+                        <div class="profile-info">
+                            <a style="color:black; font-size: 14px;">{{ user.name }}</a><br>
+                            <a>{{ user.description }}</a>
+                        </div>
                         <button>+ Connect</button>
                     </div>
-                    <div class="teammate-profile">
-                        <img src="/img/profile1.jpg" alt=""> 
-                        <a>Jade Smith<br>Java Developer</a>
-                        <button>+ Connect</button>
-                    </div>
+                                      
+            
             </div>
+
+
             <div class="postpage-card"  id="live-card">
                 <img src="/img/upcoming-live.png" alt="">
             </div>
@@ -121,10 +134,6 @@
                 <div>ad</div>
             </div>
         </div>
-        
-        
-        
-        
     </div>
     <footer>
         <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
@@ -132,11 +141,70 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script>
-    new Vue({
-        //js
-    });
-</script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          users: [
+            {
+              id: 1,
+              name: "Jacob Jones",
+              image: "img/mentor1.png",
+              description: "Research Science",
+            },
+            {
+              id: 2,
+              name: "Emily Davis",
+              image: "img/mentor2.jpg",
+              description: "Java Developer",
+            },
+            {
+              id: 3,
+              name: "Michael Brown",
+              image: "img/mentor3.png",
+              description: "Innovation Consultant",
+            },
+          ],
+          trendings: [
+            {
+              id: 1,
+              name: "StartupTips",
+            },
+            {
+              id: 2,
+              name: "Funding",
+            },
+            {
+              id: 3,
+              name: "Networking",
+            },
+            {
+              id: 4,
+              name: "BusinessGrowth",
+            },
+            {
+              id: 5,
+              name: "Entrepreneurship",
+            },
+            {
+              id: 6,
+              name: "Mentorship",
+            },
+            {
+              id: 7,
+              name: "ProductDevelopment",
+            },
+            {
+              id: 8,
+              name: "MarketTrends",
+            },
+            {
+              id: 9,
+              name: "TechInnovation",
+            },
+          ],
+      }});
+    </script>
 
 </body>
 </html>
