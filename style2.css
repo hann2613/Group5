@@ -32,9 +32,10 @@ header .logo {
   font-weight: bold;
 }
 
-.teamup {
+.teamup  {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .teamup-btn {
@@ -43,9 +44,13 @@ header .logo {
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  margin-right: 20px;
   border-radius: 10px;
+  gap: 10px;
 }
+.teamup span {
+  font-size: 1.5em;
+}
+
 /* Footer */
 footer {
   background-color: #333;
