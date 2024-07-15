@@ -15,7 +15,12 @@
         <a href="event.html">Events</a>
         <a href="globalConnections.html">Global Connections</a>
         <div class="teamup">
-          <button onclick="window.location.href = 'teamup1.html'" class="teamup-btn">Team Up</button>
+          <button
+            onclick="window.location.href = 'teamup1.html'"
+            class="teamup-btn"
+          >
+            Team Up
+          </button>
           <div class="profile-icon"></div>
         </div>
       </nav>
@@ -37,15 +42,11 @@
       <section class="events-sessions">
         <h2>Upcoming Live Sessions</h2>
         <div class="events-sessions-container">
-          <div
-            class="events-session-card"
-            v-for="session in sessions"
-            :key="session.id"
-          >
-            <img :src="session.image" :alt="session.title" />
-            <h3>{{ session.title }}</h3>
-            <p>{{ session.date }}</p>
-            <button>{{ session.buttonText }}</button>
+          <div class="events-session-card" v-for="live in lives" :key="live.id">
+            <img :src="live.image" :alt="live.title" />
+            <h3>{{ live.title }}</h3>
+            <p>{{ live.date }}</p>
+            <button>{{ live.buttonText }}</button>
           </div>
         </div>
       </section>
@@ -103,7 +104,7 @@
       new Vue({
         el: "#app",
         data: {
-          sessions: [
+          lives: [
             {
               id: 1,
               image: "img/event-live1.jpeg",
