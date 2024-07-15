@@ -5,7 +5,7 @@
             <div class="postpage-card" id="profile-card">
                 <div id="profile">
                     <a href="/profile.html">
-                        <img src="/img/profile1.jpg" alt="Profile" id="profile-img">
+                        <img src="img/profile1.jpg" alt="Profile" id="profile-img">
                     </a>
                     <h2>Emma Rivera</h2>
                     <h3>Web Developer</h3>
@@ -15,31 +15,31 @@
                     <button>Get More with Premium</button>
                 </div>
                     <br>
-                    <img src="/img/social.png" alt="">
+                    <img src="img/social.png" alt="">
             
             </div>
 
 
             <div class="postpage-card" id="explore-card">
                 <div id="title">
-                    <img src="/img/explore.svg" alt="">
+                    <img src="img/explore.svg" alt="">
                     <a>Explore</a>
                 </div>
                 <hr>
                 <div id="nav">
                     <ul>
-                        <li><img src="/img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
-                        <li><img src="/img/nav2.svg"  alt=""><a href="/learning.html"> Learning</a></li>
-                        <li><img src="/img/nav3.svg"  alt=""><a href="/network.html"> My Network</a></li>
-                        <li><img src="/img/nav4.svg" alt=""><a href="/globalConnections.html"> Global Connections</a></li>
-                        <li><img src="/img/nav2.svg"  alt=""><a href="/resource.html"> Investor</a></li>
+                        <li><img src="img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
+                        <li><img src="img/nav2.svg"  alt=""><a href="/learning.html"> Learning</a></li>
+                        <li><img src="img/nav3.svg"  alt=""><a href="/network.html"> My Network</a></li>
+                        <li><img src="img/nav4.svg" alt=""><a href="/globalConnections.html"> Global Connections</a></li>
+                        <li><img src="img/nav2.svg"  alt=""><a href="/resource.html"> Investor</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="postpage-card" id="trending-card" >
                 <div id="title">
-                    <img src="/img/trending.svg" alt="">
+                    <img src="img/trending.svg" alt="">
                     <a>Trending</a>
                 </div>
                 <hr>
@@ -53,7 +53,7 @@
 
         <div class="column">
             <div class="postpage-card" id="search-card">           
-                    <img src="/img/Search.svg" alt=""> 
+                    <img src="img/Search.svg" alt=""> 
                     <a href="">#Global Connections </a>
 
                     
@@ -61,22 +61,22 @@
 
             <div class="postpage-card"  id="write-post">
                 <div id="write">
-                    <img style="object-fit:cover;" src="/img/profile1.jpg" alt="" id="write-profile">
+                    <img style="object-fit:cover;" src="img/profile1.jpg" alt="" id="write-profile">
                     <div id="edit">
                         <a>Writing someting... </a>
-                        <img src="/img/Edit.svg" alt="">
+                        <img src="img/Edit.svg" alt="">
                     </div>
                 </div>
                 <div id="post">
-                    <img src="/img/emoji.png" alt="">
+                    <img src="img/emoji.png" alt="">
                     <button>Post</button>
                 </div>
             </div>
 
             <div class="postpage-card"  id="post-card">
-                <img src="/img/Post1.png" alt="">
-                <img src="/img/Post (1).png" alt="">    
-                <img src="/img/Post (2).png" alt="">          
+                <img src="img/Post1.png" alt="">
+                <img src="img/Post (1).png" alt="">    
+                <img src="img/Post (2).png" alt="">          
             </div>
         </div>
         
@@ -106,7 +106,7 @@
                   <h3 style="font-size: 18px;padding-left: 5px;">Upcoming Live Session</h3>
                   <hr>
                   <p style="text-align: left;padding-left: 5px;">Effective Marketing Strategies</p>
-                  <img src="/img/event-competition.jpeg" alt="">
+                  <img src="img/event-competition.jpeg" alt="">
                   <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Gain insights into the most effective marketing strategies for your business</p>
                   <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">July 15, 2024, 5:00 PM</p>
                 </div>
@@ -122,7 +122,7 @@
                 <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
                 <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract customers.</p>
                 <p style="text-align: left;padding-left: 5px;" >Rating: 4.9/5</p>
-                <img src="/img/event-competition.jpeg" alt="">
+                <img src="img/event-competition.jpeg" alt="">
                 <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
               </div>
               <div class="btn-contianer2">   
