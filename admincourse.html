@@ -3,12 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Course Management</title>
+    <title>Admin Dashboard - StudentPreneur</title>
+    <link rel="stylesheet" href="style7.css">
 </head>
 <body>
-<h1>StudentPreneur</h1>
-
+    <header>
+        <div class="logo">StudentPreneur</div>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li class="active">Course Management</li>
+                <li>Event Management</li>
+                <li>Sign Out</li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <section class="courses">
+                <h2>Courses</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>No. of orders</th>
+                            <th>Review</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Course1</td>
+                            <td>23</td>
+                            <td>4.6</td>
+                            <td><a href="#">View</a> <a href="#">Edit</a> <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Course2</td>
+                            <td>34</td>
+                            <td>3.5</td>
+                            <td><a href="#">View</a> <a href="#">Edit</a> <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Course3</td>
+                            <td>45</td>
+                            <td>3.6</td>
+                            <td><a href="#">View</a> <a href="#">Edit</a> <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Course4</td>
+                            <td>34</td>
+                            <td>4.2</td>
+                            <td><a href="#">View</a> <a href="#">Edit</a> <a href="#">Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>Course5</td>
+                            <td>23</td>
+                            <td>4.1</td>
+                            <td><a href="#">View</a> <a href="#">Edit</a> <a href="#">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="more-btn">More</button>
+            </section>
+        </main>
+    </div>
+    <footer>
+        &copy; 2024 StudentPreneur. All rights reserved.
+    </footer>
 </body>
-
-
 </html>
