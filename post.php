@@ -1,19 +1,30 @@
-<?php include 'header.php'; 
-  require('model/database.php');
-  require('model/user_db.php');
+<!DOCTYPE html>
+<html>
 
-  $action = filter_input(INPUT_POST, 'action');
-  if ($action === NULL) {
-      $action = filter_input(INPUT_GET, 'action');
-      if ($action === NULL) {
-          $action = 'list_users';
-      }
-  }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentPreneur Post</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  if ($action == 'list_users') {
-      $users = get_users(2);
-  }
-?>
+<body>
+    <?php include 'header.php';
+    require('model/database.php');
+    require('model/user_db.php');
+
+    $action = filter_input(INPUT_POST, 'action');
+    if ($action === NULL) {
+        $action = filter_input(INPUT_GET, 'action');
+        if ($action === NULL) {
+            $action = 'list_users';
+        }
+    }
+
+    if ($action == 'list_users') {
+        $users = get_users(2);
+    }
+    ?>
     <div class="container">
         <div class="column">
             <div class="postpage-card" id="profile-card">
@@ -28,9 +39,9 @@
                 <div>
                     <button>Get More with Premium</button>
                 </div>
-                    <br>
-                    <img src="img/social.png" alt="">
-            
+                <br>
+                <img src="img/social.png" alt="">
+
             </div>
 
 
@@ -43,15 +54,15 @@
                 <div id="nav">
                     <ul>
                         <li><img src="img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
-                        <li><img src="img/nav2.svg"  alt=""><a href="/learning.html"> Learning</a></li>
-                        <li><img src="img/nav3.svg"  alt=""><a href="/network.html"> My Network</a></li>
+                        <li><img src="img/nav2.svg" alt=""><a href="/learning.html"> Learning</a></li>
+                        <li><img src="img/nav3.svg" alt=""><a href="/network.html"> My Network</a></li>
                         <li><img src="img/nav4.svg" alt=""><a href="/globalConnections.html"> Global Connections</a></li>
-                        <li><img src="img/nav2.svg"  alt=""><a href="/resource.html"> Investor</a></li>
+                        <li><img src="img/nav2.svg" alt=""><a href="/resource.html"> Investor</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="postpage-card" id="trending-card" >
+            <div class="postpage-card" id="trending-card">
                 <div id="title">
                     <img src="img/trending.svg" alt="">
                     <a>Trending</a>
@@ -66,14 +77,14 @@
         </div>
 
         <div class="column">
-            <div class="postpage-card" id="search-card">           
-                    <img src="img/Search.svg" alt=""> 
-                    <a href="">#Global Connections </a>
+            <div class="postpage-card" id="search-card">
+                <img src="img/Search.svg" alt="">
+                <a href="">#Global Connections </a>
 
-                    
+
             </div>
 
-            <div class="postpage-card"  id="write-post">
+            <div class="postpage-card" id="write-post">
                 <div id="write">
                     <img style="object-fit:cover;" src="img/profile1.jpg" alt="" id="write-profile">
                     <div id="edit">
@@ -87,73 +98,73 @@
                 </div>
             </div>
 
-            <div class="postpage-card"  id="post-card">
+            <div class="postpage-card" id="post-card">
                 <img src="img/Post1.png" alt="">
-                <img src="img/Post (1).png" alt="">    
-                <img src="img/Post (2).png" alt="">          
+                <img src="img/Post (1).png" alt="">
+                <img src="img/Post (2).png" alt="">
             </div>
         </div>
-        
+
         <div class="column">
             <div class="postpage-card" id="teammate-card">
-                    <div id="title">
-                        <a id="find">Find Your Teammate</a>
-                        <a class="see-more">See more</a>
-                    </div>
-                    <hr>
-                    <?php foreach ($users as $user) : ?>
+                <div id="title">
+                    <a id="find">Find Your Teammate</a>
+                    <a class="see-more">See more</a>
+                </div>
+                <hr>
+                <?php foreach ($users as $user) : ?>
                     <div class="teammate-profile">
                         <img src=" " alt="">
                         <div class="profile-info">
                             <a style='color:black; font-size: 14px;padding-bottom:4px;'><?php echo "{$user['firstName']} {$user['lastName']}" ?></a><br>
-                            <a> <?php echo "{$user['description']}"?></a> 
+                            <a> <?php echo "{$user['description']}" ?></a>
                         </div>
                         <button>+ Connect</button>
                     </div>
-                    <?php endforeach; ?>
-                                      
-            
+                <?php endforeach; ?>
+
+
             </div>
 
 
-            <div class="postpage-card"  id="live-card">
+            <div class="postpage-card" id="live-card">
                 <div class="disc-container">
-                  <h3 style="font-size: 18px;padding-left: 5px;">Upcoming Live Session</h3>
-                  <hr>
-                  <p style="text-align: left;padding-left: 5px;">Effective Marketing Strategies</p>
-                  <img src="img/event-competition.jpeg" alt="">
-                  <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Gain insights into the most effective marketing strategies for your business</p>
-                  <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">July 15, 2024, 5:00 PM</p>
+                    <h3 style="font-size: 18px;padding-left: 5px;">Upcoming Live Session</h3>
+                    <hr>
+                    <p style="text-align: left;padding-left: 5px;">Effective Marketing Strategies</p>
+                    <img src="img/event-competition.jpeg" alt="">
+                    <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Gain insights into the most effective marketing strategies for your business</p>
+                    <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">July 15, 2024, 5:00 PM</p>
                 </div>
-                <div class="btn-contianer">   
-                  <button>Remind Me</button><br>
-                  <button id="btn-join">Join Now</button>      
+                <div class="btn-contianer">
+                    <button>Remind Me</button><br>
+                    <button id="btn-join">Join Now</button>
                 </div>
             </div>
-            
-            <div class="postpage-card"  id="course-card">
-              <div class="disc-container">
-                <h3 style="font-size: 18px;padding-left: 5px;">Featured Courses</h3>
-                <hr>
-                <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
-                <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract users.</p>
-                <p style="text-align: left;padding-left: 5px;" >Rating: 4.9/5</p>
-                <img src="img/event-competition.jpeg" alt="">
-                <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
-              </div>
-              <div class="btn-contianer2">   
-                <button>Watch for Free (Members)</button><br>
-                <button id="btn-buy">Buy Now for £19</button>  
-              </div>
+
+            <div class="postpage-card" id="course-card">
+                <div class="disc-container">
+                    <h3 style="font-size: 18px;padding-left: 5px;">Featured Courses</h3>
+                    <hr>
+                    <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
+                    <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract users.</p>
+                    <p style="text-align: left;padding-left: 5px;">Rating: 4.9/5</p>
+                    <img src="img/event-competition.jpeg" alt="">
+                    <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
+                </div>
+                <div class="btn-contianer2">
+                    <button>Watch for Free (Members)</button><br>
+                    <button id="btn-buy">Buy Now for £19</button>
+                </div>
             </div>
-          
-            
-            <div class="postpage-card"  id="ad-card"> 
+
+
+            <div class="postpage-card" id="ad-card">
                 <div>ad</div>
             </div>
         </div>
     </div>
     <?php include 'footer.php'; ?>
+</body>
 
-
-    
+</html>
