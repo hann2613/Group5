@@ -10,8 +10,8 @@
 <body>
 <header>
         <nav>
-          <div class="logo"><a href="/post.html">StudentPreneur</a></div>
-          <a href="/post.html">Home</a>
+          <div class="logo"><a href="/post.php">StudentPreneur</a></div>
+          <a href="/post.php">Home</a>
           <a href="/learning.html">Learning</a>
           <a href="/event.html">Events</a>
           <a href="/globalConnections.html">Global Connections</a>
