@@ -13,28 +13,33 @@
     require('model/database.php');
     require('model/user_db.php');
 
+    session_start();
+    
     $action = filter_input(INPUT_POST, 'action');
     if ($action === NULL) {
         $action = filter_input(INPUT_GET, 'action');
         if ($action === NULL) {
-            $action = 'list_users';
+            if (isset($_SESSION['user_id'])) { 
+               $action = 'list_user';
+            }
         }
     }
 
-    if ($action == 'list_users') {
-        $users = get_users(2);
+    if ($action == 'list_user') {
+        $userId = $_SESSION['user_id'];
+        $user = get_user($userId);
     }
     ?>
     <div class="container">
         <div class="column">
             <div class="postpage-card" id="profile-card">
                 <div id="profile">
-                    <a href="/profile.html">
-                        <img src="img/profile1.jpg" alt="Profile" id="profile-img">
+                    <a href="profile.php">
+                        <img src="<?php echo isset($user['profile_picture'])?>" alt="Profile" id="profile-img">
                     </a>
-                    <h2>Emma Rivera</h2>
-                    <h3>Web Developer</h3>
-                    <p>Web Development | UI/UX Design | E-commerce | Education Technology | Healthcare Technology</p>
+                    <h2><?php echo isset($user['name']) ?></h2>
+                    <h3><?php echo isset($user['title']) ?></h3>
+                    <p><?php echo isset($user['skills']) ?></p>
                 </div>
                 <div>
                     <button>Get More with Premium</button>
@@ -53,11 +58,11 @@
                 <hr>
                 <div id="nav">
                     <ul>
-                        <li><img src="img/nav1.svg" alt=""><a href="/event.html"> Events</a></li>
-                        <li><img src="img/nav2.svg" alt=""><a href="/learning.html"> Learning</a></li>
-                        <li><img src="img/nav3.svg" alt=""><a href="/network.html"> My Network</a></li>
-                        <li><img src="img/nav4.svg" alt=""><a href="/globalConnections.html"> Global Connections</a></li>
-                        <li><img src="img/nav2.svg" alt=""><a href="/resource.html"> Investor</a></li>
+                        <li><img src="img/nav1.svg" alt=""><a href="event.html"> Events</a></li>
+                        <li><img src="img/nav2.svg" alt=""><a href="learning.php"> Learning</a></li>
+                        <li><img src="img/nav3.svg" alt=""><a href="network.html"> My Network</a></li>
+                        <li><img src="img/nav4.svg" alt=""><a href="globalConnections.html"> Global Connections</a></li>
+                        <li><img src="img/nav2.svg" alt=""><a href="resource.html"> Investor</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,10 +73,18 @@
                     <a>Trending</a>
                 </div>
                 <hr>
-                <div id="nav" v-for="trending in trendings.slice(0, 9)" :key="trending.id">
-                    <ul>
-                        <li><a href=""># {{trending.name}}</a></li>
-                    </ul>
+                <div id="nav">
+                <ul>
+                    <li>#StartupTips</li>
+                    <li>#Funding</li>
+                    <li>#Networking</li>
+                    <li>#BusinessGrowth</li>
+                    <li>#Entrepreneurship</li>
+                    <li>#Mentorship</li>
+                    <li>#ProductDevelopment</li>
+                    <li>#MarketTrends</li>
+                    <li>#TechInnovation</li>
+                </ul>
                 </div>
             </div>
         </div>
@@ -112,16 +125,23 @@
                     <a class="see-more">See more</a>
                 </div>
                 <hr>
-                <?php foreach ($users as $user) : ?>
+                
                     <div class="teammate-profile">
-                        <img src=" " alt="">
+                        <img src="img/user1.svg" alt="">
                         <div class="profile-info">
-                            <a style='color:black; font-size: 14px;padding-bottom:4px;'><?php echo "{$user['firstName']} {$user['lastName']}" ?></a><br>
-                            <a> <?php echo "{$user['description']}" ?></a>
+                            <a style='color:black; font-size: 14px;padding-bottom:4px;'>John Doe</a><br>
+                            <a>Research Science</a>
                         </div>
                         <button>+ Connect</button>
                     </div>
-                <?php endforeach; ?>
+                    <div class="teammate-profile">
+                        <img src="img/user2.svg" alt="">
+                        <div class="profile-info">
+                            <a style='color:black; font-size: 14px;padding-bottom:4px;'>Jade Smith</a><br>
+                            <a>Java Developer</a>
+                        </div>
+                        <button>+ Connect</button>
+                    </div>
 
 
             </div>
@@ -132,7 +152,7 @@
                     <h3 style="font-size: 18px;padding-left: 5px;">Upcoming Live Session</h3>
                     <hr>
                     <p style="text-align: left;padding-left: 5px;">Effective Marketing Strategies</p>
-                    <img src="img/event-competition.jpeg" alt="">
+                    <img src="img/upcoming-live.png" alt="">
                     <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Gain insights into the most effective marketing strategies for your business</p>
                     <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">July 15, 2024, 5:00 PM</p>
                 </div>
@@ -149,7 +169,7 @@
                     <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
                     <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract users.</p>
                     <p style="text-align: left;padding-left: 5px;">Rating: 4.9/5</p>
-                    <img src="img/event-competition.jpeg" alt="">
+                    <img src="img/featured-course.png" alt="">
                     <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
                 </div>
                 <div class="btn-contianer2">

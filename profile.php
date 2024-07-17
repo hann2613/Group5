@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style5.css" />
-    <title>StudentPreneur Profile</title>
-  </head>
-  <body>
-    <div id="app">
-        <header>
-            <nav>
-              <div class="logo"><a href="post.html">StudentPreneur</a></div>
-              <a href="post.html">Home</a>
-              <a href="learning.html">Learning</a>
-              <a href="event.html">Events</a>
-              <a href="globalConnections.html">Global Connections</a>
-              <div class="teamup">
-                <button onclick="window.location.href = 'teamup1.html'" class="teamup-btn">Team Up</button>
-                <div class="profile-icon"><a href="profile.html"></a></div>
-              </div>
-            </nav>
-          </header>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentPreneur Post</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+    <?php include 'header.php';
+    require('model/database.php');
+    require('model/user_db.php');
+    session_start();
+    
+    $action = filter_input(INPUT_POST, 'action');
+    if ($action === NULL) {
+        $action = filter_input(INPUT_GET, 'action');
+        if ($action === NULL) {
+            if (isset($_SESSION['user_id'])) { 
+               $action = 'list_user';
+            }
+        }
+    }
+
+    if ($action == 'list_user') {
+        $userId = $_SESSION['user_id'];
+        $user = get_user($userId);
+    }
+    ?>
 
       <div class="profile-main">
         <!--分成card！！！！！！！！！！！！-->
         <div class="profile-sidebar">
-          <img src="img/profile1.jpg" alt="Emma Rivera" class="profile-img" />
-          <h2>Emma Rivera</h2>
-          <p>Web Developer</p>
-          <p class="profile-location">Cork, Ireland</p>
-          <p class="profile-university">University College Cork</p>
-          <p class="profile-email">Emmairl@gmail.com</p>
-          <p class="profile-phone">3375705467</p>
+          <img src="<?php echo isset($user['profile_picture'])?>" alt="profile-img" class="profile-img" />
+          <h2><?php echo isset($user['name']) ?></h2>
+          <p><?php echo isset($user['title']) ?></p>
+          <p class="profile-location"><?php echo isset($user['location']) ?></p>
+          <p class="profile-university"><?php echo isset($user['university']) ?></p>
+          <p class="profile-email"><?php echo isset($user['email']) ?></p>
+          <p class="profile-phone"><?php echo isset($user['phone']) ?></p>
           <div class="profile-social">
             <a href="#">Twitter</a>
             <a href="#">GitHub</a>
@@ -53,10 +61,10 @@
         <div class="profile-content">
           <div class="profile-section">
             <h3>Profile</h3>
+            <a href="network.html"><h3>Network</h3></a>
             <div>
               <p>
-                Hi, I'm Emma Rivera, a web developer and recent graduate
-                passionate about creating dynamic and responsive websites...
+              <?php echo isset($user['description']) ?>
               </p>
             </div>
           </div>
@@ -126,11 +134,8 @@
           </div>
         </div>
       </div>
-      <footer>
-        <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
-      </footer>
+      <?php include 'footer.php'; ?>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="app.js"></script>
+
   </body>
 </html>
