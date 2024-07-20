@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>StudentPreneur Sign in</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <nav>
+          <div class="logo">StudentPreneur</div>
+          <div class="log_button">
+            <button onclick="signIn()">Sign In</button>
+            <button onclick="signUp()">Sign Up</button>
+          </div>
+        </nav>
+      </header>
+
+      <section class="login-section">
+        <div class="login-left">
+          <div>
+            <h2>Join Studentpreneur<br />Turn your ideas into reality</h2>
+            <button onclick="loginGoogle()">Login with Google</button>
+          </div>
+          <br />
+          <div>
+            <form id="loginForm" @submit.prevent="login">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" v-model="email" required />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  v-model="password"
+                  required
+                />
+              </div>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+        <div class="login-right">
+          <img src="img/login.jpg" alt="Login Image" />
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            email: "",
+            password: "",
+            hardcodedAccounts: [
+              { email: "user1@example.com", password: "user1password",role:"user"},
+              { email: "user2@example.com", password: "user2password",role:"user" },
+              { email: "user3@example.com", password: "user3password",role:"user" },
+              { email: "user4@example.com", password: "user4password",role:"user" },
+              { email: "user5@example.com", password: "user5password",role:"user" },
+              { email: "user6@example.com", password: "user6password",role:"user" },
+              { email: "admin1@example.com", password: "admin1password",role:"admin" },
+              { email: "admin2@example.com", password: "admin2password",role:"admin" },
+              { email: "admin3@example.com", password: "admin3password",role:"admin" },
+              { email: "admin4@example.com", password: "admin4password" ,role:"admin"},
+              { email: "admin5@example.com", password: "admin5password",role:"admin" },
+              { email: "admin6@example.com", password: "admin6password",role:"admin" },
+            ],
+          };
+        },
+        methods: {
+          login() {
+            const { email, password } = this;
+            const matchedAccount = this.hardcodedAccounts.find(
+              (account) =>
+                account.email === email && account.password === password
+            );
+            if (matchedAccount) {
+              if (matchedAccount.role === "user") {
+                alert("Login as user successful!");
+                window.location.href = "post.html";
+              } else if (matchedAccount.role === "admin") {
+                alert("Login as admin successful!");
+                window.location.href = "admin.html";
+              }
+            } else {
+              alert("Login failed. Please check your email or password.");
+            }
+          },
+        },
+      });
+
+      function signIn() {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,535 @@
+/*----------------Team up management-----
+-----------------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  margin: auto 20px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.teamup  {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.teamup-btn {
+  background-color: #686868;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  gap: 10px;
+}
+.teamup span {
+  font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.teamup-main {
+  padding: 20px;
+}
+
+.projects-section,
+.tasks-section {
+  margin-bottom: 20px;
+}
+
+.project-tabs,
+.sprint-tabs {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.project-tab,
+.sprint-tab {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.project-tab.active,
+.sprint-tab.active {
+  background-color: #686868;
+  color: #fff;
+  border: none;
+}
+
+.tasks-section {
+  display: flex;
+}
+
+.task-column {
+  background-color: #fff;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.task-column-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.task-count {
+  color: #666;
+}
+
+.task-card {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-card h3 {
+  margin-top: 0;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+}
+
+.task-card.To-Do {
+  border-left: 4px solid #bfdeff;
+}
+
+.task-card.Development {
+  border-left: 4px solid #ff9900;
+}
+
+.task-card.UX-Design {
+  border-left: 4px solid #ff4f4f;
+}
+
+.task-card.Arrangement {
+  border-left: 4px solid #a9ffa9;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d1d1d1;
+  margin: 20px 0;
+}
+
+/*----------------------------Resource page--------
+-------*/
+section {
+  margin: 20px 100px;
+  padding: 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.investor-profile,
+.fundings-profile,
+.supplier-profile {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/*-------------------------learning page-------
+---------------------------*/
+.header-content {
+  position: relative;
+  background-image: url("img/learning-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  flex-shrink: 0;
+}
+
+.header-content .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.header-content h1,
+.header-content p,
+.header-content button {
+  position: relative;
+  z-index: 2;
+}
+
+.header-content h1 {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+.header-content p {
+  color: #e9ffb5;
+  font-size: 25px;
+}
+
+.header-content button {
+  background-color: #06241b;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+section {
+  padding: 40px 20px;
+  margin: auto 0;
+}
+
+/* Courses section */
+.courses {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 2em;
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.course-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Mentors section */
+.mentors {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mentors h2 {
+  font-size: 2em;
+}
+
+.mentor-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.mentor-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.mentor-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Articles section */
+.articles {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.articles h2 {
+  font-size: 2em;
+}
+
+.article-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.article-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+/* Pricing section */
+.pricing {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.pricing h2 {
+  font-size: 2em;
+}
+
+.pricing-tables {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pricing-table {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.pricing-table button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #686868;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*------------------------------Global Connections-------------------*/
+
+.global_cover {
+  background-image: url("img/global.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px;
+  text-align: center;
+}
+
+.global_cover h2 {
+  font-size: 2.5em;
+  margin-top: 130px;
+  color: #000000;
+  text-align: center;
+}
+.global_cover p {
+  font-size: 1.5em;
+  color: #000000;
+  text-align: center;
+}
+.global_cover button {
+  padding: 20px 30px;
+  border: none;
+  background-color: #352626;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  display: none;
+}
+
+/*--------------filter&search area-------------------*/
+.filter_search {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.filter-block {
+  display: flex;
+  align-items: center;
+  padding:0;
+}
+
+.filter-block input,
+.filter-block select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.filter-block label {
+  margin-right: 5px;
+}
+
+.filter-block button {
+  padding: 8px 16px;
+  background-color: #001731;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+svg path {
+  fill: #006e99;
+  stroke: #eee;
+  stroke-width: 0.25;
+}
+
+svg path:hover {
+  fill: #002936;
+  transition: 0.6em;
+  cursor: pointer;
+}
+
+/*global connect part*/
+.global-connect-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  margin: 50px 250px;
+}
+
+.global-connect {
+  width: 45%;
+  padding: 15px 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-connect {
+  padding: 6px 12px;
+  background-color: #172b49;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-connect:hover {
+  background-color: #0d1c32;
+}
