@@ -16,7 +16,7 @@
 
     require('model/database.php');
     require('model/search_user_db.php');
-    
+
     session_set_cookie_params(0);
     session_start();
 
@@ -28,11 +28,9 @@
         ];
         $_SESSION['team'][] = $selected_user;
 
-        header("Location: " . $_SERVER['PHP_SELF']);//避免重复提交
+        header("Location: " . $_SERVER['PHP_SELF']);
         exit();
     }
-
-    // var_dump($_SESSION);
     ?>
 
     <header>
@@ -60,15 +58,18 @@
             <div class="step active">Choose Your Teammate</div>
             <div class="step">Succeed</div>
         </div>
-        <div class="setup-team">
+        <div class="choose-teammate">
             <h1>Choose Your Teammate</h1>
             <div class="search-container">
                 <form method="post" action="">
                     <div class="search-input-wrapper">
                         <input type="text" name="tag" placeholder="Tag..." required>
-                        <button type="submit" name="search_user">🔍</button>
+                        <button type="submit" name="search_user" class="search-button">🔍</button>
                     </div>
                 </form>
+                <div class="image-placeholder">
+                    <img src="img/teamup.jpeg" alt="Team Up">
+                </div>
             </div>
             <div class="user-results">
                 <?php
@@ -81,7 +82,7 @@
                         echo '<img src="' . htmlspecialchars($user['avatar']) . '" alt="' . htmlspecialchars($user['firstName']) . '" class="user-avatar">';
                         echo '<p>' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '</p>';
                         echo '<p>' . htmlspecialchars($user['description']) . '</p>';
-                        echo '<form method="post" action="" target = "hidden_iframe">';
+                        echo '<form method="post" action="" target="hidden_iframe">';
                         echo '<input type="hidden" name="selected_user_id" value="' . $user['id'] . '">';
                         echo '<input type="hidden" name="selected_user_name" value="' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '">';
                         echo '<input type="hidden" name="selected_user_avatar" value="' . htmlspecialchars($user['avatar']) . '">';
@@ -92,8 +93,8 @@
                 }
                 ?>
             </div>
-            <div class="next-button">
-                <button><a href="succeed.php">Next</a></button>
+            <div class="next-button-container">
+                <button type="button" class="next-button" onclick="location.href='succeed.php'">Next</button>
             </div>
         </div>
     </main>

@@ -1,9 +1,10 @@
-/* Teamup 2 */
+/* succeed */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background: #F1F1F3;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -57,7 +58,7 @@ button {
 }
 
 main {
-    background-color: #e0e0e0;
+    background-color: #FFFFFF;
     flex: 1;
     padding: 20px;
     margin: 20px;
@@ -67,7 +68,6 @@ main {
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
-    background-color: #e0e0e0;
 }
 
 .step {
@@ -104,7 +104,7 @@ main {
 }
 
 .setup-team {
-    background-color: #e0e0e0;
+    background-color: #FFFFFF;
     padding: 40px;
     text-align: left;
 }
@@ -146,16 +146,17 @@ footer {
 }
 
 .manage-team button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
+    background-color: #575757; /* 按钮背景颜色 */
+    color: white;             /* 按钮文字颜色 */
+    padding: 10px 20px;       /* 按钮内边距 */
+    border: none;             /* 去掉按钮边框 */
+    border-radius: 37px;       /* 按钮圆角 */
+    cursor: pointer;          /* 鼠标悬停时显示手型指针 */
+    font-size: 16px;    
 }
 
 .manage-team button:hover {
-    background-color: #555;
+    background-color: #45a049; /* 按钮悬停时的背景颜色 */
 }
+
 
