@@ -3,7 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background: #F1F1F3;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -57,7 +58,7 @@ button {
 }
 
 main{
-    background-color: #e0e0e0;
+    background-color: #FFFFFF;
     height: 700px;
     margin: 100px;
 }
@@ -66,7 +67,7 @@ main{
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
-    background-color: #e0e0e0;
+
 }
 
 .step {
@@ -103,7 +104,7 @@ main{
 }
 
 .setup-team {
-    background-color: #e0e0e0;
+    background-color:#FFFFFF;
     padding: 40px;
     text-align: center;
 }
@@ -122,9 +123,14 @@ main{
 }
 
 .image-placeholder {
-    width:50% ;
-    height: 250px;
-    background-color: #ccc;
+    width: 528px;
+    height: 458px;
+    flex-shrink: 0;
+    /* width:50% ;
+    height: 250px; */
+    border-radius: 20px;
+    background:lightgray 50% / cover no-repeat;
+    /* background-color: #ccc; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,13 +155,20 @@ input[type="text"] {
     border-radius: 20px;
 }
 
-button[type="submit"] {
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+/* 定义按钮样式 */
+.next-button {
+    background-color: #575757; /* 按钮背景颜色 */
+    color: white;             /* 按钮文字颜色 */
+    padding: 10px 20px;       /* 按钮内边距 */
+    border: none;             /* 去掉按钮边框 */
+    border-radius: 37px;       /* 按钮圆角 */
+    cursor: pointer;          /* 鼠标悬停时显示手型指针 */
+    font-size: 16px;          /* 按钮文字大小 */
+}
+
+
+.next-button:hover {
+    background-color: #45a049; /* 按钮悬停时的背景颜色 */
 }
 
 footer {
@@ -165,3 +178,5 @@ footer {
     margin-top: auto;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+

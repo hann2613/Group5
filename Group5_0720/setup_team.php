@@ -42,14 +42,14 @@
             <div class="step">Succeed</div>
         </div>
         <div class="setup-team">
-            <h1>Setup Team</h1>
+            <h1>Set Up Your Team Now!</h1>
             <div class="form-container">
                 <form method="post" action="">
                     <input type="text" name="team_name" placeholder="Team Name" required>
-                    <button type="submit">Next</button>
+                    <button type="submit" class="next-button">Next</button>
                 </form>
                 <div class="image-placeholder">
-                    <img src="path_to_your_image.jpg" alt="Placeholder Image">
+                    <img src="img/teamup.jpeg" alt="Team Up">
                 </div>
             </div>
         </div>

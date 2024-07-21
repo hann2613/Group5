@@ -1,9 +1,9 @@
-/* Teamup 2 */
+/* choose teammate */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: #F1F1F3;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -57,7 +57,7 @@ button {
 }
 
 main {
-    background-color: #e0e0e0;
+    background: #F1F1F3;
     flex: 1;
     padding: 20px;
     margin: 20px;
@@ -67,7 +67,6 @@ main {
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
-    background-color: #e0e0e0;
 }
 
 .step {
@@ -103,44 +102,82 @@ main {
     color: #fff;
 }
 
-.setup-team {
-    background-color: #e0e0e0;
+.choose-teammate {
+    background-color: #FFFFFF;
     padding: 40px;
-    text-align: left;
+    text-align: center;
 }
 
-.setup-team h1 {
+.choose-teammate h1 {
     text-align: left;
     margin-left: 1%;
     margin-bottom: 0%;
 }
 
-.form-container {
+.search-container {
     display: flex;
-    gap: 30px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: 50%;
 }
 
 .image-placeholder {
-    width: 50%;
-    height: 250px;
-    background-color: #ccc;
+    width: 528px;
+    height: 458px;
+    flex-shrink: 0;
+    /* width:50% ;
+    height: 250px; */
+    border-radius: 20px;
+    background:lightgray 50% / cover no-repeat;
+    /* background-color: #ccc; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-placeholder img {
+.image-placeholder img{
     max-width: 100%;
     max-height: 100%;
 }
 
-.user-avatar {
-    width: 100px; /* 设定头像的宽度 */
-    height: 100px; /* 设定头像的高度 */
-    border-radius: 50%; /* 使头像变成圆形 */
-    object-fit: cover; /* 确保图片覆盖整个容器 */
+form {
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.user-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .user-card {
@@ -151,51 +188,56 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative;
-}
-
-.user-card form {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    margin-top: 0%;
+    width: 200px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    width: 50%;
+    align-items: center;
 }
 
-.search-input-wrapper {
-    position: relative;
-    width: 100%;
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    padding-right: 40px; /* Space for the button */
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-button[type="submit"] {
+.select-button {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-button[type="submit"].selected {
-    background-color: #4caf50; /* 点击后变成绿色 */
-    color: #fff;
+.select-button.selected {
+    background-color: #4caf50;
 }
+
+.next-button-container {
+    text-align: center;
+}
+
+.next-button {
+    background-color: #575757;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 37px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.next-button:hover,
+.next-button:active,
+.next-button:focus {
+    background-color: #45a049;
+    color: white;
+    text-decoration: none;
+}
+
 
 footer {
     background-color: #fff;
