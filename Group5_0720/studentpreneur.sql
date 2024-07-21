@@ -2,15 +2,15 @@ create database studentpreneur;
 
 use studentpreneur;
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `firstName` varchar(255) NOT NULL,
-  `lastName` varchar(255) NOT NULL,
-  `description` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` enum('user','admin') NOT NULL,
-  `avatar` varchar(255) DEFAULT NULL
+CREATE TABLE users (
+  id int(11) NOT NULL,
+  firstName varchar(255) NOT NULL,
+  lastName varchar(255) NOT NULL,
+  description varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  role enum('user','admin') NOT NULL,
+  avatar varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `description`, `email`, `password`, `role`, `avatar`) VALUES
@@ -62,11 +62,6 @@ CREATE TABLE courses (
     description varchar(255) not null,
     rate decimal(2,0) not null
 );
-
-INSERT INTO courses VALUES 
-(2001, 'Entrepreneurial Ventures', ,),
-(2002, 'Ecommerce Fundamentals', ,),
-(3003, 'Solution Creation', ,);
 
 -- Create a user named ts_user
 CREATE USER IF NOT EXISTS ts_user@localhost;
