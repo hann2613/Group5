@@ -1,7 +1,3 @@
-<?php 
-require('model/database.php');
-require('model/user_db.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
