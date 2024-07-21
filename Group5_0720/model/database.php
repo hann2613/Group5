@@ -1,6 +1,6 @@
 <?php
 class Database {
-    private static $dsn = 'mysql:host=localhost;port=3307;dbname=studentpreneur';
+    private static $dsn = 'mysql:host=localhost;dbname=studentpreneur';
     private static $username = 'ts_user';
     private static $password = ''; 
     private static $db;
