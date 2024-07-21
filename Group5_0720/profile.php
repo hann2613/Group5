@@ -25,9 +25,8 @@ require('model/user_db.php');
     $user = get_user($userId);
     ?>
 
-      <div class="profile-main">
-        <!--分成card！！！！！！！！！！！！-->
-        <div class="profile-sidebar">
+  <div class="profile-main">
+    <div class="profile-sidebar">
           <img src="<?php echo htmlspecialchars($user['avatar']); ?>" alt="profile-img" class="profile-img" />
           <h2><?php echo htmlspecialchars($user['firstName']); ?></h2>
           <p><?php echo htmlspecialchars($user['description']); ?></p>
@@ -35,7 +34,7 @@ require('model/user_db.php');
           <p class="profile-university"><?php echo htmlspecialchars($user['university']); ?></p>
           <p class="profile-email"><?php echo htmlspecialchars($user['email']); ?></p>
           <p class="profile-phone"><?php echo htmlspecialchars($user['phone']); ?></p>
-          <div class="profile-social">
+      <div class="profile-social">
         <a href="#">Twitter</a>
         <a href="#">GitHub</a>
         <a href="#">LinkedIn</a>
