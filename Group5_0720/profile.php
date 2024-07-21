@@ -11,18 +11,31 @@ require('model/user_db.php');
   <title>StudentPreneur Profile</title>
 </head>
 <body>
-<?php include 'header.php' ?>
+<?php include 'header.php';
+    require('model/database.php');
+    require('model/user_db.php');
+    session_start();
+    
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: post.php");
+        exit();
+    }
 
-  <div class="profile-main">
-    <div class="profile-sidebar">
-      <img src="img/profile1.jpg" alt="Emma Rivera" class="profile-img" />
-      <h2>Emma Rivera</h2>
-      <p>Web Developer</p>
-      <p class="profile-location">Cork, Ireland</p>
-      <p class="profile-university">University College Cork</p>
-      <p class="profile-email">Emmairl@gmail.com</p>
-      <p class="profile-phone">3375705467</p>
-      <div class="profile-social">
+    $userId = $_SESSION['user_id'];
+    $user = get_user($userId);
+    ?>
+
+      <div class="profile-main">
+        <!--分成card！！！！！！！！！！！！-->
+        <div class="profile-sidebar">
+          <img src="<?php echo htmlspecialchars($user['avatar']); ?>" alt="profile-img" class="profile-img" />
+          <h2><?php echo htmlspecialchars($user['firstName']); ?></h2>
+          <p><?php echo htmlspecialchars($user['description']); ?></p>
+          <p class="profile-location"><?php echo htmlspecialchars($user['location']); ?></p>
+          <p class="profile-university"><?php echo htmlspecialchars($user['university']); ?></p>
+          <p class="profile-email"><?php echo htmlspecialchars($user['email']); ?></p>
+          <p class="profile-phone"><?php echo htmlspecialchars($user['phone']); ?></p>
+          <div class="profile-social">
         <a href="#">Twitter</a>
         <a href="#">GitHub</a>
         <a href="#">LinkedIn</a>
