@@ -49,11 +49,11 @@
                 <hr>
                 <div id="nav">
                     <ul>
-                        <li><img src="img/nav1.svg" alt=""><a href="event.html"> Events</a></li>
+                        <li><img src="img/nav1.svg" alt=""><a href="event.php"> Events</a></li>
                         <li><img src="img/nav2.svg" alt=""><a href="learning.php"> Learning</a></li>
-                        <li><img src="img/nav3.svg" alt=""><a href="network.php"> My Network</a></li>
+                        <li><img src="img/nav3.svg" alt=""><a href="profile.php"> My Network</a></li>
                         <li><img src="img/nav4.svg" alt=""><a href="globalConnections.php"> Global Connections</a></li>
-                        <li><img src="img/nav2.svg" alt=""><a href="resource.html"> Investor</a></li>
+                        <li><img src="img/nav2.svg" alt=""><a href="resource.php"> Investor</a></li>
                     </ul>
                 </div>
             </div>

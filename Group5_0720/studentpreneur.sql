@@ -38,17 +38,71 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `description`, `email`, `pas
 (1022, 'Jack', 'Perez', 'Robotics Engineer', 'jack@example.com', 'sesame', 'user', NULL),
 (1023, 'Aiden', 'White', 'Game Developer', 'aiden@example.com', 'sesame', 'user', NULL);
 
-create table lives (
-    id int auto_increment primary key,
-    title varchar(255) not null,
-    date date not null
+
+CREATE TABLE investors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    field VARCHAR(255) NOT NULL,
+    avatar VARCHAR(255) 
 );
 
-CREATE TABLE workshops (
-    id int auto_increment primary key,
-    title varchar(255) not null,
-    date date not null
+INSERT INTO investors (name, field, avatar) VALUES
+('Alice Johnson', 'Technology', 'avatar1.jpg'),
+('Bob Smith', 'Healthcare', 'avatar2.jpg'),
+('Charlie Brown', 'Finance', 'avatar3.jpg');
+
+CREATE TABLE fundings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    amount DECIMAL(10, 2) NOT NULL,
+    field VARCHAR(255) NOT NULL,
+    deadline DATE NOT NULL
 );
+
+INSERT INTO fundings (amount, field, deadline) VALUES
+(50000.00, 'Technology', '2024-12-31'),
+(75000.00, 'Healthcare', '2024-11-30'),
+(100000.00, 'Education', '2025-01-15');
+
+CREATE TABLE suppliers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    field VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL
+);
+
+INSERT INTO suppliers (name, field, country) VALUES
+('Supplier One', 'Electronics', 'USA'),
+('Supplier Two', 'Medical Supplies', 'Germany'),
+('Supplier Three', 'Office Supplies', 'China');
+
+
+CREATE TABLE lives (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    date DATETIME NOT NULL,
+    buttonText VARCHAR(255) NOT NULL
+);
+
+INSERT INTO lives (title, image, date, buttonText) VALUES
+('Sustainable Fashion Trends', 'img/live1.jpeg', '2024-07-28 10:00:00', 'Join Now'),
+('Green Innovations in Textiles', 'img/live2.jpeg', '2024-08-05 14:00:00', 'Register Today'),
+('Eco-Friendly Fabric Technologies', 'img/live3.jpeg', '2024-08-12 16:00:00', 'Learn More');
+
+
+CREATE TABLE workshops (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    image VARCHAR(255) NOT NULL,
+    date DATETIME NOT NULL,
+    buttonText VARCHAR(255) NOT NULL
+);
+
+INSERT INTO workshops (title, image, date, buttonText) VALUES
+('Fashion Design for Sustainability', 'img/workshop1.jpeg', '2024-07-25 09:00:00', 'Sign Up'),
+('Circular Economy in Fashion', 'img/workshop2.jpeg', '2024-08-02 11:00:00', 'Enroll Now'),
+('Green Manufacturing Techniques', 'img/workshop3.jpeg', '2024-08-10 13:00:00', 'Reserve Spot');
+
 
 CREATE TABLE mentors (
     id int auto_increment primary key,

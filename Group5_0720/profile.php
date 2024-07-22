@@ -133,6 +133,7 @@
   </div>
 
   <?php include 'footer.php' ?>
+  
   <script>function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
 

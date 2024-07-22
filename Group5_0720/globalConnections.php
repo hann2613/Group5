@@ -8,19 +8,7 @@
   </head>
   <body>
     <div id="app">
-      <header>
-        <nav>
-          <div class="logo"><a href="post.html">StudentPreneur</a></div>
-          <a href="post.html">Home</a>
-          <a href="learning.html">Learning</a>
-          <a href="event.html">Events</a>
-          <a href="globalConnections.html">Global Connections</a>
-          <div class="teamup">
-            <button onclick="window.location.href = 'teamup1.html'" class="teamup-btn">Team Up</button>
-            <div class="profile-icon"><a href="profile.html"></a></div>
-          </div>
-        </nav>
-      </header>
+    <?php include 'header.php';?>
 
       <div class="global_cover">
         <h2>Connect with Aspiring Entrepreneurs <br />from Around the World</h2>
@@ -2195,9 +2183,7 @@ THE SOFTWARE.
       </div>
 
       <div class="invite"></div>
-      <footer>
-        <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
-      </footer>
+      <?php include 'footer.php'; ?>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
