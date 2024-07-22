@@ -461,10 +461,3 @@ h2 {
   cursor: pointer;
   border: 1px solid #ddd;
 }
-
-.message-mine {
-  font-size: 12px;
-  color: #682626;
-  margin-bottom: 5px;
-  float: right;
-}
