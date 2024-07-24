@@ -1,0 +1,288 @@
+/*styles for homepage, message, profile, global connections*/
+/*general style*/
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: auto;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  header {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    z-index: 1000;
+    background-color: #f3f3f3;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .strong {
+    font-size: 1.3em;
+  }
+  
+  .teamup-btn {
+    background-color: #686868;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 10px;
+  }
+  
+  header .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  header .icons a {
+    font-size: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+
+/*------home page styles-------*/
+.homeCover {
+    background-image: url("img/homepage1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 200px 100px;
+    text-align: center;
+  }
+  
+  .homeCover h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .homeCover button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #686868;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .icons button {
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  } 
+  /* mentors */
+  .mentors {
+    margin: 50px 100px;
+  }
+  
+  .mentors h2 {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 2em;
+    margin: 20px;
+  }
+  
+  .slide-container {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  
+  .mentor-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(50% * 2);
+  }
+  
+  .mentor-card {
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mentor-card img {
+    max-width: 150px;
+    max-height: 150px;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .booksession {
+    padding: 10px 15px;
+    border: none;
+    background-color: #686868;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Navigation Arrows */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  .dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: #585858;
+  }
+  
+  /* Live Session */
+  .live-session {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e5e5e5;
+}
+
+.live-session h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.live-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.session-card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(110, 110, 110, 0.1);
+    text-align: left;
+    width: calc((100% - 40px) / 3);
+    box-sizing: border-box;
+}
+
+.session-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.session-card h3 {
+    font-size: 1.2em;
+    margin: 15px 0 10px;
+}
+
+.session-card p {
+    margin-bottom: 15px;
+}
+
+.session-card button {
+    padding: 5px 15px;
+    border: none;
+    background-color: #686868;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 20px;
+    align-items: center;
+}
+
+.session-card button:hover {
+    background-color: #363636;
+}
+
+  
+  /* homepage-GlobalConnections */
+  .global-connections {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .global-connections h2 {
+    font-size: 2em;
+  }
+  
+  .map {
+    position: relative;
+    text-align: center;
+  }
+  
+  .map img {
+    text-align: center;
+    max-width: 80%;
+  }
+  
