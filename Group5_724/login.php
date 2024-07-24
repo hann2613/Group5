@@ -50,19 +50,12 @@
       <header>
         <nav>
           <div class="logo">StudentPreneur</div>
-          <div class="log_button">
-            <button >Sign Up</button>
-          </div>
+          
         </nav>
       </header>
 
       <section class="login-section">
         <div class="login-left">
-          <div>
-            <h2>Join Studentpreneur<br />Turn your ideas into reality</h2>
-            <button>Login with Google</button>
-          </div>
-          <br />
           <div>
             <?php if (isset($login_error)) : ?>
               <p class="error"><?php echo $login_error; ?></p>

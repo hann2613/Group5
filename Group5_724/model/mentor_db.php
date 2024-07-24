@@ -2,7 +2,7 @@
 function get_mentors() {
     global $db;
     $query = 'SELECT * FROM mentors
-              ORDER BY mentorID';
+              ORDER BY id';
     $statement = $db->prepare($query);
     $statement->execute();
     $mentors = $statement->fetchAll();
@@ -15,7 +15,7 @@ function get_mentors() {
 function get_mentor($mentor_id) {
     global $db;
     $query = 'SELECT * FROM mentors
-              WHERE mentorID = :mentor_id';
+              WHERE id = :mentor_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':mentor_id', $mentor_id);
     $statement->execute();

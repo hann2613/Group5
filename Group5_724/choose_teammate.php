@@ -10,11 +10,13 @@
 
 <body>
     <?php
+    include 'header.php'; 
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
     require('model/database.php');
+    require('model/user_db.php');
     require('model/search_user_db.php');
 
     session_set_cookie_params(0);
@@ -31,24 +33,21 @@
         header("Location: " . $_SERVER['PHP_SELF']);
         exit();
     }
+
+    // Filter out the current user
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.php");
+        exit();
+    }
+
+    $current_user_id = $_SESSION['user_id'];
+
+    $users = get_users(7);
+
+    $filtered_users = array_filter($users, function($user) use ($current_user_id) {
+        return $user['id'] !== $current_user_id;
+    });
     ?>
-
-    <header>
-        <nav>
-            <div class="logo"><a href="post.php">StudentPreneur</a></div>
-            <a href="post.php">Home</a>
-            <a href="learning.php">Learning</a>
-            <a href="event.php">Events</a>
-            <a href="globalConnections.php">Global Connections</a>
-            <div class="icons">
-                <a href="teamprofile.php">🧑‍🧒 </a>
-                <a href="message.php"> 💬 </a>
-                <a href="profile.php"> 👤 </a>
-                <a href="setup_team.php"><button>Team Up</button></a>
-            </div>
-        </nav>
-    </header>
-
 
     <main>
         <div class="progress-bar">
@@ -95,7 +94,21 @@
             <div class="next-button-container">
                 <button type="button" class="next-button" onclick="location.href='succeed.php'">Next</button>
             </div>
+
+            <div class="network-container">
+                <?php foreach ($filtered_users as $user) : ?>
+                    <div class="networks-session-card">
+                        <img style="width:200px" src="<?php echo htmlspecialchars($user['avatar']); ?>" alt='image' />
+                        <h3><?php echo htmlspecialchars($user['firstName']); echo' '; echo htmlspecialchars($user['lastName']); ?></h3>
+                        <p><?php echo htmlspecialchars($user['description']); ?></p>
+                        <button>Select</button>
+                    </div>
+                    <?php endforeach; ?>
+            </div>
+            
         </div>
+
+        
     </main>
 
     <script>

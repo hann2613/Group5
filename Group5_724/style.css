@@ -472,11 +472,6 @@ Post Page
   display: flex;
   justify-content: left;
 }
-#trending-card #nav a{
-  margin-left: 5%;
-  font-size: 18px;
-  font-weight: 400;
-}
 
 #search-card {
   height: 44px;

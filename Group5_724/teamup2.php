@@ -7,23 +7,7 @@
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">StudentPreneur</div>
-            <ul>
-                <li href="#">Home</li>
-                <li href="#">Learning</li>
-                <li href="#">Events</li>
-                <li href="#">Global Connections</li>
-            </ul>
-            <div class="icons">
-                <span href="#">🧑‍🧒</span>
-                <span href="#">💬</span>
-                <span href="#">👤</span>
-                <button href="#">Team Up</button>
-            </div>
-        </nav>
-    </header>
+<?php include 'header.php'; ?>
     <main>
         <div class="progress-bar">
             <div class="step completed">Welcome</div>
