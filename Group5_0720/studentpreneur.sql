@@ -111,11 +111,16 @@ CREATE TABLE mentors (
 );
 
 CREATE TABLE courses (
-    id int auto_increment primary key,
-    title varchar(255) not null,
-    description varchar(255) not null,
-    rate decimal(2,0) not null
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    rate DECIMAL(5, 2) NOT NULL
 );
+
+INSERT INTO courses (title, description, rate) VALUES
+('Introduction to Python', 'Learn the basics of Python programming.', 4.5),
+('Advanced JavaScript', 'Deep dive into advanced concepts of JavaScript.', 4.7),
+('Data Structures and Algorithms', 'Understand the fundamental data structures and algorithms.', 4.8);
 
 -- Create a user named ts_user
 CREATE USER IF NOT EXISTS ts_user@localhost;
