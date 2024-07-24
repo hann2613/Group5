@@ -24,7 +24,7 @@
             <?php foreach ($investors as $investor): ?>
                 <div class="investor-profile" key="<?php echo $investor['id']; ?>">
                     <div class="card">
-                        <div class="avatar"></div>
+                        <img id="avatar" src="<?php echo htmlspecialchars($investor['avatar']); ?>" alt="img" />
                         <p><?php echo htmlspecialchars($investor['name']); ?></p>
                         <p>Expert in <?php echo htmlspecialchars($investor['field']); ?></p>
                     </div>

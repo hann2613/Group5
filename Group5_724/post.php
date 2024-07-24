@@ -49,7 +49,7 @@ $user = get_user($userId);
                     </a>
                     <h2><?php echo htmlspecialchars($user['firstName']); ?></h2>
                     <h3><?php echo htmlspecialchars($user['description']); ?></h3>
-                    <p>Skills</p>
+                    <p><?php echo htmlspecialchars($user['skills']); ?></p>
                 </div>
                 <div>
                     <button>Get More with Premium</button>
@@ -82,7 +82,7 @@ $user = get_user($userId);
                 </div>
                 <hr>
                 <div id="nav">
-                    <ul>
+                    <ul style="font-size:20px;">
                         <li>#StartupTips</li>
                         <li>#Funding</li>
                         <li>#Networking</li>
@@ -121,8 +121,8 @@ $user = get_user($userId);
 
             <div class="postpage-card" id="post-card">
                 <img src="img/Post1.png" alt="">
-                <img src="img/Post (1).png" alt="">
-                <img src="img/Post (2).png" alt="">
+                <img src="img/Post2.png" alt="">
+                <img src="img/Post3.png" alt="">
             </div>
         </div>
 
@@ -135,7 +135,7 @@ $user = get_user($userId);
                 <hr>
 
                 <div class="teammate-profile">
-                    <img src="img/user1.svg" alt="">
+                    <img src="img/avatar/James.jpeg" alt="">
                     <div class="profile-info">
                         <a style='color:black; font-size: 14px;padding-bottom:4px;'>John Doe</a><br>
                         <a>Research Science</a>
@@ -143,7 +143,7 @@ $user = get_user($userId);
                     <button>+ Connect</button>
                 </div>
                 <div class="teammate-profile">
-                    <img src="img/user2.svg" alt="">
+                    <img src="img/avatar/Jade.jpeg" alt="">
                     <div class="profile-info">
                         <a style='color:black; font-size: 14px;padding-bottom:4px;'>Jade Smith</a><br>
                         <a>Java Developer</a>
@@ -160,7 +160,7 @@ $user = get_user($userId);
                     <h3 style="font-size: 18px;padding-left: 5px;">Upcoming Live Session</h3>
                     <hr>
                     <p style="text-align: left;padding-left: 5px;">Effective Marketing Strategies</p>
-                    <img src="img/upcoming-live.png" alt="">
+                    <img src="img/event-competition.jpeg" alt="">
                     <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Gain insights into the most effective marketing strategies for your business</p>
                     <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">July 15, 2024, 5:00 PM</p>
                 </div>
@@ -177,7 +177,7 @@ $user = get_user($userId);
                     <p style="text-align: left;padding-left: 5px;">Marketing for Startups</p>
                     <p style="font-size: 14px;padding-left: 10px;padding-right: 10px;">Learn effective marketing strategies to promote your startup and attract users.</p>
                     <p style="text-align: left;padding-left: 5px;">Rating: 4.9/5</p>
-                    <img src="img/featured-course.png" alt="">
+                    <img src="img/learning-course3.jpg" alt="">
                     <p style="text-align: left;padding-left: 5px;">Duration: 5 Weeks</p>
                 </div>
                 <div class="btn-contianer2">

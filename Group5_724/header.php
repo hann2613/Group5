@@ -7,9 +7,12 @@
           <a href="globalConnections.php">Global Connections</a>
           <div class="icons">
             <a href="teamprofile.php">🧑‍🧒 </a>
-            <a href="message.php"> 💬 </a>
+            <a href="message.html"> 💬 </a>
             <a href="profile.php"> 👤 </a>
             <a href="setup_team.php"><button>Team Up</button></a>
+            <form action="logout.php" method="post" style="display:inline;">
+                <button type="submit" id="logout-btn">Logout</button>
+            </form>
           </div>          
         </nav>
 </header>

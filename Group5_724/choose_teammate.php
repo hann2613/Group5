@@ -95,6 +95,10 @@
             <div class="next-button-container">
                 <button type="button" class="next-button" onclick="location.href='succeed.php'">Next</button>
             </div>
+
+            <div class="network-container">
+                network
+            </div>
         </div>
     </main>
 

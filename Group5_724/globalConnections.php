@@ -8,7 +8,12 @@
   </head>
   <body>
     <div id="app">
-    <?php include 'header.php';?>
+    <?php include 'header.php';
+    require('model/database.php');
+    require('model/user_db.php');
+
+    $users = get_users(6);
+    ?>
 
       <div class="global_cover">
         <h2>Connect with Aspiring Entrepreneurs <br />from Around the World</h2>
@@ -2166,20 +2171,22 @@ THE SOFTWARE.
         </div>
 
       <div class="global-connect-container">
-        <div class="global-connect" v-for="(card, index) in cards" :key="index">
+      <?php foreach ($users as $user): ?>
+        <div class="global-connect"key="<?php echo $user['id']; ?>">
           <div class="connect-card">
-            <div class="card-title">{{ card.name }}</div>
+            <div class="card-title"><?php echo htmlspecialchars($user['firstName']); echo " "; echo htmlspecialchars($user['lastName']); ?></div>
             <button class="btn-connect" @click="connect(card)">Connect</button>
           </div>
           <div class="card">
-            <img :src="card.avatar" alt="Avatar" />
+            <img src="<?php echo htmlspecialchars($user['avatar']); ?>" alt="Avatar" />
             <div class="card-content">
-              <p><strong>Region:</strong> {{ card.region }}</p>
-              <p><strong>Field:</strong> {{ card.field }}</p>
-              <p><strong>Skill:</strong> {{ card.skill }}</p>
+              <p><strong>Region:</strong> <?php echo htmlspecialchars($user['country']); ?></p>
+              <p><strong>Field:</strong> <?php echo htmlspecialchars($user['field']); ?> </p>
+              <p><strong>Skills:</strong> <?php echo htmlspecialchars($user['skills']); ?></p>
             </div>
           </div>
         </div>
+        <?php endforeach; ?>
       </div>
 
       <div class="invite"></div>
