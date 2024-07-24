@@ -7,21 +7,7 @@
     <link rel="stylesheet" href="style5.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo"><a href="post.php">StudentPreneur</a></div>
-        <a href="post.php">Home</a>
-        <a href="learning.php">Learning</a>
-        <a href="event.php">Events</a>
-        <a href="globalConnections.php">Global Connections</a>
-        <div class="icons">
-          <a href="teamprofile.php">🧑‍🧒 </a>
-          <a href="message.php"> 💬 </a>
-          <a href="profile.php"> 👤 </a>
-          <a href="setup_team.php"><button>Team Up</button></a>
-        </div>
-      </nav>
-    </header>
+  <?php include 'header.php';?>
 
     <main id="app" class="container">
       <section class="sidebar">
@@ -147,9 +133,7 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
-    </footer>
+    <?php include 'footer.php';?>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {

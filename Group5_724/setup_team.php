@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+    include 'header.php';
     session_start();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['team_name'])) {
@@ -17,23 +18,6 @@
     }
     ?>
 
-    <header>
-        <nav>
-            <div class="logo">StudentPreneur</div>
-            <ul>
-                <li href="#">Home</li>
-                <li href="#">Learning</li>
-                <li href="#">Events</li>
-                <li href="#">Global Connections</li>
-            </ul>
-            <div class="icons">
-                <span href="#">🧑‍🧒</span>
-                <span href="#">💬</span>
-                <span href="#">👤</span>
-                <button href="#">Team Up</button>
-            </div>
-        </nav>
-    </header>
     <main>
         <div class="progress-bar">
             <div class="step completed">Welcome</div>
