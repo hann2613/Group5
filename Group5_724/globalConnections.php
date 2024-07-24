@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style_02.css" />
     <title>StudentPreneur Global Connections</title>
   </head>
   <body>
@@ -14,34 +14,33 @@
 
     $users = get_users(6);
     ?>
-<header>
-        <nav>
-          <div class="logo"><a href="post.php">StudentPreneur</a></div>
-          <a href="post.php">Home</a>
-          <a href="learning.php">Learning</a>
-          <a href="event.php">Events</a>
-          <strong class="strong"><a href="globalConnections.php">Global Connections</a></strong>
-          <div class="icons">
-            <a href="teamprofile.php"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
-                <path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
-              </svg></a>
-            <a href="message.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
-                <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
-              </svg></a>
-            <a href="profile.php"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
-                <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
-              </svg> </a>
-            <a href="setup_team.php"><button class="teamup-btn">Team Up</button></a>
-            <?php if (isset($_SESSION['user_id'])) : ?>
-                <form action="logout.php" method="post" style="display:inline;">
-                    <button type="submit" id="logout-btn">Logout</button>
-                </form>
-            <?php endif; ?>
-          </div>
-          
-        </nav>
-      </header>
-      <div class="global_cover">
+    <header>
+      <nav>
+        <div class="logo"><a href="post.php">StudentPreneur</a></div>
+        <a href="post.php">Home</a>
+        <a href="learning.php">Learning</a>
+        <a href="event.php">Events</a>
+        <strong class="strong"><a href="globalConnections.php">Global Connections</a></strong>
+        <div class="icons">
+          <a href="teamprofile.php"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M0-240v-63q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H0Zm240 0v-65q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v65H240Zm540 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+            </svg></a>
+          <a href="message.php"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z" />
+            </svg></a>
+          <a href="profile.php"> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+              <path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
+            </svg> </a>
+          <a href="setup_team.php"><button class="teamup-btn">Team Up</button></a>
+          <?php if (isset($_SESSION['user_id'])) : ?>
+            <form action="logout.php" method="post" style="display:inline;">
+              <button type="submit" id="logout-btn">Logout</button>
+            </form>
+          <?php endif; ?>
+        </div>
+      </nav>
+    </header>
+    <div class="global_cover">
         <h2>Connect with Aspiring Entrepreneurs <br />from Around the World</h2>
         <p>
           Our platform brings together students from diverse backgrounds and
@@ -50,19 +49,19 @@
           Explore the map below to connect with fellow entrepreneurs,<br />share
           ideas, and grow your network.
         </p>
-        <button @click="connect">Connect Now</button>
-      </div>
-      <div filter_search>
+        <button onclick="connect()">Connect Now</button>
+    </div>
+    <div class="filter_search">
         <div class="filter-block">
           <input
             type="text"
-            v-model="searchText"
+            id="searchText"
             placeholder="Search by name, region, or field..."
           />
         </div>
         <div class="filter-block">
-          <label for="regionFilter">Region：</label>
-          <select id="regionFilter" v-model="selectedRegion">
+          <label for="regionFilter">Region:</label>
+          <select id="regionFilter">
             <option value="all">All</option>
             <option value="europe">Europe</option>
             <option value="asian">Asian</option>
@@ -71,8 +70,8 @@
           </select>
         </div>
         <div class="filter-block">
-          <label for="fieldFilter">Field：</label>
-          <select id="fieldFilter" v-model="selectedField">
+          <label for="fieldFilter">Field:</label>
+          <select id="fieldFilter">
             <option value="all">All</option>
             <option value="it">IT</option>
             <option value="finance">Finance</option>
@@ -82,19 +81,19 @@
           </select>
         </div>
         <div class="filter-block">
-          <label for="fieldFilter">Skill：</label>
-          <select id="fieldFilter" v-model="selectedField">
+          <label for="skillFilter">Skill:</label>
+          <select id="skillFilter">
             <option value="all">All</option>
             <option value="design">UX/UI Design</option>
             <option value="communication">Communication</option>
-            <option value="Data">Data Analytics</option>
-            <option value="Java">Java</option>
+            <option value="data">Data Analytics</option>
+            <option value="java">Java</option>
           </select>
         </div>
         <div class="filter-block">
-          <button @click="search">Search</button>
+          <button onclick="search()">Search</button>
         </div>
-      </div>
+    </div>
 
       <div class="map">
         <?xml version="1.0"?>
@@ -2218,61 +2217,14 @@ THE SOFTWARE.
       <div class="invite"></div>
       <?php include 'footer.php'; ?>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-      new Vue({
-        el: "#app",
-        data: {
-          cards: [
-            {
-              name: "Card 1",
-              region: "Europe",
-              field: "IT",
-              skill: "JavaScript",
-              avatar: "img/globalconnect1.jpg",
-            },
-            {
-              name: "Card 2",
-              region: "Asia",
-              field: "Finance",
-              skill: "Data Analysis",
-              avatar: "img/globalconnect2.jpg",
-            },
-            {
-              name: "Card 3",
-              region: "America",
-              field: "Marketing",
-              skill: "SEO",
-              avatar: "img/globalconnect3.jpg",
-            },
-            {
-              name: "Card 4",
-              region: "MainlandChina",
-              field: "Engineering",
-              skill: "Python",
-              avatar: "img/globalconnect4.jpg",
-            },
-          ],
-          showModal: false,
-          selectedCard: null,
-        },
-        methods: {
-          connect(card) {
-            this.selectedCard = card;
-            this.showModal = true;
-          },
-          showProfile(region) {
-          const card = this.cards.find(c => c.region.toLowerCase() === region.toLowerCase());
-          if (card) {
-            this.selectedCard = card;
-            this.showModal = true;
-          }
-        },
-        closeModal() {
-          this.showModal = false;
+        function connect() {
+            alert("Connect Now button clicked");
         }
-        },
-      });
+
+        function search() {
+            alert("Search button clicked");
+        }
     </script>
   </body>
 </html>
