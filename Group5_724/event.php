@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style5.css" />
+  <link rel="stylesheet" href="style_01.css" />
   <title>StudentPreneur Events</title>
 </head>
 
@@ -20,7 +20,7 @@
             <a href="teamprofile.php">🧑‍🧒 </a>
             <a href="message.php"> 💬 </a>
             <a href="profile.php"> 👤 </a>
-            <a href="setup_team.php"><button>Team Up</button></a>
+            <a href="setup_team.php"><button class="teamup-btn">Team Up</button></a>
           </div>          
         </nav>
 </header>
