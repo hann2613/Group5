@@ -49,7 +49,7 @@
     <div id="app">
       <header>
         <nav>
-          <div class="logo">StudentPreneur</div>
+          <a href="homepage.php"><div class="logo">StudentPreneur</div></a>
           
         </nav>
       </header>

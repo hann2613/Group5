@@ -9,7 +9,15 @@
 <body>
     <?php
     include 'header.php';
+    require('model/database.php');
+    require('model/user_db.php');
+    
     session_start();
+
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.php");
+        exit();
+    }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['team_name'])) {
         $_SESSION['team_name'] = $_POST['team_name'];
