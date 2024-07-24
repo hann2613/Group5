@@ -119,7 +119,7 @@ body {
     text-align: center;
     margin: 10px auto;
     font-size: 2em;
-    margin: 20px;
+    margin-top: 20px;
   }
   
   .slide-container {
@@ -127,6 +127,7 @@ body {
     max-width: 80%;
     margin: 20px auto;
     overflow: hidden;
+    top: 20px;
   }
   
   .mentor-slide {
@@ -139,7 +140,7 @@ body {
     min-width: 50%;
     box-sizing: border-box;
     padding: 20px;
-    margin: 0 10px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
