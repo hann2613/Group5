@@ -110,7 +110,32 @@
 
   <?php include 'footer.php'; ?>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('main section');
+      
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
 
+      const callback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('section-animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, options);
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 </body>
 
 </html>
