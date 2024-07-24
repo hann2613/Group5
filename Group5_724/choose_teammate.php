@@ -16,6 +16,7 @@
     error_reporting(E_ALL);
 
     require('model/database.php');
+    require('model/user_db.php');
     require('model/search_user_db.php');
 
     session_set_cookie_params(0);
@@ -32,6 +33,20 @@
         header("Location: " . $_SERVER['PHP_SELF']);
         exit();
     }
+
+    // Filter out the current user
+    if (!isset($_SESSION['user_id'])) {
+        header("Location: login.php");
+        exit();
+    }
+
+    $current_user_id = $_SESSION['user_id'];
+
+    $users = get_users(7);
+
+    $filtered_users = array_filter($users, function($user) use ($current_user_id) {
+        return $user['id'] !== $current_user_id;
+    });
     ?>
 
     <main>
@@ -81,9 +96,19 @@
             </div>
 
             <div class="network-container">
-                network
+                <?php foreach ($filtered_users as $user) : ?>
+                    <div class="networks-session-card">
+                        <img style="width:200px" src="<?php echo htmlspecialchars($user['avatar']); ?>" alt='image' />
+                        <h3><?php echo htmlspecialchars($user['firstName']); echo' '; echo htmlspecialchars($user['lastName']); ?></h3>
+                        <p><?php echo htmlspecialchars($user['description']); ?></p>
+                        <button>Select</button>
+                    </div>
+                    <?php endforeach; ?>
             </div>
+            
         </div>
+
+        
     </main>
 
     <script>
