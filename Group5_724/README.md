@@ -8,3 +8,5 @@
 6.profile
 7.resource
 8.team profile
+9.teammagament
+10.post
