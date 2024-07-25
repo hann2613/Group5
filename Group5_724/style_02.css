@@ -92,8 +92,9 @@ footer p {
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  padding: 200px 100px;
+  padding: 280px 20px; 
   text-align: center;
+  margin-top: 65px;
 }
 
 .homeCover h1 {
@@ -119,46 +120,46 @@ footer p {
   border: none;
   cursor: pointer;
 }
+
 /*homepage - mentors */
 .mentors {
-  margin: 50px 100px;
+  margin: 50px auto;
+  max-width: 1200px;
 }
 
 .mentors h2 {
   text-align: center;
-  margin: 10px auto;
   font-size: 2em;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .slide-container {
   position: relative;
-  max-width: 80%;
+  max-width: 100%;
   margin: 20px auto;
   overflow: hidden;
-  top: 20px;
 }
 
 .mentor-slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: calc(50% * 2);
+  width: 100%;
 }
 
 .mentor-card {
-  min-width: 50%;
+  flex: 0 0 50%;
   box-sizing: border-box;
   padding: 20px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .mentor-card img {
   max-width: 150px;
   max-height: 150px;
-  width: 80%;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 50%;
@@ -182,18 +183,18 @@ footer p {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
 }
 
 .prev {
-  left: 0;
+  left: 10px;
 }
 
 .next {
-  right: 0;
+  right: 10px;
 }
 
 .dots {
@@ -215,7 +216,7 @@ footer p {
   background-color: #585858;
 }
 
-/*homepage--Live Session */
+/* homepage--Live Session */
 .live-session {
   padding: 40px 20px;
   text-align: center;
@@ -229,19 +230,21 @@ footer p {
 
 .live-list {
   display: flex;
+  flex-wrap: wrap; 
+  gap: 30px;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
 }
 
 .session-card {
-  background-color: white;
-  padding: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(110, 110, 110, 0.1);
   text-align: left;
-  width: calc((100% - 40px) / 3);
-  box-sizing: border-box;
+  background-color: white;
+  max-width: 300px;
+  margin: 0;
 }
 
 .session-card img {
@@ -260,19 +263,21 @@ footer p {
 }
 
 .session-card button {
-  padding: 5px 15px;
+  padding: 5px 10px;
   border: none;
   background-color: #686868;
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  gap: 20px;
-  align-items: center;
+  margin-right: 10px;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .session-card button:hover {
   background-color: #363636;
 }
+
 
 /* homepage-GlobalConnections */
 .global-connections {
@@ -290,9 +295,9 @@ footer p {
 }
 
 .map img {
-  text-align: center;
-  max-width: 80%;
+  max-width: 100%;
 }
+
 
 /*-----------------message------------------------------------------
 ----------------------------*/
