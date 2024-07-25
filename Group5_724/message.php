@@ -9,6 +9,19 @@
 </head>
 
 <body>
+
+<?php
+        require('model/database.php');
+        require('model/user_db.php');
+
+        session_start();
+
+        if (!isset($_SESSION['user_id'])) {
+            header("Location: login.php");
+            exit();
+        }
+
+        ?>
   <header>
     <nav>
       <div class="logo"><a href="post.php">StudentPreneur</a></div>

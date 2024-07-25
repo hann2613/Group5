@@ -12,6 +12,9 @@
   <?php
   require('model/database.php');
   require('model/course_db.php');
+
+  session_start();
+  
   $courses = get_courses();
   ?>
   <header>

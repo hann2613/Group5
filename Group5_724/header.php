@@ -1,3 +1,12 @@
+<?php
+  require('model/database.php');
+  require('model/user_db.php');
+
+  session_start();
+
+?>
+  
+
 <header>
     <nav>
       <div class="logo"><a href="post.php">StudentPreneur</a></div>

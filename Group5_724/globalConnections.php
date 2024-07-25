@@ -12,6 +12,8 @@
     require('model/database.php');
     require('model/user_db.php');
 
+    session_start();
+    
     $users = get_users(6);
     ?>
     <header>

@@ -8,6 +8,13 @@
   </head>
 
   <body>
+    <?php session_start();
+    
+    if (!isset($_SESSION['user_id'])) {
+      header("Location: login.php");
+      exit();
+  }
+    ?>
     <header>
       <nav>
         <div class="logo"><a href="post.php">StudentPreneur</a></div>

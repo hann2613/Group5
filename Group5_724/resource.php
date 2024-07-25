@@ -14,6 +14,8 @@
   require('model/funding_db.php');
   require('model/supplier_db.php');
 
+  session_start();
+  
   $investors = get_investors(3);
   $fundings = get_fundings(3);
   $suppliers = get_suppliers(3);
