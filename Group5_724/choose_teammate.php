@@ -4,126 +4,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Up2-StudentPreneur</title>
+    <title>Choose Your Teammate</title>
     <link rel="stylesheet" href="style4.css">
 </head>
 
 <body>
-    <?php
-    include 'header.php'; 
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+<?php
+include 'header.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-    require('model/database.php');
-    require('model/user_db.php');
-    require('model/search_user_db.php');
+require('model/database.php');
+require('model/user_db.php');
+require('model/search_user_db.php');
 
-    session_set_cookie_params(0);
-    session_start();
+session_set_cookie_params(0);
+session_start();
+$show_network_container = true;
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['select_user'])) {
-        $selected_user = [
-            'id' => $_POST['selected_user_id'],
-            'name' => $_POST['selected_user_name'],
-            'avatar' => $_POST['selected_user_avatar']
-        ];
-        $_SESSION['team'][] = $selected_user;
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['select_user'])) {
+    $selected_user = [
+        'id' => $_POST['selected_user_id'],
+        'name' => $_POST['selected_user_name'],
+        'avatar' => $_POST['selected_user_avatar']
+    ];
+    $_SESSION['team'][] = $selected_user;
 
-        header("Location: " . $_SERVER['PHP_SELF']);
-        exit();
-    }
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
 
-    // Filter out the current user
-    
+// Filter out the current user
+$current_user_id = $_SESSION['user_id'];
 
-    $current_user_id = $_SESSION['user_id'];
+$users = get_users(7);
 
-    $users = get_users(7);
+$filtered_users = array_filter($users, function($user) use ($current_user_id) {
+    return $user['id'] !== $current_user_id;
+});
+?>
 
-    $filtered_users = array_filter($users, function($user) use ($current_user_id) {
-        return $user['id'] !== $current_user_id;
-    });
-    ?>
+<main>
+    <div class="progress-bar">
+        <div class="step completed">Welcome</div>
+        <div class="step completed">Set Up Your Team</div>
+        <div class="step active">Choose Your Teammate</div>
+        <div class="step">Succeed</div>
+    </div>
 
-    <main>
-        <div class="progress-bar">
-            <div class="step completed">Welcome</div>
-            <div class="step completed">Set Up Your Team</div>
-            <div class="step active">Choose Your Teammate</div>
-            <div class="step">Succeed</div>
-        </div>
-        <div class="choose-teammate">
-            <h1>Choose Your Teammate</h1>
-            <div class="search-container">
-                <form method="post" action="">
-                    <div class="search-input-wrapper">
-                        <input type="text" name="tag" placeholder="Tag..." required>
-                        <button type="submit" name="search_user" class="search-button">🔍</button>
-                    </div>
-                </form>
-                <div class="image-placeholder">
-                    <img src="img/teamup.jpeg" alt="Team Up">
+    <div class="choose-teammate">
+        <h1>Choose Your Teammate</h1>
+        <div class="search-container">
+            <form method="post" action="">
+                <div class="search-input-wrapper">
+                    <input type="text" name="tag" placeholder="Tag..." required>
+                    <button type="submit" name="search_user" class="search-button">🔍</button>
                 </div>
+            </form>
+            <div class="image-placeholder">
+                <img src="img/teamup.jpeg" alt="Team Up">
             </div>
-            <div class="user-results">
-                <?php
-                if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search_user'])) {
-                    $tag = $_POST['tag'];
-                    $users = search_users_by_tag($tag);
+        </div>
+        <div class="user-results">
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search_user'])) {
+                $tag = $_POST['tag'];
+                $users = search_users_by_tag($tag);
+                $show_network_container = false;
+            }
 
-                    foreach ($users as $user) {
-                        echo '<div class="user-card">';
-                        echo '<img src="' . htmlspecialchars($user['avatar']) . '" alt="' . htmlspecialchars($user['firstName']) . '" class="user-avatar">';
-                        echo '<p>' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '</p>';
-                        echo '<p>' . htmlspecialchars($user['description']) . '</p>';
-                        echo '<form method="post" action="" target="hidden_iframe">';
-                        echo '<input type="hidden" name="selected_user_id" value="' . $user['id'] . '">';
-                        echo '<input type="hidden" name="selected_user_name" value="' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '">';
-                        echo '<input type="hidden" name="selected_user_avatar" value="' . htmlspecialchars($user['avatar']) . '">';
-                        echo '<button type="submit" name="select_user" class="select-button">Select</button>';
-                        echo '</form>';
-                        echo '</div>';
-                    }
+            if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search_user'])) {
+                foreach ($users as $user) {
+                    echo '<div class="user-card">';
+                    echo '<img src="' . htmlspecialchars($user['avatar']) . '" alt="' . htmlspecialchars($user['firstName']) . '" class="user-avatar">';
+                    echo '<p>' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '</p>';
+                    echo '<p>' . htmlspecialchars($user['description']) . '</p>';
+                    echo '<form method="post" action="" target="hidden_iframe">';
+                    echo '<input type="hidden" name="selected_user_id" value="' . $user['id'] . '">';
+                    echo '<input type="hidden" name="selected_user_name" value="' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '">';
+                    echo '<input type="hidden" name="selected_user_avatar" value="' . htmlspecialchars($user['avatar']) . '">';
+                    echo '<button type="submit" name="select_user" class="select-button">Select</button>';
+                    echo '</form>';
+                    echo '</div>';
+                }
+            }
+            ?>
+        </div>
+        <div class="next-button-container">
+            <button type="button" class="next-button" onclick="location.href='succeed.php'">Next</button>
+        </div>
+
+        <?php if ($show_network_container) { ?>
+            <div class="network-container">
+                <?php
+                foreach ($filtered_users as $user) {
+                    echo '<div class="networks-session-card">';
+                    echo '<img src="' . htmlspecialchars($user['avatar']) . '" alt="' . htmlspecialchars($user['firstName']) . '" class="filtered_user-avatar">';
+                    echo '<p>' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '</p>';
+                    echo '<p>' . htmlspecialchars($user['description']) . '</p>';
+                    echo '<form method="post" action="" target="hidden_iframe">';
+                    echo '<input type="hidden" name="selected_user_id" value="' . $user['id'] . '">';
+                    echo '<input type="hidden" name="selected_user_name" value="' . htmlspecialchars($user['firstName'] . ' ' . $user['lastName']) . '">';
+                    echo '<input type="hidden" name="selected_user_avatar" value="' . htmlspecialchars($user['avatar']) . '">';
+                    echo '<button type="submit" name="select_user" class="select-button">Select</button>';
+                    echo '</form>';
+                    echo '</div>';
                 }
                 ?>
             </div>
-            <div class="next-button-container">
-                <button type="button" class="next-button" onclick="location.href='succeed.php'">Next</button>
-            </div>
+        <?php } ?>
+    </div>
+</main>
 
-            <div class="network-container">
-                <?php foreach ($filtered_users as $user) : ?>
-                    <div class="networks-session-card">
-                        <img style="width:200px" src="<?php echo htmlspecialchars($user['avatar']); ?>" alt='image' />
-                        <h3><?php echo htmlspecialchars($user['firstName']); echo' '; echo htmlspecialchars($user['lastName']); ?></h3>
-                        <p><?php echo htmlspecialchars($user['description']); ?></p>
-                        <button>Select</button>
-                    </div>
-                    <?php endforeach; ?>
-            </div>
-            
-        </div>
-
-        
-    </main>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const buttons = document.querySelectorAll('.select-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    // e.preventDefault(); 
-                    button.classList.add('selected');
-                });
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const buttons = document.querySelectorAll('.select-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // e.preventDefault();
+                button.classList.add('selected');
             });
         });
-    </script>
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    });
+</script>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
-    <footer>
-        &copy; 2024 StudentPreneur. All rights reserved.
-    </footer>
+<footer>
+    &copy; 2024 StudentPreneur. All rights reserved.
+</footer>
 
 </body>
 
