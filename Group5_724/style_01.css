@@ -65,6 +65,17 @@ header .icons a {
   font-size: 20px;
 }
 
+
+#logout-btn {
+  background-color: #9e9e9e;
+  color: #000000;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
 /* Footer */
 footer {
   background-color: #333;
@@ -467,11 +478,11 @@ hr {
 
 /*-----------------resource page--------------*/
 
-section {
+#resource-main {
   padding: 20px;
 }
 
-h2 {
+.investor h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }

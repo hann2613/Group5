@@ -65,10 +65,10 @@ header .icons a {
 }
 
 #logout-btn {
-  background-color: #e2e2e2;
-  color: #686868;
+  background-color: #9e9e9e;
+  color: #000000;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
 }

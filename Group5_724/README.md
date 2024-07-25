@@ -5,4 +5,5 @@
 4.learning(start设置成跳转当页)
        style02的字体
 5.global connections(connect now后可以跳转到底部connect)
-6.profile(位置有问题)
+6.profile
+7.resource
