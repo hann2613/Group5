@@ -76,7 +76,7 @@
     <section class="global-connections">
       <h2>Discover Global Connections</h2>
       <div class="map">
-        <img src="" />
+        <img src="img/connection.png" />
       </div>
     </section>
 
