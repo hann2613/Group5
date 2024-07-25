@@ -19,28 +19,16 @@ CREATE TABLE users (
 
 INSERT INTO users (id, firstName, lastName, description, email, password, role, avatar, country, city, skills, field) VALUES
 (1001, 'Emma', 'Rivera', 'Web Developer', 'Emma@example.com', 'sesame', 'user', 'img/avatar/Emma.jpeg', 'USA', 'New York', 'Web Development | UI/UX Design | Usability Testing | Prototyping | Data Science', 'IT'),
-(1002, 'John', 'Doe', 'Research Science', 'John@example.com', 'sesame', 'user', NULL, 'USA', 'San Francisco', 'Research | Data Analysis', 'IT'),
-(1003, 'Jade', 'Smith', 'Java Developer', 'Jade@example.com', 'sesame', 'user', 'img/avatar/Jade.jpeg', 'USA', 'Los Angeles', 'Java Development | Spring Framework', 'IT'),
-(1004, 'Liam', 'Johnson', 'Full Stack Developer', 'liam@example.com', 'sesame', 'user', NULL, 'Canada', 'Toronto', 'Full Stack Development | MERN Stack', 'IT'),
-(1005, 'Noah', 'Williams', 'UX Designer', 'noah@example.com', 'sesame', 'user', 'img/avatar/Noah.jpeg', 'UK', 'London', 'UI/UX Design | Prototyping', 'Finance'),
-(1006, 'Oliver', 'Brown', 'Front End Developer', 'oliver@example.com', 'sesame', 'user', 'img/avatar/Oliver.jpeg', 'USA', 'Boston', 'Front End Development | React.js', 'IT'),
-(1007, 'Elijah', 'Jones', 'Back End Developer', 'elijah@example.com', 'sesame', 'user', 'img/avatar/Elijah.jpeg', 'USA', 'Chicago', 'Back End Development | Node.js', 'Finance'),
-(1008, 'William', 'Garcia', 'Data Scientist', 'william@example.com', 'sesame', 'user', NULL, 'Spain', 'Madrid', 'Data Science | Machine Learning', 'IT'),
-(1009, 'James', 'Martinez', 'UI/UX Designer', 'james@example.com', 'sesame', 'user', 'img/avatar/James.jpeg', 'Mexico', 'Mexico City', 'UI/UX Design | User Research', 'IT'),
-(1010, 'Benjamin', 'Rodriguez', 'DevOps Engineer', 'benjamin@example.com', 'sesame', 'user', NULL, 'USA', 'Seattle', 'DevOps | CI/CD', 'Finance'),
-(1011, 'Lucas', 'Martinez', 'Mobile App Developer', 'lucas@example.com', 'sesame', 'user', NULL, 'Brazil', 'São Paulo', 'Mobile Development | Android', 'IT'),
-(1012, 'Henry', 'Hernandez', 'AI Specialist', 'henry@example.com', 'sesame', 'user', NULL, 'USA', 'San Jose', 'AI | Machine Learning', 'IT'),
-(1013, 'Alexander', 'Lopez', 'Cybersecurity Expert', 'alexander@example.com', 'sesame', 'user', NULL, 'USA', 'Austin', 'Cybersecurity | Network Security', 'IT'),
-(1014, 'Mason', 'Gonzalez', 'Cloud Engineer', 'mason@example.com', 'sesame', 'user', 'img/avatar/Mason.jpeg', 'USA', 'San Diego', 'Cloud Computing | AWS', 'Finance'),
-(1015, 'Michael', 'Wilson', 'Database Administrator', 'michael@example.com', 'sesame', 'user', NULL, 'USA', 'Denver', 'Database Management | SQL', 'IT'),
-(1016, 'Ethan', 'Anderson', 'Systems Analyst', 'ethan@example.com', 'sesame', 'user', NULL, 'USA', 'Miami', 'Systems Analysis | IT Consulting', 'Finance'),
-(1017, 'Daniel', 'Thomas', 'Network Engineer', 'daniel@example.com', 'sesame', 'user', NULL, 'Australia', 'Sydney', 'Network Engineering | Cisco', 'IT'),
-(1018, 'Jacob', 'Taylor', 'Software Engineer', 'jacob@example.com', 'sesame', 'user', NULL, 'USA', 'Houston', 'Software Engineering | Agile', 'IT'),
-(1019, 'Logan', 'Moore', 'Blockchain Developer', 'logan@example.com', 'sesame', 'user', NULL, 'Canada', 'Vancouver', 'Blockchain Development | Solidity', 'IT'),
-(1020, 'Jackson', 'Jackson', 'Machine Learning Engineer', 'jackson@example.com', 'sesame', 'user', NULL, 'USA', 'Atlanta', 'Machine Learning | Data Science', 'IT'),
-(1021, 'Sebastian', 'Lee', 'UX Researcher', 'sebastian@example.com', 'sesame', 'user', 'img/avatar/Sebastian.jpeg', 'USA', 'San Francisco', 'UX Research | Usability Testing', 'IT'),
-(1022, 'Jack', 'Perez', 'Robotics Engineer', 'jack@example.com', 'sesame', 'user', NULL, 'USA', 'Las Vegas', 'Robotics | Automation', 'IT'),
-(1023, 'Aiden', 'White', 'Game Developer', 'aiden@example.com', 'sesame', 'user', NULL, 'USA', 'Orlando', 'Game Development | Unity', 'IT');
+(1002, 'Jade', 'Smith', 'Java Developer', 'Jade@example.com', 'sesame', 'user', 'img/avatar/Jade.jpeg', 'USA', 'Los Angeles', 'Java Development | Spring Framework', 'IT'),
+(1003, 'Noah', 'Williams', 'UX Designer', 'noah@example.com', 'sesame', 'user', 'img/avatar/Noah.jpeg', 'UK', 'London', 'UI/UX Design | Prototyping', 'Finance'),
+(1004, 'Oliver', 'Brown', 'Front End Developer', 'oliver@example.com', 'sesame', 'user', 'img/avatar/Oliver.jpeg', 'USA', 'Boston', 'Front End Development | React.js', 'IT'),
+(1005, 'Elijah', 'Jones', 'Back End Developer', 'elijah@example.com', 'sesame', 'user', 'img/avatar/Elijah.jpeg', 'USA', 'Chicago', 'Back End Development | Node.js', 'Finance'),
+(1006, 'James', 'Martinez', 'UI/UX Designer', 'james@example.com', 'sesame', 'user', 'img/avatar/James.jpeg', 'Mexico', 'Mexico City', 'UI/UX Design | User Research', 'IT'),
+(1007, 'Mason', 'Gonzalez', 'Cloud Engineer', 'mason@example.com', 'sesame', 'user', 'img/avatar/Mason.jpeg', 'USA', 'San Diego', 'Cloud Computing | AWS', 'Finance'),
+(1008, 'Sebastian', 'Lee', 'UX Researcher', 'sebastian@example.com', 'sesame', 'user', 'img/avatar/Sebastian.jpeg', 'USA', 'Admin', 'Admin', 'IT'),
+(1009, 'Ava', 'Lee', 'Admin', 'Ava@example.com', 'sesame', 'admin', NULL, 'Ireland', 'Admin', 'Admin', 'Admin'),
+(1010, 'Tess', 'Liu', 'Admin', 'Tess@example.com', 'sesame', 'admin', NULL, 'Ireland', 'Admin', 'Admin', 'Admin');
+
 
 CREATE TABLE investors (
     id INT AUTO_INCREMENT PRIMARY KEY,

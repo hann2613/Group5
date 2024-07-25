@@ -76,7 +76,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <form action="logout.php" method="post" style="display:inline;">
+              <form action="admin_logout.php" method="post" style="display:inline;">
                 <button type="submit" id="logout-btn">Logout</button>
               </form>
               </a>
