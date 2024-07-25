@@ -1,6 +1,6 @@
 <?php
-  require('model/database.php');
-  require('model/user_db.php');
+  require_once('model/database.php');
+  require_once('model/user_db.php');
 
   session_start();
 
