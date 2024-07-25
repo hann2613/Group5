@@ -21,6 +21,7 @@ require('model/search_user_db.php');
 
 session_set_cookie_params(0);
 session_start();
+
 $show_network_container = true;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['select_user'])) {

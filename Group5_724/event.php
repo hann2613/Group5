@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<?php session_start();?>
   <header>
     <nav>
       <div class="logo"><a href="post.php">StudentPreneur</a></div>
