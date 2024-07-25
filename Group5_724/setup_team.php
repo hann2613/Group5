@@ -21,7 +21,7 @@
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['team_name'])) {
         $_SESSION['team_name'] = $_POST['team_name'];
-        header('Location: choose_teammate.php'); // 跳转到选择队友页面
+        header('Location: choose_teammate.php');
         exit();
     }
     ?>
