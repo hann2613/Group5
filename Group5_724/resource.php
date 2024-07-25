@@ -22,7 +22,7 @@
       <nav>
         <div class="logo"><a href="post.php">StudentPreneur</a></div>
         <a href="post.php">Home</a>
-        <strong class="strong"><a href="learning.php">Learning</a></strong>
+        <a href="learning.php">Learning</a>
         <a href="event.php">Events</a>
         <a href="globalConnections.php">Global Connections</a>
         <div class="icons">
