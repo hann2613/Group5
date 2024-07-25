@@ -575,118 +575,64 @@
         <circle cx="1798.2" cy="719.3" id="2"></circle>
       </svg>
 
-      <div id="popupCard">
-        <img id="popupImage" src="img/avatar/Jade.jpeg" alt="Region Image">
-        <p id="popupRegionName">Field: IT</p>
-        <p id="popupDetails">Skills: Java Development | Spring Framework</p>
-        <button id="closeCard">Close</button>
-      </div>
-
-      <div class="modal" v-if="showModal">
-        <img :src="selectedCard.avatar" alt="Avatar" style="width: 100px; height: 100px;">
-        <p>Name: {{ selectedCard.name }}</p>
+    
+      <div id="popupCard" v-if="selectedCard">
+        <img :src="selectedCard.avatar" alt="Region Image">
         <p>Field: {{ selectedCard.field }}</p>
-        <p>Skill: {{ selectedCard.skill }}</p>
+        <p>Skills: {{ selectedCard.skill }}</p>
         <button @click="closeModal">Close</button>
       </div>
-
-      <div class="global-connect-container">
-        <?php foreach ($users as $user) : ?>
-          <div class="global-connect" key="<?php echo $user['id']; ?>">
-            <div class="connect-card">
-              <div class="card-title"><?php echo htmlspecialchars($user['firstName']) . " " . htmlspecialchars($user['lastName']); ?></div>
-              <button class="btn-connect" @click="connect(card)">Connect</button>
-            </div>
-            <div class="card">
-              <img src="<?php echo htmlspecialchars($user['avatar']); ?>" alt="Avatar" />
-              <div class="card-content">
-                <p><strong>Region:</strong> <?php echo htmlspecialchars($user['country']); ?></p>
-                <p><strong>Field:</strong> <?php echo htmlspecialchars($user['field']); ?></p>
-                <p><strong>Skills:</strong> <?php echo htmlspecialchars($user['skills']); ?></p>
-              </div>
-            </div>
-          </div>
-        <?php endforeach; ?>
-      </div>
-
+    </div>
+  
       <?php include 'footer.php'; ?>
 
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
       <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const regions = document.querySelectorAll('.map-region');
-          const popupCard = document.getElementById('popupCard');
-          const closeCard = document.getElementById('closeCard');
-          const popupRegionName = document.getElementById('popupRegionName');
-          const popupDetails = document.getElementById('popupDetails');
-
-          regions.forEach(region => {
-            region.addEventListener('click', function() {
-              const regionName = this.getAttribute('name');
-              popupRegionName.textContent = `Field: ${regionName}`;
-              popupDetails.textContent = `Skills: Details about ${regionName}`;
-              popupCard.style.display = 'block';
-            });
-          });
-
-          closeCard.addEventListener('click', () => {
-            popupCard.style.display = 'none';
+    new Vue({
+      el: "#app",
+      data: {
+        cards: [
+          {
+            name: "Card 1",
+            region: "Ireland",
+            field: "IT",
+            skill: "JavaScript",
+            avatar: "img/globalconnect3.jpg",
+          },
+          {
+            name: "Card 2",
+            region: "Mainland China",
+            field: "Engineering",
+            skill: "Python",
+            avatar: "img/globalconnect2.jpg",
+          },
+        ],
+        selectedCard: null,
+      },
+      methods: {
+        showProfile(region) {
+          const card = this.cards.find(c => c.region.toLowerCase() === region.toLowerCase());
+          if (card) {
+            this.selectedCard = card;
+            document.getElementById('popupCard').style.display = 'block';
+          }
+        },
+        closeModal() {
+          this.selectedCard = null;
+          document.getElementById('popupCard').style.display = 'none';
+        }
+      },
+      mounted() {
+        const regions = document.querySelectorAll('.map-region');
+        regions.forEach(region => {
+          region.addEventListener('click', () => {
+            const regionName = region.getAttribute('name');
+            this.showProfile(regionName);
           });
         });
-
-        new Vue({
-          el: "#app",
-          data: {
-            cards: [{
-                name: "Card 1",
-                region: "Europe",
-                field: "IT",
-                skill: "JavaScript",
-                avatar: "img/globalconnect1.jpg",
-              },
-              {
-                name: "Card 2",
-                region: "Asia",
-                field: "Finance",
-                skill: "Data Analysis",
-                avatar: "img/globalconnect2.jpg",
-              },
-              {
-                name: "Card 3",
-                region: "America",
-                field: "Marketing",
-                skill: "SEO",
-                avatar: "img/globalconnect3.jpg",
-              },
-              {
-                name: "Card 4",
-                region: "MainlandChina",
-                field: "Engineering",
-                skill: "Python",
-                avatar: "img/globalconnect4.jpg",
-              }
-            ],
-            showModal: false,
-            selectedCard: null,
-          },
-          methods: {
-            connect(card) {
-              this.selectedCard = card;
-              this.showModal = true;
-            },
-            showProfile(region) {
-              const card = this.cards.find(c => c.region.toLowerCase() === region.toLowerCase());
-              if (card) {
-                this.selectedCard = card;
-                this.showModal = true;
-              }
-            },
-            closeModal() {
-              this.showModal = false;
-            }
-          },
-        });
-      </script>
+      }
+    });
+  </script>
 </body>
 
 </html>
