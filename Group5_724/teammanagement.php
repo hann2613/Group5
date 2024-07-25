@@ -38,13 +38,13 @@
     </nav>
   </header>
 
-
   <div class="manage-container">
     <h2>Manage Your Team Project</h2>
     <div class="manage-projects-bar" id="projects-bar">
       <h3>Projects</h3>
       <div id="projects">
-        <div id="projects-list"></div>
+        <div id="projects-list">
+        </div>
         <button id="addProjectButton">+</button>
       </div>
     </div>
@@ -95,25 +95,17 @@
       <h3>Add New Task</h3>
       <form id="taskForm">
         <label for="taskName">Task Name:</label>
-        <input type="text" id="taskName" name="taskName" required /><br />
-
-        <label for="taskAssignee">Task Assignee:</label>
-        <input type="text" id="taskAssignee" name="taskAssignee" required /><br />
-
+        <input type="text" id="taskName" name="taskName" required />
+        <label for="taskAssignee">Assignee:</label>
+        <input type="text" id="taskAssignee" name="taskAssignee" required />
         <label for="taskDeadline">Deadline:</label>
-        <input type="date" id="taskDeadline" name="taskDeadline" required /><br />
-        <label for="taskImage">Attach Image:</label>
-        <input type="file" id="taskImage" name="taskImage" accept="image/*" /><br />
-
-        <button type="submit">Save</button>
+        <input type="date" id="taskDeadline" name="taskDeadline" required />
+        <label for="taskImage">Task Image:</label>
+        <input type="file" id="taskImage" name="taskImage" accept="image/*" />
+        <button type="submit">Add Task</button>
       </form>
     </div>
   </div>
-
-
-  <footer>
-    <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
-  </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -197,8 +189,8 @@
         const taskDiv = document.createElement("div");
         taskDiv.className = "task-item";
         taskDiv.innerHTML = `<div><strong>${taskName}</strong></div><div>Assignee: ${assignee}</div>
-    <div>Deadline: ${deadline}</div>
-    ${imageSrc ? `<img src="${imageSrc}" alt="Task image" class="task-image" />` : ""}`;
+        <div>Deadline: ${deadline}</div>
+        ${imageSrc ? `<img src="${imageSrc}" alt="Task image" class="task-image" />` : ""}`;
         column.appendChild(taskDiv);
       }
 
@@ -214,7 +206,7 @@
 
       function updateTasks() {
         document.querySelectorAll(".tasks-column").forEach((column) => {
-          column.innerHTML = column.querySelector("h3").outerHTML;
+          column.innerHTML = column.querySelector("h4").outerHTML;
         });
         if (currentSprint) {
           document
@@ -232,6 +224,10 @@
           button.addEventListener("click", openTaskModal);
         });
       }
+
+      
+      addProject("DreamCreations");
+      addProject("SmartQuest");
 
       addProjectButton.addEventListener("click", () => openModal("project"));
       addSprintButton.addEventListener("click", () => {

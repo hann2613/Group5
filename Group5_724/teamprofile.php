@@ -44,14 +44,14 @@
       <div class="project-cards">
         <div class="project-card">
           <img src="img/event-live1.jpeg" alt="Startup Platform" />
-          <h3>Project 1</h3>
+          <h3>DreamCreations</h3>
           <p>Innovate Hub</p>
           <p>1st project</p>
           <button class="view-button" onclick="window.location.href='teammanagement.php';">View</button>
         </div>
         <div class="project-card">
           <img src="img/event-live2.jpeg" alt="NextWave" />
-          <h3>Project 2</h3>
+          <h3>DreamCreations</h3>
           <p>Innovate Hub</p>
           <p>2nd project</p>
           <button class="view-button">View</button>
@@ -167,7 +167,6 @@
         const firstDay = new Date(year, month, 1).getDay();
         const lastDate = new Date(year, month + 1, 0).getDate();
 
-        // Day names
         for (let i = 0; i < 7; i++) {
           const dayName = document.createElement("div");
           dayName.className = "day-name";
@@ -183,13 +182,11 @@
           calendar.appendChild(dayName);
         }
 
-        // Empty cells before the first day of the month
         for (let i = 0; i < firstDay; i++) {
           const emptyCell = document.createElement("div");
           calendar.appendChild(emptyCell);
         }
 
-        // Days of the month
         for (let i = 1; i <= lastDate; i++) {
           const dayCell = document.createElement("div");
           dayCell.className = "day-cell";
