@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Up1-StudentPreneur</title>
+    <title>Team Up</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
