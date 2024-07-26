@@ -95,7 +95,7 @@ footer p {
 
 .latest-projects {
   margin-bottom: 20px;
-  padding: 20px;
+  width: 100%;
 }
 
 .latest-projects h2 {
@@ -137,7 +137,7 @@ footer p {
 
 .project-card .view-button {
   background-color: #505050;
-  color: white;
+  color: rgb(16, 16, 16);
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
@@ -152,11 +152,12 @@ footer p {
 }
 
 .left-column {
-  flex: 2;
+  flex: 1;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 20px;
   background-color: #f8f9fa;
+  
 }
 
 .my-tasks {
@@ -499,16 +500,17 @@ footer p {
 }
 
 /*-------------set team page----------*/
-main .setup {
+main.setup {
   background-color: #ffffff;
-  height: 700px;
-  margin: 100px;
+  height: auto;
+  margin-top: 100px;
+  padding: 10px;
 }
 
 .progress-bar {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .step {
@@ -546,14 +548,14 @@ main .setup {
 
 .setup-team {
   background-color: #ffffff;
-  padding: 50px;
+  padding: 40px;
   text-align: center;
 }
 
 .setup-team h1 {
   position: absolute;
-  top: 20%;
-  left: 25%;
+  top: 35%;
+  left: 30%;
   transform: translateX(-50%);
   font-size: 2.2em;
   color: #000000;
@@ -567,7 +569,7 @@ main .setup {
 }
 
 .image-placeholder {
-  width: 600px;
+  width: 530px;
   height: auto;
   flex-shrink: 0;
   border-radius: 20px;
@@ -575,6 +577,7 @@ main .setup {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .image-placeholder img {
@@ -587,7 +590,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  width: 40%;
+  width: 35%;
 }
 
 input[type="text"] {
@@ -605,3 +608,4 @@ input[type="text"] {
   cursor: pointer;
   font-size: 16px;
 }
+

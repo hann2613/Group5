@@ -16,7 +16,7 @@ require('model/database.php');
 session_set_cookie_params(0);
 session_start();
 
-// 假设你的团队名称存储在会话中
+
 $teamName = isset($_SESSION['team_name']) ? htmlspecialchars($_SESSION['team_name']) : 'Your Team';
 
 // var_dump($_SESSION);
@@ -73,7 +73,7 @@ $teamName = isset($_SESSION['team_name']) ? htmlspecialchars($_SESSION['team_nam
             </table>
         </div>
         <div class="manage-team">
-            <a href="#"><button>Manage Your Team</button></a>
+            <a href="teamprofile.php"><button>Manage Your Team</button></a>
         </div>
     </div>
 </main>
