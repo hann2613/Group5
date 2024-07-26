@@ -10,12 +10,12 @@
 
 <body>
   <?php session_start();
-  
+
   if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
-}
-?> 
+  }
+  ?>
   <header>
     <nav>
       <div class="logo"><a href="post.php">StudentPreneur</a></div>
@@ -113,7 +113,9 @@
       </form>
     </div>
   </div>
-
+  <footer>
+    <p>&copy; 2024 StudentPreneur. All rights reserved.</p>
+  </footer>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const addProjectButton = document.getElementById("addProjectButton");
@@ -232,7 +234,7 @@
         });
       }
 
-      
+
       addProject("DreamCreations");
       addProject("SmartQuest");
 
