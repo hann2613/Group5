@@ -51,28 +51,24 @@ if (!isset($_SESSION['user_id'])) {
         <div class="project-card">
           <img src="img/event-live1.jpeg" alt="Startup Platform" />
           <h3>DreamCreations</h3>
-          <p>Innovate Hub</p>
           <p>1st project</p>
           <button class="view-button" onclick="window.location.href='teammanagement.php';">View</button>
         </div>
         <div class="project-card">
           <img src="img/event-live2.jpeg" alt="NextWave" />
-          <h3>DreamCreations</h3>
-          <p>Innovate Hub</p>
+          <h3>SmartQuest</h3>
           <p>2nd project</p>
-          <button class="view-button">View</button>
+          <button class="view-button" onclick="window.location.href='teammanagement.php';">View</button>
         </div>
         <div class="project-card">
           <img src="img/event-live3.jpeg" alt="VisionPath" />
           <h3>project 3</h3>
-          <p>Innovate Hub</p>
           <p>3rd project</p>
           <button class="view-button">View</button>
         </div>
         <div class="project-card">
           <img src="img/event-live1.jpeg" alt="VisionPath" />
           <h3>project 4</h3>
-          <p>Innovate Hub</p>
           <p>4th project</p>
           <button class="view-button">View</button>
         </div>
