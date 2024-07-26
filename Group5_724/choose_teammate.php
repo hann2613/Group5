@@ -19,8 +19,7 @@ require_once('model/database.php');
 require_once('model/user_db.php');
 require_once('model/search_user_db.php');
 
-session_set_cookie_params(0);
-session_start();
+/* session_set_cookie_params(0); */
 
 $show_network_container = true;
 
