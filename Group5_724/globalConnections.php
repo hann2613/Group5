@@ -582,7 +582,7 @@
         <p>From: {{ selectedCard.region }}</p>
         <p>Current Location: {{ selectedCard.location }}</p>
         <p>Field: {{ selectedCard.field }}</p>
-        <p>Skills: {{ selectedCard.skill }}</p>
+        <p>Resource: {{ selectedCard.skill }}</p>
         <button @click="closeModal">Close</button>
       </div>
     </div>
@@ -599,8 +599,8 @@
               Location: "Irenland",
               region: "Ireland",
               location:"Ireland",
-              field: "IT",
-              skill: "JavaScript",
+              field: "Marketing Management",
+              skill: "Marketing, Business",
               avatar: "img/globalconnect3.jpg",
             },
             {
@@ -609,7 +609,7 @@
               region: "Mainland China",
               location:"Ireland",
               field: "Engineering",
-              skill: "Python",
+              skill: "Python, Big Data",
               avatar: "img/globalconnect2.jpg",
             },
           ],
