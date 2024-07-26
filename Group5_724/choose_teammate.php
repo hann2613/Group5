@@ -11,13 +11,13 @@
 <body>
 <?php
 include 'header.php';
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
-require('model/database.php');
-require('model/user_db.php');
-require('model/search_user_db.php');
+require_once('model/database.php');
+require_once('model/user_db.php');
+require_once('model/search_user_db.php');
 
 session_set_cookie_params(0);
 session_start();
