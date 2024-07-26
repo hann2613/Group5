@@ -601,7 +601,7 @@
               location:"Ireland",
               field: "Marketing Management",
               skill: "Marketing, Business",
-              avatar: "img/globalconnect3.jpg",
+              avatar: "img/avatar/Emma.jpeg",
             },
             {
               name: "Zimu",
