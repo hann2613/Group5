@@ -15,7 +15,7 @@
     require('model/user_db.php');
 
     session_start();
-    
+
     $users = get_users(6);
     ?>
     <header>
@@ -575,64 +575,70 @@
         <circle cx="1798.2" cy="719.3" id="2"></circle>
       </svg>
 
-    
+
       <div id="popupCard" v-if="selectedCard">
         <img :src="selectedCard.avatar" alt="Region Image">
+        <p>Name: {{ selectedCard.name }}</p>
+        <p>From: {{ selectedCard.region }}</p>
+        <p>Current Location: {{ selectedCard.location }}</p>
         <p>Field: {{ selectedCard.field }}</p>
         <p>Skills: {{ selectedCard.skill }}</p>
         <button @click="closeModal">Close</button>
       </div>
     </div>
-  
-      <?php include 'footer.php'; ?>
 
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-      <script>
-    new Vue({
-      el: "#app",
-      data: {
-        cards: [
-          {
-            name: "Card 1",
-            region: "Ireland",
-            field: "IT",
-            skill: "JavaScript",
-            avatar: "img/globalconnect3.jpg",
+    <?php include 'footer.php'; ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          cards: [{
+              name: "Emma",
+              Location: "Irenland",
+              region: "Ireland",
+              location:"Ireland",
+              field: "IT",
+              skill: "JavaScript",
+              avatar: "img/globalconnect3.jpg",
+            },
+            {
+              name: "Zimu",
+              Location: "Irenland",
+              region: "Mainland China",
+              location:"Ireland",
+              field: "Engineering",
+              skill: "Python",
+              avatar: "img/globalconnect2.jpg",
+            },
+          ],
+          selectedCard: null,
+        },
+        methods: {
+          showProfile(region) {
+            const card = this.cards.find(c => c.region.toLowerCase() === region.toLowerCase());
+            if (card) {
+              this.selectedCard = card;
+              document.getElementById('popupCard').style.display = 'block';
+            }
           },
-          {
-            name: "Card 2",
-            region: "Mainland China",
-            field: "Engineering",
-            skill: "Python",
-            avatar: "img/globalconnect2.jpg",
-          },
-        ],
-        selectedCard: null,
-      },
-      methods: {
-        showProfile(region) {
-          const card = this.cards.find(c => c.region.toLowerCase() === region.toLowerCase());
-          if (card) {
-            this.selectedCard = card;
-            document.getElementById('popupCard').style.display = 'block';
+          closeModal() {
+            this.selectedCard = null;
+            document.getElementById('popupCard').style.display = 'none';
           }
         },
-        closeModal() {
-          this.selectedCard = null;
-          document.getElementById('popupCard').style.display = 'none';
-        }
-      },
-      mounted() {
-        const regions = document.querySelectorAll('.map-region');
-        regions.forEach(region => {
-          region.addEventListener('click', () => {
-            const regionName = region.getAttribute('name');
-            this.showProfile(regionName);
+        mounted() {
+          const regions = document.querySelectorAll('.map-region');
+          regions.forEach(region => {
+            region.addEventListener('click', () => {
+              const regionName = region.getAttribute('name');
+              this.showProfile(regionName);
+            });
           });
-        });
-      }
-    });
-  </script>
+        }
+      });
+    </script>
 </body>
 
 </html>
