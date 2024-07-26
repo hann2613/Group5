@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Up</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style_03team.css">
 </head>
 <body>
     <?php
@@ -26,7 +26,7 @@
     }
     ?>
 
-    <main>
+    <main class="setup">
         <div class="progress-bar">
             <div class="step completed">Welcome</div>
             <div class="step active">Set Up Your Team</div>

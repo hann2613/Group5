@@ -74,20 +74,18 @@ header .icons a {
   border-radius: 5px;
 }
 
-
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    bottom: 0;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
 
 /*---------------team profile ----------------------------------------*/
 .team-profile-page {
@@ -323,31 +321,36 @@ footer {
 }
 
 /*1. project bar & sprint bar*/
-.manage-projects-bar, .manage-sprints-bar {
+.manage-projects-bar,
+.manage-sprints-bar {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   margin-right: 50px;
 }
 
-.manage-projects-bar h3, .manage-sprints-bar h3 {
+.manage-projects-bar h3,
+.manage-sprints-bar h3 {
   margin: 0;
 }
 
-#projects, #sprints {
+#projects,
+#sprints {
   display: flex;
   flex-direction: column;
-  position: relative; 
+  position: relative;
 }
 
-#projects-list, #sprints-list {
+#projects-list,
+#sprints-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 5px;
 }
 
-.project-item, .sprint-item {
+.project-item,
+.sprint-item {
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 5px 20px;
@@ -356,18 +359,20 @@ footer {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.project-item.active, .sprint-item.active {
+.project-item.active,
+.sprint-item.active {
   background-color: #f0f8ff;
   border-color: #6d6d6d;
 }
 
-#addProjectButton, #addSprintButton {
+#addProjectButton,
+#addSprintButton {
   position: absolute;
-  right: 20px;  
+  right: 20px;
   padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
-  margin-top:-15px;
+  margin-top: -15px;
   background-color: #949494;
   border: 1px;
   border-radius: 5px;
@@ -375,8 +380,8 @@ footer {
 }
 
 .manage-container hr {
-border: 0.5px solid rgb(185, 185, 185);
-width: 100%;
+  border: 0.5px solid rgb(185, 185, 185);
+  width: 100%;
 }
 
 /*2.task part*/
@@ -397,7 +402,7 @@ width: 100%;
   border: 1px solid rgb(226, 226, 226);
   padding: 5px 5px;
   margin: 5px 0;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .addTask {
@@ -425,7 +430,8 @@ width: 100%;
   border-radius: 4px;
 }
 
-.modal, .task-modal {
+.modal,
+.task-modal {
   display: none;
   position: fixed;
   top: 0;
@@ -437,7 +443,8 @@ width: 100%;
   align-items: center;
 }
 
-.modal-content, .task-modal-content {
+.modal-content,
+.task-modal-content {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -446,25 +453,29 @@ width: 100%;
   position: relative;
 }
 
-.modal-content h3, .task-modal-content h3 {
+.modal-content h3,
+.task-modal-content h3 {
   margin-top: 0;
 }
 
-.modal-content label, .task-modal-content label {
-  display: block; 
+.modal-content label,
+.task-modal-content label {
+  display: block;
   margin: 10px 5px;
   width: 50%;
   padding: 10px;
 }
 
-.modal-content input, .task-modal-content input {
+.modal-content input,
+.task-modal-content input {
   width: calc(100% - 20px);
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.modal-content button, .task-modal-content button {
+.modal-content button,
+.task-modal-content button {
   background-color: #555555;
   border: none;
   padding: 10px;
@@ -485,4 +496,112 @@ width: 100%;
 
 .close:hover {
   color: #333;
+}
+
+/*-------------set team page----------*/
+main .setup {
+  background-color: #ffffff;
+  height: 700px;
+  margin: 100px;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.step {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 350px;
+  height: 2px;
+  background-color: #333;
+  transform: translateY(-50%);
+}
+
+.step:last-child::after {
+  display: none;
+}
+
+.completed {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.active {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.setup-team {
+  background-color: #ffffff;
+  padding: 50px;
+  text-align: center;
+}
+
+.setup-team h1 {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  transform: translateX(-50%);
+  font-size: 2.2em;
+  color: #000000;
+}
+
+.form-container {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 600px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: lightgray 50% / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: auto;
+}
+
+form {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 40%;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.next-button {
+  background-color: #575757;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 37px;
+  cursor: pointer;
+  font-size: 16px;
 }
