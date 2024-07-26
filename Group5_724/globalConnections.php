@@ -610,7 +610,7 @@
               location:"Ireland",
               field: "Engineering",
               skill: "Python, Big Data",
-              avatar: "img/globalconnect4.jpg",
+              avatar: "img/globalconnect4.jpeg",
             },
           ],
           selectedCard: null,
