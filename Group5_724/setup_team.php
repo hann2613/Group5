@@ -12,7 +12,7 @@
     require_once('model/database.php');
     require_once('model/user_db.php');
     
-    session_start();
+    /* session_start(); */
 
     if (!isset($_SESSION['user_id'])) {
         header("Location: login.php");
