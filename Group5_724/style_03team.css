@@ -95,6 +95,7 @@ footer p {
 .latest-projects {
   margin-bottom: 20px;
   width: 100%;
+  display: block;
 }
 
 .latest-projects h2 {
@@ -108,6 +109,8 @@ footer p {
   gap: 30px;
   overflow-x: auto;
   padding: 10px 0;
+width: 100%;
+
 }
 
 .project-card {
@@ -135,8 +138,8 @@ footer p {
 }
 
 .project-card .view-button {
-  background-color: #505050;
-  color: rgb(16, 16, 16);
+  background-color: #3b3b3b;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
@@ -148,14 +151,16 @@ footer p {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .left-column {
   flex: 1;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 20px;
+  padding: 30px;
   background-color: #f8f9fa;
+  width: 50%;
 }
 
 .my-tasks {
@@ -200,8 +205,9 @@ footer p {
   flex: 1;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 20px;
+  padding: 30px;
   background-color: #f8f9fa;
+  width: 50%;
 }
 
 .calendar {
@@ -260,9 +266,6 @@ footer p {
   height: 100%;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
-  margin-top: 120px;
-  margin-left: 20px;
 }
 
 .task-modal-content {
