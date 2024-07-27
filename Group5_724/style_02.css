@@ -936,4 +936,26 @@ svg path:hover {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.message-btn {
+  background-color: #666;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.message-btn.connected {
+  background-color: rgb(198, 198, 198);
+  color: white;
+}
+

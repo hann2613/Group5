@@ -57,7 +57,7 @@
         <h2>My Team</h2>
         <div class="team-group">
           <div class="team-item active">
-            <div class="team-name">Innovate Hub</div>
+            <div class="team-name">DreamCreations</div>
             <div class="team-last-message">
               <span>Today, 9:02</span>
               <p>Thanks, everyone! Let's make sure...</p>
@@ -113,7 +113,7 @@
     </section>
     <section class="chat-section">
       <div class="chat-header">
-        <div class="chat-title">Project 1</div>
+        <div class="chat-title">DreamCreations</div>
         <div class="chat-status">Online - Last seen, 9:20</div>
         <div class="chat-actions">
           <button class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
@@ -130,38 +130,12 @@
       <div class="chat-messages" id="chat-messages">
         <div class="message">
           <div class="message-info">
-            <strong>Maya</strong> <span>Today, 8:30</span>
+            <strong>Zimu</strong> <span>Today, 8:30</span>
           </div>
           <p>
-            Hey everyone, just a quick update: the prototype for our interface
+            Hey, just a quick update: the prototype for our interface
             is ready for review. Please check it out and give your feedback by
             Friday!
-          </p>
-        </div>
-        <div class="message">
-          <div class="message-info">
-            <strong>Javier</strong> <span></span>
-          </div>
-          <p>
-            Great work, Maya! I'll look into the backend integration for the
-            user profiles tonight.
-          </p>
-        </div>
-        <div class="message">
-          <div class="message-info"><strong>Amy</strong> <span></span></div>
-          <p>
-            I've added some initial designs for the chat features on our
-            platform. Please let me know if they align with our usability
-            goals.
-          </p>
-        </div>
-        <div class="message">
-          <div class="message-info">
-            <strong>Maya</strong> <span>Today, 9:02</span>
-          </div>
-          <p>
-            Thanks, everyone! Let's make sure we address all the feedback and
-            keep the momentum going. Excited to see where we're heading!
           </p>
         </div>
       </div>
@@ -190,24 +164,9 @@
       const chatMessages = document.getElementById("chat-messages");
 
       const messages = [{
-          user: "Maya",
-          text: "Hey everyone, just a quick update: the prototype for our interface is ready for review. Please check it out and give your feedback by Friday!",
+          user: "Zimu",
+          text: "Hey, just a quick update: the prototype for our interface is ready for review. Please check it out and give your feedback by Friday!",
           time: "Today, 8:30",
-        },
-        {
-          user: "Javier",
-          text: "Great work, Maya! I'll look into the backend integration for the user profiles tonight.",
-          time: "Today, 8:45",
-        },
-        {
-          user: "Amy",
-          text: "I've added some initial designs for the chat features on our platform. Please let me know if they align with our usability goals.",
-          time: "Today, 8:50",
-        },
-        {
-          user: "Maya",
-          text: "Thanks, everyone! Let's make sure we address all the feedback and keep the momentum going. Excited to see where we're heading!",
-          time: "Today, 9:02",
         },
       ];
 
