@@ -57,8 +57,8 @@
         <div class="progress-bar">
             <div class="step completed">Welcome</div>
             <div class="step completed">Set Up Your Team</div>
-            <div class="step active">Choose Your Teammate</div>
-            <div class="step">Succeed</div>
+            <div class="step completed">Choose Your Teammate</div>
+            <div class="step active">Succeed</div>
         </div>
     </div>
     <main class="succeed">
