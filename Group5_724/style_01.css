@@ -264,7 +264,7 @@ footer p {
   border-radius: 10px;
 }
 
-/*------learning page—————————————————————*/
+
 /*-------------------------learning page-------
 ---------------------------*/
 .header-content {
@@ -615,7 +615,7 @@ Post Page
   flex-direction: column;
 }
 .column:nth-child(1) {
-    flex-basis: 27%;
+  flex-basis: 27%;
 }
 
 .column:nth-child(2) {
@@ -623,7 +623,7 @@ Post Page
 }
 
 .column:nth-child(3) {
-    flex-basis: 23%;
+  flex-basis: 23%;
 }
 
 .postpage-card {
@@ -682,7 +682,7 @@ Post Page
   padding: 5px;
 }
 
-#explore-card #title{
+#explore-card #title {
   margin-top: 8%;
   margin-left: 14%;
   margin-bottom: 8%;
@@ -692,19 +692,18 @@ Post Page
   font-weight: 600;
 }
 
-#explore-card #nav{
+#explore-card #nav {
   margin-top: 8%;
 }
-#explore-card #nav ul{
+#explore-card #nav ul {
   margin-top: 8%;
   list-style: none;
-
 }
 
-#explore-card #nav ul li{
+#explore-card #nav ul li {
   margin-top: 5%;
 }
-#explore-card #nav a{
+#explore-card #nav a {
   margin-left: 5%;
   font-size: 20px;
   font-weight: 400;
@@ -715,7 +714,7 @@ Post Page
   padding: 5px;
 }
 
-#trending-card #title{
+#trending-card #title {
   margin-top: 8%;
   margin-left: 14%;
   margin-bottom: 8%;
@@ -725,16 +724,15 @@ Post Page
   font-weight: 600;
 }
 
-#trending-card #nav{
+#trending-card #nav {
   margin-top: 8%;
 }
-#trending-card #nav ul{
+#trending-card #nav ul {
   margin-top: 8%;
   list-style: none;
-
 }
 
-#trending-card #nav ul li{
+#trending-card #nav ul li {
   margin-top: 5%;
   display: flex;
   justify-content: left;
@@ -744,32 +742,30 @@ Post Page
   height: 44px;
   background: #d9d9d9;
   display: flex;
-  justify-content:left;
-  gap:1%;
+  justify-content: left;
+  gap: 1%;
 }
 
-#search-card img{
-    padding-left: 8%;
+#search-card img {
+  padding-left: 8%;
 }
 
-#search-card a{
-   color: rgba(0, 0, 0, 0.60);
-    font-size: 14px;
-    font-weight: 300;
-    padding-left: 4%;
-    padding-top: 15px;
-
+#search-card a {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 4%;
+  padding-top: 15px;
 }
 
-
-#write-post #write{
+#write-post #write {
   display: flex;
   gap: 3%;
   margin-left: 5%;
   margin-bottom: 5%;
 }
 
-#write-profile{
+#write-profile {
   width: 40px;
   height: 40px;
   background: url(<path-to-image>) lightgray 50% / cover no-repeat;
@@ -777,23 +773,23 @@ Post Page
   margin-top: 5%;
 }
 
-#write-post #edit{
+#write-post #edit {
   text-align: center;
   margin-top: 7%;
 }
 
-#write-post #post{
+#write-post #post {
   display: flex;
   justify-content: space-between;
 }
 
-#write-post #post img{
+#write-post #post img {
   width: 160px;
   padding-left: 5%;
   padding-right: 5%;
 }
 
-#write-post #post button{
+#write-post #post button {
   width: 100px;
   height: 40px;
   margin-right: 5%;
@@ -801,39 +797,37 @@ Post Page
   border-radius: 10px;
   border-width: 0;
   background: #575757;
-  color: var(--White, #FFF);
+  color: var(--White, #fff);
   font-size: 16px;
   font-weight: 400;
 }
 
-#emoji{
-    width: 150px;
-    margin: 5% 0 0 5%;
+#emoji {
+  width: 150px;
+  margin: 5% 0 0 5%;
 }
 
-#postbtn{
-    width: 100px;
-    height: 40px;
-    padding: 6px 10px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background: #575757;
-    color: var(--White, #FFF);
-    gap: 30px;
-    align-items: right;
-
+#postbtn {
+  width: 100px;
+  height: 40px;
+  padding: 6px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #575757;
+  color: var(--White, #fff);
+  gap: 30px;
+  align-items: right;
 }
 
-#post-card{
-  background:none;
+#post-card {
+  background: none;
   border: none;
-  box-shadow:none;
+  box-shadow: none;
 }
-#post-card img{
+#post-card img {
   width: 100%;
 }
-
 
 #teammate-card {
   height: 160px;
@@ -842,7 +836,7 @@ Post Page
   padding: 5px;
 }
 
-#teammate-card #title{
+#teammate-card #title {
   margin-top: 8%;
   display: flex;
   justify-content: space-between;
@@ -850,25 +844,25 @@ Post Page
   margin-right: 7%;
 }
 
-#teammate-card #find{
+#teammate-card #find {
   font-size: 16px;
   font-weight: 600;
 }
 
-.see-more{
+.see-more {
   color: #616161;
   font-size: 9px;
   font-weight: 400;
   padding-top: 3%;
 }
 
-.teammate-profile{
+.teammate-profile {
   margin-top: 6%;
   display: flex;
   justify-content: space-between;
 }
 
-.teammate-profile img{
+.teammate-profile img {
   width: 30px;
   height: 30px;
   object-fit: cover;
@@ -881,40 +875,38 @@ Post Page
   color: #707070;
   font-size: 10px;
   font-weight: 400;
-  
 }
 
-.teammate-profile button{
+.teammate-profile button {
   width: 70px;
   height: 22px;
   border-radius: 15px;
   border-width: 0;
   background: #575757;
-  color: var(--White, #FFF);
+  color: var(--White, #fff);
   font-size: 10px;
   font-weight: 400;
   text-align: center;
   margin-right: 8%;
 }
 
-
-#live-card{
+#live-card {
   padding: 5px;
-  height:480px;
+  height: 480px;
   display: flexbox;
   flex-direction: column;
   justify-content: center;
 }
 
-#live-card img{
+#live-card img {
   width: 100%;
 }
 
-.btn-contianer{
-  padding-left: 33%
+.btn-contianer {
+  padding-left: 33%;
 }
 
-#live-card button{
+#live-card button {
   display: flex;
   border-radius: 15px;
   border: none;
@@ -923,36 +915,34 @@ Post Page
   height: 28px;
   justify-content: center;
   align-items: center;
-  color: var(--White, #FFF);
+  color: var(--White, #fff);
   font-size: 10px;
 }
 
-#live-card #btn-join{
+#live-card #btn-join {
   border-radius: 15px;
-  background: #B9B6B6;
+  background: #b9b6b6;
   font-size: 10px;
 }
 
-
-#course-card{
-  height:550px;
+#course-card {
+  height: 550px;
   padding: 5px;
   display: flexbox;
   flex-direction: column;
   justify-content: center;
 }
 
-#course-card img{
+#course-card img {
   width: 100%;
 }
 
-.btn-contianer2{
+.btn-contianer2 {
   padding-left: 18%;
   padding-top: 10%;
-
 }
 
-#course-card button{
+#course-card button {
   display: flex;
   border-radius: 15px;
   border: none;
@@ -964,17 +954,273 @@ Post Page
   align-items: center;
   gap: 30px;
   flex-shrink: 0;
-  color: var(--White, #FFF);
+  color: var(--White, #fff);
   font-size: 10px;
 }
 
-#course-card #btn-buy{
+#course-card #btn-buy {
   border-radius: 15px;
-  background: #B9B6B6;
+  background: #b9b6b6;
   font-size: 10px;
 }
 
-#ad-card{
-    height: 350px;
-    text-align: center;
+#ad-card {
+  height: 350px;
+  text-align: center;
+}
+
+/* General styles for responsiveness */
+@media (max-width: 1200px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .events-hero {
+    padding: 150px 30px;
+  }
+
+  .events-session-card,
+  .events-workshop-card {
+    width: 45%;
+  }
+
+  .course-card,
+  .mentor-card,
+  .article-card,
+  .pricing-table {
+    width: 90%;
+  }
+
+  .pricing-tables,
+  .article-list,
+  .mentor-list,
+  .course-list {
+    flex-direction: column;
+  }
+
+  .pricing-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .events-hero {
+    padding: 120px 20px;
+  }
+
+  .events-session-card,
+  .events-workshop-card {
+    width: 100%;
+  }
+
+  header .icons {
+    flex-direction: column;
+  }
+
+  .header-content {
+    padding: 180px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 35px;
+  }
+
+  .header-content p {
+    font-size: 20px;
+  }
+
+  .course-card,
+  .mentor-card,
+  .article-card,
+  .pricing-table {
+    width: 100%;
+  }
+
+  .resource-card {
+    width: 100%;
+  }
+
+  .column {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .logo {
+    font-size: 1.2em;
+  }
+
+  .events-hero {
+    padding: 80px 15px;
+  }
+
+  .events-session-card,
+  .events-workshop-card {
+    width: 100%;
+  }
+
+  .teamup-btn,
+  #logout-btn,
+  .event-search button,
+  .events-workshops-search button {
+    padding: 8px 15px;
+  }
+
+  .events-sessions,
+  .events-competition,
+  .events-workshops {
+    padding: 60px 20px;
+  }
+
+  .header-content {
+    padding: 150px 10px;
+  }
+
+  .header-content h1 {
+    font-size: 30px;
+  }
+
+  .header-content p {
+    font-size: 18px;
+  }
+
+  .course-card,
+  .mentor-card,
+  .article-card,
+  .pricing-table {
+    width: 100%;
+  }
+
+  .column {
+    flex-basis: 100%;
+  }
+
+  .slideshow {
+    width: 70%;
+  }
+
+  .postpage-card {
+    margin: 5px 0;
+  }
+
+  #profile-card {
+    height: auto;
+  }
+
+  #profile-card #profile-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #write-post #post img {
+    width: 120px;
+  }
+
+  #emoji {
+    width: 120px;
+  }
+
+  #postbtn {
+    width: 90px;
+  }
+
+  #live-card,
+  #course-card {
+    height: auto;
+  }
+
+  #live-card button,
+  #course-card button {
+    width: 140px;
+    height: 28px;
+  }
+
+  .teammate-profile img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .profile-info {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 10px 0;
+  }
+
+  .events-hero {
+    padding: 60px 10px;
+  }
+
+  .events-session-card,
+  .events-workshop-card {
+    width: 100%;
+  }
+
+  .header-content {
+    padding: 120px 10px;
+  }
+
+  .header-content h1 {
+    font-size: 24px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
+
+  .course-card,
+  .mentor-card,
+  .article-card,
+  .pricing-table {
+    width: 100%;
+  }
+
+  .column {
+    flex-basis: 100%;
+  }
+
+  #profile-card {
+    height: auto;
+  }
+
+  #profile-card #profile-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #write-post #post img {
+    width: 100px;
+  }
+
+  #emoji {
+    width: 100px;
+  }
+
+  #postbtn {
+    width: 80px;
+  }
+
+  #live-card button,
+  #course-card button {
+    width: 120px;
+    height: 28px;
+  }
+
+  .teammate-profile img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .profile-info {
+    font-size: 8px;
+  }
 }

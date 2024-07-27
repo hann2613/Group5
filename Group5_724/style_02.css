@@ -92,7 +92,7 @@ footer p {
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  padding: 280px 20px; 
+  padding: 280px 20px;
   text-align: center;
   margin-top: 65px;
 }
@@ -230,7 +230,7 @@ footer p {
 
 .live-list {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
 }
@@ -278,7 +278,6 @@ footer p {
   background-color: #363636;
 }
 
-
 /* homepage-GlobalConnections */
 .global-connections {
   padding: 60px 20px;
@@ -310,7 +309,6 @@ footer p {
   }
 }
 
-
 .fade-in-up {
   opacity: 0;
   transform: translateY(20px);
@@ -320,7 +318,6 @@ footer p {
 .fade-in-up.visible {
   animation: fadeInUp 0.6s forwards;
 }
-
 
 /*-----------------message------------------------------------------
 ----------------------------*/
@@ -473,7 +470,6 @@ h2 {
   margin-right: 10px;
 }
 
-
 /*------------------------------Global Connections-------------------*/
 
 .global_cover {
@@ -518,7 +514,6 @@ h2 {
   justify-content: center;
   border-radius: 10px;
 }
-
 
 #popupCard img {
   width: 100px;
@@ -721,13 +716,15 @@ svg path:hover {
   color: #202020;
 }
 
-.profile-location, .profile-details {
+.profile-location,
+.profile-details {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.profile-location svg, .profile-details svg {
+.profile-location svg,
+.profile-details svg {
   fill: #5f6368;
   width: 24px;
   height: 24px;
@@ -959,3 +956,176 @@ svg path:hover {
   color: white;
 }
 
+/* Responsive Layout */
+
+/* Header */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo {
+    font-size: 1.2em;
+  }
+
+  header .icons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .teamup-btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Home Page */
+@media (max-width: 768px) {
+  .homeCover {
+    padding: 180px 10px;
+  }
+
+  .homeCover h1 {
+    font-size: 2em;
+  }
+
+  .homeCover button {
+    padding: 10px 20px;
+  }
+}
+
+/* Mentors */
+@media (max-width: 768px) {
+  .mentor-card {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .mentor-card img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mentor-card img {
+    max-width: 100px;
+  }
+
+  .mentor-card {
+    padding: 10px;
+  }
+}
+
+/* Live Session */
+@media (max-width: 768px) {
+  .session-card {
+    flex: 1 1 calc(50% - 20px); 
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .session-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .session-card button {
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+
+/* Global Connections */
+@media (max-width: 768px) {
+  .global-connect-container {
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .global-connect {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Profile Page */
+@media (max-width: 768px) {
+  .profile-main {
+    flex-direction: column;
+  }
+
+  .profile-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .profile-sidebar-right {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-sidebar {
+    width: 100%;
+  }
+
+  .profile-main {
+    gap: 5px;
+  }
+
+  .profile-content,
+  .profile-sidebar-right {
+    margin: 0;
+  }
+}
+
+/* Message Page */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    margin-top: 0;
+  }
+
+  .chat-section {
+    flex-direction: column;
+  }
+
+  .chat-input {
+    padding: 10px;
+  }
+
+  .chat-input input {
+    margin-right: 0;
+  }
+}
+
+/* Popup Card */
+@media (max-width: 768px) {
+  #popupCard {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .filter_search {
+    flex-direction: column;
+  }
+
+  .filter-block {
+    width: 100%;
+  }
+
+  .filter-block input,
+  .filter-block select {
+    width: 100%;
+  }
+}

@@ -372,3 +372,188 @@ form input[type="text"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* Responsive layout adjustments */
+
+/* Mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .icons {
+    margin-top: 10px;
+  }
+
+  .teamup-btn,
+  #logout-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .progress-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .step {
+    width: 120px;
+    height: 50px;
+    font-size: 0.9em;
+  }
+
+  main.setup-team {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .left-column {
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+  .image-placeholder img {
+    max-width: 90%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  form input[type="text"] {
+    max-width: 100%;
+  }
+
+  .next-button {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .choose {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-column-choose {
+    width: 100%;
+    max-height: none;
+  }
+
+  .user-card {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .succeed {
+    max-width: 100%;
+  }
+
+  .your-team table,
+  .manage-team button {
+    font-size: 14px;
+  }
+}
+
+/* Tablets and small desktops (min-width: 768px and max-width: 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  header nav {
+    flex-direction: row;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  .step {
+    width: 150px;
+    height: 60px;
+  }
+
+  main.setup-team {
+    width: 90%;
+    flex-direction: row;
+    padding: 20px;
+  }
+
+  .left-column {
+    max-width: 50%;
+    margin-right: 20px;
+  }
+
+  .image-placeholder img {
+    max-width: 90%;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  form input[type="text"] {
+    max-width: 100%;
+  }
+
+  .next-button {
+    width: 40%;
+    max-width: 350px;
+  }
+
+  .choose {
+    flex-direction: column;
+  }
+
+  .right-column-choose {
+    width: 100%;
+    max-height: 70vh;
+  }
+
+  .user-card {
+    width: 100%;
+  }
+
+  .succeed {
+    max-width: 100%;
+  }
+
+  .your-team table {
+    font-size: 14px;
+  }
+}
+
+/* Desktops (min-width: 1200px) */
+@media (min-width: 1200px) {
+  header nav {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  main.setup-team {
+    width: 80%;
+  }
+
+  .left-column {
+    max-width: 600px;
+  }
+
+  .next-button {
+    width: 30%;
+    max-width: 400px;
+  }
+
+  .right-column-choose {
+    width: 30%;
+  }
+
+  .user-card {
+    width: 80%;
+  }
+
+  .succeed {
+    max-width: 90%;
+  }
+}

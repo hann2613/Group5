@@ -109,8 +109,7 @@ footer p {
   gap: 30px;
   overflow-x: auto;
   padding: 10px 0;
-width: 100%;
-
+  width: 100%;
 }
 
 .project-card {
@@ -501,4 +500,114 @@ width: 100%;
 
 .task-modal-content input[type="file"] {
   border: none;
+}
+
+/* Responsive layout adjustments */
+
+/* Mobile devices */
+@media (max-width: 767px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .team-profile-page {
+    padding: 15px;
+    margin-top: 60px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    padding: 15px;
+    border: none;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #taskTable {
+    font-size: 14px;
+  }
+
+  .manage-container {
+    margin: 70px 10px 20px 10px;
+  }
+
+  .tasks-column {
+    padding: 0 10px;
+  }
+
+  .modal-content,
+  .task-modal-content {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main-content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .left-column,
+  .right-column {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .manage-container {
+    margin: 80px 15px 20px 15px;
+  }
+
+  .tasks-column {
+    padding: 0 15px;
+  }
+
+  .modal-content,
+  .task-modal-content {
+    width: 80%;
+    max-width: 600px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1200px) {
+  header nav {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .team-profile-page {
+    padding: 30px;
+    margin-top: 80px;
+  }
+
+  .main-content {
+    gap: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 30px;
+  }
+
+  .modal-content,
+  .task-modal-content {
+    width: 30%;
+    max-width: 700px;
+  }
 }

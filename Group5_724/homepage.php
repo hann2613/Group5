@@ -26,6 +26,7 @@
         <a href="learning.php">Learning</a>
         <a href="event.php">Events</a>
         <a href="globalConnections.php">Global Connections</a>
+        <a href="setup_team.php"><button class="teamup-btn">Team Up</button></a>
       </nav>
     </header>
     <div class="homeCover">
