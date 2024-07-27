@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Up</title>
-    <link rel="stylesheet" href="style_03team.css">
+    <link rel="stylesheet" href="styleteam.css">
 </head>
 
 <body>
@@ -26,25 +26,28 @@
         exit();
     }
     ?>
-
-    <main class="setup">
+    <div class="progress-bar-container">
         <div class="progress-bar">
             <div class="step completed">Welcome</div>
-            <div class="step active">Set Up Your Team</div>
-            <div class="step">Choose Your Teammate</div>
+            <div class="step completed">Set Up Your Team</div>
+            <div class="step active">Choose Your Teammate</div>
             <div class="step">Succeed</div>
         </div>
-        <div class="setup-team">
+    </div>
+    <main class="setup-team">
+        <div class="left-column">
             <h1>Set Up Your Team Now!</h1>
             <div class="form-container">
                 <form method="post" action="">
                     <input type="text" name="team_name" placeholder="Team Name" required>
-                    <button type="submit" class="next-button">Next</button>
+
                 </form>
-                <div class="image-placeholder">
-                    <img src="img/teamup.jpeg" alt="Team Up">
-                </div>
+                <button type="button" class="next-button" onclick="location.href='choose_teammate.php'">Next</button>
+
             </div>
+        </div>
+        <div class="image-placeholder">
+            <img src="img/teamup.jpeg" alt="Team Up">
         </div>
     </main>
     <footer>
