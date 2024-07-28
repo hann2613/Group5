@@ -119,25 +119,24 @@
           <h3>About</h3>
           <div>
             <p>
-              Hi, I'm Emma Rivera, a web developer and recent graduate
-              passionate about creating dynamic and responsive websites...
+              Hi, I'm Emma Rivera, a Marketing student and recent graduate
+              passionate about Business Management...
             </p>
           </div>
         </div>
         <div class="profile-section">
           <h3>Fields</h3>
           <ul>
-            <li>Web Development</li>
-            <li>UI/UX Design</li>
+            <li>Digital Businee</li>
+            <li>Business Developement</li>
             <li>E-commerce</li>
-            <li>Education Technology</li>
-            <li>Healthcare Technology</li>
+            <li>Marketing</li>
           </ul>
         </div>
         <div class="profile-section">
           <h3>Ideal Team Members</h3>
           <ul>
-            <li>Marketing Skills</li>
+            <li>Engineering</li>
             <li>Communication Skills</li>
             <li>Leadership</li>
           </ul>
@@ -147,26 +146,25 @@
           <h3>Skills</h3>
           <ul>
             <li>
-              HTML/CSS: Expert in creating clean, semantic, and responsive
-              layouts.
+              Leadership
             </li>
             <li>
-              JavaScript: Proficient in vanilla JavaScript and popular
-              frameworks like React and Angular.
+              Analytical ability
+              Data Analytics
+              Market research
             </li>
             <li>
-              Version Control: Experienced with Git and GitHub for
-              collaborative projects.
+              Negotiation skills
+              Business negotiation
             </li>
             <li>
-              UI/UX Design: Strong understanding of user experience principles
-              and design tools like Figma and Adobe XD.
+              Strategic planning
+              Business strategy
+              Competitive analysis
             </li>
             <li>
-              Performance Optimization: Skilled in optimizing websites for
-              speed and performance.
+              Performance Optimization
             </li>
-            <li>APIs: Experience with RESTful API integration and AJAX.</li>
           </ul>
         </div>
       </div>
