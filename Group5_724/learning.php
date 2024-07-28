@@ -129,7 +129,9 @@
           <li>Community support</li>
           <li>Basic analytics</li>
         </ul>
-        <button>Subscribe</button>
+        <form action="under_construction.php" method="get" style="margin-top: 15px;">
+        <button type="submit">Subscribe</button>
+      </form>
       </div>
       <div class="pricing-table">
         <h3>Pro Plan</h3>
@@ -140,7 +142,9 @@
           <li>Advanced analytics</li>
           <li>Priority customer support</li>
         </ul>
-        <button>Subscribe</button>
+        <form action="under_construction.php" method="get" style="margin-top: 15px;">
+        <button type="submit">Subscribe</button>
+      </form>
       </div>
     </div>
   </section>
