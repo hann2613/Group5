@@ -18,7 +18,7 @@ CREATE TABLE users (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO users (id, firstName, lastName, description, email, password, role, avatar, country, city, skills, field) VALUES
-(1001, 'Emma', 'Rivera', 'Web Developer', 'Emma@example.com', 'sesame', 'user', 'img/avatar/Emma.jpeg', 'USA', 'New York', 'Web Development | UI/UX Design | Usability Testing | Prototyping | Data Science', 'IT'),
+(1001, 'Emma', 'Rivera', 'Marketing student', 'Emma@example.com', 'sesame', 'user', 'img/avatar/Emma.jpeg', 'USA', 'New York', 'Marketing Management | Business Development | Sustainability', 'Marketing student'),
 (1002, 'Jade', 'Smith', 'Java Developer', 'Jade@example.com', 'sesame', 'user', 'img/avatar/Jade.jpeg', 'USA', 'Los Angeles', 'Java Development | Spring Framework', 'IT'),
 (1003, 'Noah', 'Williams', 'UX Designer', 'noah@example.com', 'sesame', 'user', 'img/avatar/Noah.jpeg', 'UK', 'London', 'UI/UX Design | Prototyping', 'Finance'),
 (1004, 'Oliver', 'Brown', 'Front End Developer', 'oliver@example.com', 'sesame', 'user', 'img/avatar/Oliver.jpeg', 'USA', 'Boston', 'Front End Development | React.js', 'IT'),
