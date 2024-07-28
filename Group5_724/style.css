@@ -255,7 +255,7 @@ Sign in Page
 -----------------------------------------------------------------------------------*/
 .login-section {
   display: flex;
-  height: 80vh;
+  height: 84vh;
   align-items: center;
   justify-content: center;
 }
