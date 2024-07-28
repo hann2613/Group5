@@ -10,18 +10,18 @@
 
 <body>
 
-<?php
-        require('model/database.php');
-        require('model/user_db.php');
+  <?php
+  require('model/database.php');
+  require('model/user_db.php');
 
-        session_start();
+  session_start();
 
-        if (!isset($_SESSION['user_id'])) {
-            header("Location: login.php");
-            exit();
-        }
+  if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+  }
 
-        ?>
+  ?>
   <header>
     <nav>
       <div class="logo"><a href="post.php">StudentPreneur</a></div>
@@ -95,13 +95,7 @@
             <p>Thank you for today! The insights...</p>
           </div>
         </div>
-        <div class="person">
-          <div class="person-name">Dean</div>
-          <div class="person-last-message">
-            <span>20 June, 1:13</span>
-            <p>Really excited about the ideas we...</p>
-          </div>
-        </div>
+
         <div class="person">
           <div class="person-name">Carl</div>
           <div class="person-last-message">
@@ -164,11 +158,10 @@
       const chatMessages = document.getElementById("chat-messages");
 
       const messages = [{
-          user: "Zimu",
-          text: "Hey, just a quick update: the prototype for our interface is ready for review. Please check it out and give your feedback by Friday!",
-          time: "Today, 8:30",
-        },
-      ];
+        user: "Zimu",
+        text: "Hey, just a quick update: the prototype for our interface is ready for review. Please check it out and give your feedback by Friday!",
+        time: "Today, 8:30",
+      }, ];
 
       function renderMessages() {
         chatMessages.innerHTML = "";

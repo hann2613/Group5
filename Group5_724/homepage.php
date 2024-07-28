@@ -45,7 +45,8 @@
               <img src="<?php echo htmlspecialchars($mentor['avatar']); ?>" alt="mentor" />
               <h3><?php echo htmlspecialchars($mentor['name']); ?></h3>
               <p><?php echo htmlspecialchars($mentor['description']); ?></p>
-              <button @click="bookSession()">Book a Session</button>
+              <button style="padding: 6px 10px; border: none; background-color: #686868; color: white; font-size: 12px; border-radius: 10px; cursor: pointer;"
+              @click="bookSession()">Book a Session</button>
             </div>
           <?php endforeach; ?>
         </div>

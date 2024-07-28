@@ -62,6 +62,7 @@
         </div>
 
         <div class="right-column-choose">
+            <h3 style="text-align: center;color:#666;">Your connect here</h3>
             <div class="user-results">
                 <?php
                 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search_user'])) {
